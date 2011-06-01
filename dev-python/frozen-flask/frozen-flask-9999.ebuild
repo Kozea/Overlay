@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 inherit distutils
 if [[ ${PV} = 9999 ]]; then
 	inherit git
-	EGIT_REPO_URI="https://github.com/SimonSapin/${MY_PN}.git"
+	EGIT_REPO_URI="git://github.com/SimonSapin/${MY_PN}.git"
 else
 	SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 fi
