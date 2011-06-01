@@ -6,12 +6,16 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils git
-
 MY_PN="Frozen-Flask"
 MY_P="${MY_PN}-${PV}"
 
-EGIT_REPO_URI="https://github.com/SimonSapin/${MY_PN}.git"
+inherit distutils
+if [[ ${PV} = 9999 ]]; then
+	inherit git
+	EGIT_REPO_URI="https://github.com/SimonSapin/${MY_PN}.git"
+else
+	SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+fi
 
 DESCRIPTION="Freeze a Flask application into a set of static files"
 HOMEPAGE="http://packages.python.org/${MY_PN}/"
