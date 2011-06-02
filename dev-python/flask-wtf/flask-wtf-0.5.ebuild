@@ -11,7 +11,7 @@ inherit distutils
 MY_PN="Flask-WTF"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Freeze a Flask application into a set of static files"
+DESCRIPTION="Simple integration of Flask with WTForms."
 HOMEPAGE="http://packages.python.org/${MY_PN}/"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
