@@ -6,6 +6,8 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
+inherit distutils
+
 MY_PN="Frozen-Flask"
 MY_P="${MY_PN}-${PV}"
 
