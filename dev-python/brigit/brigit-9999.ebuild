@@ -8,7 +8,7 @@ inherit distutils git
 
 DESCRIPTION="A very simple python git wrapper module"
 HOMEPAGE="https://github.com/paradoxxxzero/${PN}"
-EGIT_REPO_URI="https://github.com/paradoxxxzero/${PN}.git"
+EGIT_REPO_URI="git://github.com/paradoxxxzero/${PN}.git"
 
 LICENSE="BSD"
 SLOT="0"

@@ -10,7 +10,7 @@ inherit distutils git
 
 DESCRIPTION="An elegant site web traffic analyzer"
 HOMEPAGE="http://pystil.org"
-EGIT_REPO_URI="https://github.com/Kozea/${PN}.git"
+EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
 
 LICENSE="BSD"
 SLOT="0"

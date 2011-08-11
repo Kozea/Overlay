@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Freeze a Flask application into a set of static files"
 HOMEPAGE="http://packages.python.org/${MY_PN}/"
-EGIT_REPO_URI="https://github.com/SimonSapin/${MY_PN}.git"
+EGIT_REPO_URI="git://github.com/SimonSapin/${MY_PN}.git"
 
 LICENSE="BSD"
 SLOT="0"
