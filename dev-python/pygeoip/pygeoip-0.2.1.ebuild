@@ -8,14 +8,14 @@ inherit distutils
 
 DESCRIPTION="Pure Python GeoIP API"
 HOMEPAGE="http://code.google.com/p/pygeoip/"
-SRC_URI="http://pypi.python.org/packages/source/p/pygeoip/${PN}-${PV}.tar.gz"
+SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${PN}-${PV}.tar.gz"
 
 LICENSE="LGPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="dev-python/six"
 DEPEND="${RDEPEND}"
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
