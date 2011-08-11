@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name><![CDATA[kozea]]></name>
+    <description><![CDATA[Collection of ebuilds for Kozea]]></description>
+    <homepage>http://community.kozea.org/</homepage>
+    <owner>
+      <email>guillaume.ayoub@kozea.org</email>
+    </owner>
+    <source type="git">git://kozea.org/kozea-portage</source>
+  </repo>
+</repositories>
