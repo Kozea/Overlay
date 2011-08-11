@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A data access library"
 HOMEPAGE="http://multicorn.org"
-EGIT_REPO_URI="https://github.com/Kozea/${MY_PN}.git"
+EGIT_REPO_URI="git://github.com/Kozea/${MY_PN}.git"
 
 LICENSE="BSD"
 SLOT="0"

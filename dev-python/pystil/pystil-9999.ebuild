@@ -17,8 +17,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="net-libs/nodejs"
 DEPEND="${RDEPEND}
 	dev-python/pygeoip
     dev-python/multicorn
     dev-python/flask"
+
+src_install() {
+	distutils_src_install
+
+	einfo "Database synchronization"
+    sh sync-db.sh || die "Database synchronization failed"
+}
