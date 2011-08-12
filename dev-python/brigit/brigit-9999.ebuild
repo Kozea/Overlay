@@ -7,8 +7,8 @@ SUPPORT_PYTHON_ABIS="1"
 inherit distutils git
 
 DESCRIPTION="A very simple python git wrapper module"
-HOMEPAGE="https://github.com/paradoxxxzero/${PN}"
-EGIT_REPO_URI="git://github.com/paradoxxxzero/${PN}.git"
+HOMEPAGE="https://github.com/Kozea/${PN}"
+EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
 
 LICENSE="BSD"
 SLOT="0"
