@@ -19,6 +19,7 @@ IUSE=""
 
 RDEPEND="net-libs/nodejs"
 DEPEND="${RDEPEND}
+        dev-python/log-colorizer
 	dev-python/pygeoip
-    dev-python/multicorn
-    dev-python/flask"
+        dev-python/multicorn
+        dev-python/flask"
