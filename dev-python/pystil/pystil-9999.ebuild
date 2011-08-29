@@ -30,6 +30,6 @@ src_install() {
         insinto "${PYSTIL_DIR}"
         doins -r . || die
         if use lighttpd; then
-	        fowners lighttpd:lighttpd "${REDMINE_DIR}" || die
+	        fowners lighttpd:lighttpd "${PYSTIL_DIR}" || die
         fi
 }
