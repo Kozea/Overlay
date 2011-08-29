@@ -28,6 +28,7 @@ PYSTIL_DIR="/var/lib/${PN}"
 
 src_install() {
         insinto "${PYSTIL_DIR}"
+        rm -rf .git
         doins -r . || die
         if use lighttpd; then
 	        fowners lighttpd:lighttpd "${PYSTIL_DIR}" || die
@@ -38,4 +39,8 @@ pkg_postinst() {
         einfo
         elog "${PN} is installed in ${PYSTIL_DIR}"
         einfo
+}
+
+pkg_postrm() {
+    return
 }
