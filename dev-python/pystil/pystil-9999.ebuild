@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="lighttpd"
 
 RDEPEND="net-libs/nodejs"
 DEPEND="${RDEPEND}
@@ -23,3 +23,13 @@ DEPEND="${RDEPEND}
 	dev-python/pygeoip
         dev-python/multicorn
         dev-python/flask"
+
+PYSTIL_DIR="/var/lib/${PN}"
+
+src_install() {
+        insinto "${PYSTIL_DIR}"
+        doins -r . || die
+        if use lighttpd; then
+	        fowners lighttpd:lighttpd "${REDMINE_DIR}" || die
+        fi
+}
