@@ -33,3 +33,9 @@ src_install() {
 	        fowners lighttpd:lighttpd "${PYSTIL_DIR}" || die
         fi
 }
+
+pkg_postinst() {
+        einfo
+        elog "${PN} is installed in ${PYSTIL_DIR}"
+        einfo
+}
