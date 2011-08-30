@@ -31,8 +31,12 @@ src_install() {
         rm -rf .git
         doins -r . || die
         if use lighttpd; then
-	        fowners lighttpd:lighttpd "${PYSTIL_DIR}" || die
+	        fowners -R lighttpd:lighttpd . || die
         fi
+        fperms +x "${PYSTIL_DIR}/pystil.fcgi" || die
+        fperms +x "${PYSTIL_DIR}/datafeed.py" || die
+        fperms +x "${PYSTIL_DIR}/migrate.py" || die
+        fperms +x "${PYSTIL_DIR}/pystil.py" || die
 }
 
 pkg_postinst() {
