@@ -18,4 +18,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="dev-vcs/git"
+DEPEND="dev-vcs/git"
+RDEPEND="${DEPEND}
+         dev-python/pycairo"
