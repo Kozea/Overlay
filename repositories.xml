@@ -8,6 +8,6 @@
     <owner>
       <email>guillaume.ayoub@kozea.org</email>
     </owner>
-    <source type="git">git://kozea.org/kozea-portage</source>
+    <source type="git">git://github.com/Kozea/Overlay.git</source>
   </repo>
 </repositories>
