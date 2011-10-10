@@ -17,9 +17,11 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="ldap apache lighttpd"
+IUSE="ssl ldap fastcgi"
 
-DEPEND="ldap? ( dev-python/python-ldap )"
+DEPEND="ssl? ( >=dev-lang/python-2.6.6[ssl] )
+        ldap? ( dev-python/python-ldap )
+        fastcgi? ( dev-python/flup )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -35,11 +37,13 @@ src_install() {
         doins config logging || die
 
         # fcgi and wsgi files
-        insinto /var/www/${PN}
-        if use lighttpd; then
-                doins radicale.fcgi || die
-        fi
-        if use apache; then
-                doins radicale.wsgi || die
-        fi
+        insinto ${ROOT}usr/share/${PN}
+        doins radicale.wsgi
+        use fastcgi && doins radicale.fcgi
+}
+
+pkg_postinst() {
+        einfo "Radicale now supports WSGI."
+        einfo "A sample wsgi-script has been put into ${ROOT}usr/share/${PN}."
+        use fastcgi && einfo "You will also find there an example fcgi-script."
 }
