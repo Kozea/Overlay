@@ -6,7 +6,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-EGIT_BRANCH="html5"
+EGIT_BRANCH="sqlalchemy"
 inherit git
 
 DESCRIPTION="The hydra website generator"
