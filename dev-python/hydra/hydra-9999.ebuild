@@ -20,8 +20,6 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-        dev-python/pyinotify
-        dev-ruby/sass
         dev-python/multicorn[lxml,docutils]
         dev-python/csstyle
         dev-python/flask
