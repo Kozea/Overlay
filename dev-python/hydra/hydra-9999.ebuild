@@ -30,7 +30,10 @@ DEPEND="${RDEPEND}
         dev-python/pytz
         dev-python/icalendar
         dev-python/soappy
-        dev-python/pyinotify"
+        dev-python/pyinotify
+        dev-python/flask-sqlalchemy
+        dev-python/pygal
+        dev-python/sqlalchemy_fdw"
 
 HYDRA_DIR="/var/lib/${PN}"
 
