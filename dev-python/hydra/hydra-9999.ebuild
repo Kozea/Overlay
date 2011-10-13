@@ -52,6 +52,7 @@ src_install() {
         fperms +x "${HYDRA_DIR}/hydra-groupinfo.fcgi" || die
         fperms +x "${HYDRA_DIR}/hydra-pharminfo.fcgi" || die
         fperms +x "${HYDRA_DIR}/hydra-medsite.fcgi" || die
+        fperms +x "${HYDRA_DIR}/hydra-pharminfo-staging.fcgi" || die
 }
 
 pkg_postinst() {
