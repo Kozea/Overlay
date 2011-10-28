@@ -12,8 +12,8 @@ MY_PN="data"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Data manager for Hydra"
-HOMEPAGE=""
-EGIT_REPO_URI="git://kozea.fr/${MY_PN}"
+HOMEPAGE="http://kozea.org/"
+EGIT_REPO_URI="git@julia:${MY_PN}"
 
 LICENSE="BSD"
 SLOT="0"
