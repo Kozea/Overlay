@@ -1,0 +1,13 @@
+This is a Gentoo overlay for stuff we use or make at Kozea.
+
+To use use it, run
+    emerge layman
+
+Then add the repository URL in /etc/layman/layman.cfg
+    https://raw.github.com/Kozea/Overlay/master/repositories.xml
+
+Finally, add /var/lib/layman/kozea to the PORTDIR_OVERLAY variable
+in /etc/make.conf
+
+See the Gentoo documentation for details:
+    http://www.gentoo.org/proj/en/overlays/userguide.xml
