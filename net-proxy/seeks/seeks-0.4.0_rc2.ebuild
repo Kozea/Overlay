@@ -4,7 +4,10 @@
 
 DESCRIPTION="An Open Decentralized Platform for Collaborative Search, Filtering and content Curation"
 HOMEPAGE="http://www.seeks-project.info"
-SRC_URI="mirror://sourceforge/seeks/hippy/${PN}-${PV/_rc/-RC}.tar.gz"
+
+MY_P="${PN}-${PV/_rc/-RC}"
+
+SRC_URI="mirror://sourceforge/seeks/hippy/${MY_P}.tar.gz"
 LICENSE="AGPL-3"
 
 EAPI="3"
@@ -28,7 +31,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
     unpack ${A}
-    cd "${S}"
+    cd "${MY_P}"
 
     # Remove problematic LDFLAGS declaration
     sed -i -e '/^LDFLAGS/d' src/Makefile.am
