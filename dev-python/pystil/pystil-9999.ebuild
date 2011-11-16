@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
         dev-python/log-colorizer
 	dev-python/pygeoip
         dev-python/multicorn
+        dev-python/flask-sqlalchemy
         dev-python/flask"
 
 PYSTIL_DIR="/var/lib/${PN}"
