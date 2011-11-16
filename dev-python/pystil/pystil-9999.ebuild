@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="lighttpd"
 
-RDEPEND="net-libs/nodejs"
+RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/log-colorizer
 	dev-python/pygeoip
