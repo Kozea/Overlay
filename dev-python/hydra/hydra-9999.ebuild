@@ -11,7 +11,7 @@ inherit git
 
 DESCRIPTION="The hydra website generator"
 HOMEPAGE="http://kozea.org"
-EGIT_REPO_URI="git@julia:${PN}"
+EGIT_REPO_URI="ssh://git@kozea.fr:27015/~/${PN}"
 
 LICENSE="Proprietary"
 SLOT="0"
