@@ -8,7 +8,7 @@ inherit git
 
 DESCRIPTION="The hydra themes"
 HOMEPAGE="http://kozea.org"
-EGIT_REPO_URI="git@julia:themes"
+EGIT_REPO_URI="git@kozea.fr:themes"
 
 LICENSE="Proprietary"
 SLOT="0"
