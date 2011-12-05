@@ -3,7 +3,6 @@
 
 EAPI="4"
 
-EGIT_BRANCH="scss"
 inherit git
 
 DESCRIPTION="The hydra themes"
