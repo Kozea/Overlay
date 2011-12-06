@@ -27,6 +27,7 @@ src_install() {
         rm -rf .git*
         echo "Generating themes..."
         ./generator.py --once
+        rm -rf .sass-cache
         echo "Installing generated files..."
         doins -r . || die
         if use lighttpd; then
