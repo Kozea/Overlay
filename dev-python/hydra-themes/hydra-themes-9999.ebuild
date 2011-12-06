@@ -23,6 +23,7 @@ THEMES_DIR="/var/lib/hydra/hydra/static/css/themes"
 
 src_install() {
         insinto "${THEMES_DIR}"
+        git clean -fxd
         rm -rf .git*
         echo "Generating themes..."
         ./generator.py --once
