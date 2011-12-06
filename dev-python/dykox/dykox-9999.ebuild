@@ -5,7 +5,7 @@ EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 EGIT_BRANCH="dykox"
-inherit distutils git
+inherit distutils git-2
 
 MY_PN="Dyko"
 MY_P="${MY_PN}-${PV}"

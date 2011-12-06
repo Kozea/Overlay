@@ -6,7 +6,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils git
+inherit distutils git-2
 
 DESCRIPTION="A postgresql dialect based on psycopg2 adding support for Foreign Data Wrappers."
 HOMEPAGE="http://www.multicorn.org"

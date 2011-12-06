@@ -4,12 +4,10 @@
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils git
+inherit distutils git-2
 
 MY_PN="Attest"
 MY_P="${MY_PN}-${PV}"
-
-inherit distutils git
 
 DESCRIPTION="Modern, Pythonic unit testing."
 HOMEPAGE="http://packages.python.org/${MY_PN}/"

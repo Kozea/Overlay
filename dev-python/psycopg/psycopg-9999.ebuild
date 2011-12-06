@@ -6,7 +6,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython"
 
 EGIT_BRANCH="devel"
-inherit distutils git
+inherit distutils git-2
 
 MY_PN="${PN}2"
 MY_P="${MY_PN}-${PV}"

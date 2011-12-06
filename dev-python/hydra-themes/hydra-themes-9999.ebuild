@@ -3,7 +3,7 @@
 
 EAPI="4"
 
-inherit git
+inherit git-2
 
 DESCRIPTION="The hydra themes"
 HOMEPAGE="http://kozea.org"
