@@ -19,9 +19,9 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+        dev-python/gevent
         dev-python/log-colorizer
 	dev-python/pygeoip
-        dev-python/multicorn
         dev-python/flask-sqlalchemy
         dev-python/flask"
 
