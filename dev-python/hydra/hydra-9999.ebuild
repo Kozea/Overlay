@@ -47,7 +47,6 @@ src_install() {
 	        fowners -R lighttpd:lighttpd "${HYDRA_DIR}" || die
         fi
         fperms +x "${HYDRA_DIR}/runserver.py" || die
-        fperms +x "${HYDRA_DIR}/setup.py" || die
         fperms +x "${HYDRA_DIR}/statuscheck.py" || die
         fperms +x "${HYDRA_DIR}/hydra-groupinfo.fcgi" || die
         fperms +x "${HYDRA_DIR}/hydra-pharminfo.fcgi" || die
