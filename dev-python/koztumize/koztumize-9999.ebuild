@@ -10,7 +10,7 @@ inherit git-2
 
 DESCRIPTION="Dress your documents"
 HOMEPAGE="http://koztumize.org"
-EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
+EGIT_REPO_URI="git://github.com/Kozea/Koztumize.git"
 
 LICENSE="AGPL"
 SLOT="0"
