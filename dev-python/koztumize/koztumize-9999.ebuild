@@ -34,6 +34,7 @@ src_install() {
 	        fowners -R lighttpd:lighttpd "${KOZTUMIZE_DIR}" || die
         fi
         fperms +x "${KOZTUMIZE_DIR}/koztumize.py" || die
+        fperms +x "${KOZTUMIZE_DIR}/koztumize.fcgi" || die
 }
 
 pkg_postinst() {
