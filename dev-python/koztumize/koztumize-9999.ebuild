@@ -19,7 +19,7 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-        dev-python/multicorn[lxml,docutils]
+        dev-python/multicorn
         media-gfx/weasyprint
         dev-python/flask
         dev-python/sqlalchemy_fdw"
