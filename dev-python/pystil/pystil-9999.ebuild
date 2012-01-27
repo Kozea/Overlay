@@ -35,9 +35,9 @@ src_install() {
 	        fowners -R lighttpd:lighttpd . || die
         fi
         fperms +x "${PYSTIL_DIR}/pystil_prod.py" || die
-        fperms +x "${PYSTIL_DIR}/datafeed.py" || die
+        fperms +x "${PYSTIL_DIR}/bin/datafeed.py" || die
         fperms +x "${PYSTIL_DIR}/migrate.py" || die
-        fperms +x "${PYSTIL_DIR}/pystil.py" || die
+        fperms +x "${PYSTIL_DIR}/bin/webapp.py" || die
 }
 
 pkg_postinst() {
