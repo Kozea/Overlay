@@ -21,7 +21,7 @@ RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/gevent
         dev-python/log-colorizer
-	dev-python/pygeoip
+	    dev-python/pygeoip
         dev-python/flask-sqlalchemy
         dev-python/flask"
 
@@ -34,10 +34,10 @@ src_install() {
         if use lighttpd; then
 	        fowners -R lighttpd:lighttpd . || die
         fi
-        fperms +x "${PYSTIL_DIR}/pystil.fcgi" || die
-        fperms +x "${PYSTIL_DIR}/datafeed.py" || die
+        fperms +x "${PYSTIL_DIR}/pystil_prod.py" || die
+        fperms +x "${PYSTIL_DIR}/bin/datafeed.py" || die
         fperms +x "${PYSTIL_DIR}/migrate.py" || die
-        fperms +x "${PYSTIL_DIR}/pystil.py" || die
+        fperms +x "${PYSTIL_DIR}/bin/webapp.py" || die
 }
 
 pkg_postinst() {
