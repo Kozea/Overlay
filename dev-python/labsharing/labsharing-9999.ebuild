@@ -19,7 +19,7 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-        dev-python/multicorn
+        dev-python/multicorn-column_types
         dev-python/cssutils
         dev-python/flask
         dev-python/flask-sqlalchemy
