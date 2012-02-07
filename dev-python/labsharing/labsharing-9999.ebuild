@@ -21,6 +21,7 @@ RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/multicorn-column_types
         dev-python/cssutils
+        dev-python/pygal
         dev-python/flask
         dev-python/flask-sqlalchemy
         dev-python/flup
