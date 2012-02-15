@@ -18,6 +18,9 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="dev-vcs/git"
-RDEPEND="${DEPEND}
-         dev-python/pycairo"
+IUSE="lxml css"
+
+RDEPEND="css? ( dev-python/cssutils )
+        lxml? ( dev-python/lxml )
+        dev-python/pycairo"
+DEPEND="${RDEPEND}"
