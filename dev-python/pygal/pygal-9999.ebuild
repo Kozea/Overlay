@@ -11,7 +11,6 @@ inherit distutils git-2
 DESCRIPTION=""
 HOMEPAGE="https://github.com/Kozea/${PN}"
 EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
-EGIT_BRANCH="pygal2"
 
 LICENSE="BSD"
 SLOT="0"
