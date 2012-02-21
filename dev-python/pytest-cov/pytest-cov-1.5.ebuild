@@ -18,6 +18,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/coverage
-	dev-python/pytest"
+DEPEND="dev-python/coverage"
 RDEPEND="${DEPEND}"
