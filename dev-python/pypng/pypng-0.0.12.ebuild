@@ -19,3 +19,14 @@ RDEPEND=""
 DEPEND="${RDEPEND}"
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
+
+src_prepare() {
+        distutils_src_prepare
+
+        2to3_conversion() {
+                [[ "${PYTHON_ABI}" == 2.* ]] && return
+                2to3-${PYTHON_ABI} -nw --no-diffs .
+        }
+        python_execute_function -s 2to3_conversion
+}
+
