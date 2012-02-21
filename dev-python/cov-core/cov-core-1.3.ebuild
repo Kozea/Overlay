@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
-DESCRIPTION="py.test plugin for coverage reporting with support for both centralised and distributed testing, including subprocesses"
+DESCRIPTION="plugin core for use by pytest-cov, nose-cov and unittest2-cov"
 HOMEPAGE="http://pypi.python.org/pypi/${PN}/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -18,5 +18,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/cov-core"
+DEPEND="dev-python/coverage"
 RDEPEND="${DEPEND}"
