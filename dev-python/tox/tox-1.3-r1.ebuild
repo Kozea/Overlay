@@ -7,7 +7,7 @@ EAPI=4
 PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="virtualenv-based automation of test activities"
 HOMEPAGE="http://tox.testrun.org http://pypi.python.org/pypi/tox"
