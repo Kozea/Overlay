@@ -16,8 +16,15 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="imagemagick"
 
 DEPEND="dev-python/six
-        dev-python/decorator"
+        dev-python/decorator
+        imagemagick? ( media-gfx/imagemagick )"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+        if use imagemagick; then
+                export PYSTACIA_SKIP_BINARIES=1
+        fi
+}
