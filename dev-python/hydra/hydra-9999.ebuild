@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
         dev-python/csstyle
 		dev-python/imapclient
         dev-python/flask
+        dev-python/html5lib
         dev-python/python-ghostscript
         dev-python/wtforms
         dev-python/cairosvg
