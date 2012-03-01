@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="3"
+EAPI=2
 PYTHON_DEPEND="*:2.6"
+SUPPORT_PYTHON_ABIS=1
 
 inherit distutils git-2
 
