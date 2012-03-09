@@ -21,7 +21,7 @@ RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/multicorn
         media-gfx/weasyprint
-        app-text/htmltidy
+        dev-python/pytidylib
         dev-python/flask
         dev-python/sqlalchemy_fdw"
 
