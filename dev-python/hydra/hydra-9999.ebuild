@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 		dev-python/imapclient
         dev-python/flask
         dev-python/html5lib
+        dev-python/docutils-html5-writer
         dev-python/python-ghostscript
         dev-python/wtforms
         dev-python/cairosvg

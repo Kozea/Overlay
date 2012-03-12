@@ -4,7 +4,6 @@
 EAPI=4
 SUPPORT_PYTHON_ABIS=1
 PYTHON_DEPEND="*:2.6"
-RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
 inherit distutils git-2
 
