@@ -19,7 +19,7 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-        dev-python/multicorn-column_types
+        dev-python/multicorn
         dev-python/cairosvg[lxml,css]
         dev-python/cssutils
         dev-python/pygal
