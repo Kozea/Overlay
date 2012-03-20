@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
         dev-python/multicorn[lxml,docutils]
         dev-python/flask
         dev-python/docutils-html5-writer
-        dev-python/pygal
+        dev-python/pygal[scipy]
         dev-python/flup"
 
 SITENCO_DIR="/var/lib/${PN}"
