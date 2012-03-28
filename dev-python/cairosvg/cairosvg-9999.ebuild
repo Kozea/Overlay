@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="lxml css"
 
-RDEPEND="css? ( dev-python/cssutils )
+RDEPEND="css? ( dev-python/tinycss )
         lxml? ( dev-python/lxml )
         dev-python/pycairo"
 DEPEND="${RDEPEND}"
