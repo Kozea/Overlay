@@ -3,7 +3,7 @@
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
 EGIT_BRANCH="devel"
 inherit distutils git-2
