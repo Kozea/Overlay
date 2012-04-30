@@ -22,6 +22,7 @@ DEPEND=""
 RDEPEND="
     ${DEPEND}
     dev-python/tinycss
+    >=dev-python/cssselect-0.6
     dev-python/pystacia
     >=x11-libs/pango-1.29.3
     dev-python/pycairo
