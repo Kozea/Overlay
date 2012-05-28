@@ -24,13 +24,9 @@ DEPEND="${RDEPEND}
         dev-python/cairosvg[lxml,css]
         dev-python/cssutils
         dev-python/pygal
-        dev-python/flask
-        dev-python/flask-sqlalchemy
-        dev-python/flask-csrf
-        dev-python/flask-wtf
+        dev-python/pynuts
         dev-python/flup
-        dev-python/dulwich
-        dev-python/wtforms"
+        dev-python/dulwich"
 
 LABSHARING_DIR="/var/lib/${PN}"
 
