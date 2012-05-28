@@ -6,6 +6,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
+EGIT_BRANCH="pynuts"
 inherit git-2
 
 DESCRIPTION="The labSharing website"
@@ -20,14 +21,16 @@ IUSE="lighttpd"
 RDEPEND=""
 DEPEND="${RDEPEND}
         media-gfx/weasyprint[svg]
-        dev-python/multicorn
         dev-python/cairosvg[lxml,css]
         dev-python/cssutils
         dev-python/pygal
         dev-python/flask
         dev-python/flask-sqlalchemy
+        dev-python/flask-csrf
+        dev-python/flask-wtf
         dev-python/flup
-        dev-python/sqlalchemy_fdw"
+        dev-python/dulwich
+        dev-python/wtforms"
 
 LABSHARING_DIR="/var/lib/${PN}"
 
