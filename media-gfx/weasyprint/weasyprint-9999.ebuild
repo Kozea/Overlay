@@ -17,10 +17,13 @@ EGIT_REPO_URI="git://github.com/Kozea/${MY_PN}.git"
 LICENSE="AGPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="svg test"
 
 DEPEND=""
 RDEPEND="
     ${DEPEND}
+    svg? ( dev-python/cairosvg )
+    test? ( dev-python/pytest )
     dev-python/tinycss
     >=dev-python/cssselect-0.6
     dev-python/pystacia
