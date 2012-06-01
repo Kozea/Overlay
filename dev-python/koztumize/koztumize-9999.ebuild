@@ -20,6 +20,7 @@ IUSE="lighttpd"
 RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/multicorn
+        dev-python/pytz
         dev-python/pynuts
         dev-python/sqlalchemy_fdw"
 
