@@ -20,9 +20,7 @@ IUSE="lighttpd"
 RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/multicorn
-        media-gfx/weasyprint
-        dev-python/pytidylib
-        dev-python/flask
+        dev-python/pynuts
         dev-python/sqlalchemy_fdw"
 
 KOZTUMIZE_DIR="/var/lib/${PN}"
