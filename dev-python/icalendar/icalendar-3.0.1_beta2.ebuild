@@ -18,23 +18,10 @@ SRC_URI="http://pypi.python.org/packages/source/i/icalendar/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
-IUSE="doc"
+IUSE=""
 RESTRICT="test"
 
 RDEPEND=""
-DEPEND="dev-python/setuptools
-	doc? ( dev-python/sphinx )"
+DEPEND="dev-python/setuptools"
 
 S=${WORKDIR}/${MY_P}
-
-DOCS="CHANGES.txt CREDITS.txt HISTORY.txt TODO.txt"
-
-src_compile() {
-	distutils_src_compile
-
-	if use doc; then
-		cd docs
-		emake text || die "building documentation"
-		DOCS="${DOCS} docs/_build/text/*.txt"
-	fi
-}
