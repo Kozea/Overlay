@@ -25,3 +25,4 @@ RDEPEND=""
 DEPEND="dev-python/setuptools"
 
 S=${WORKDIR}/${MY_P}
+RESTRICT_PYTHON_ABIS="3.*"
