@@ -8,9 +8,12 @@ PYTHON_DEPEND="2"
 
 inherit distutils
 
+MY_PV=${PV/_beta/b}
+MY_P=${PN}-${MY_PV}
+
 DESCRIPTION="Package used for parsing and generating iCalendar files (RFC 2445)."
 HOMEPAGE="http://github.com/collective/icalendar"
-SRC_URI="http://pypi.python.org/packages/source/i/icalendar/icalendar-3.0.1b2.tar.gz"
+SRC_URI="http://pypi.python.org/packages/source/i/icalendar/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -22,7 +25,7 @@ RDEPEND=""
 DEPEND="dev-python/setuptools
 	doc? ( dev-python/sphinx )"
 
-RESTRICT_PYTHON_ABIS="3.*"
+S=${WORKDIR}/${MY_P}
 
 DOCS="CHANGES.txt CREDITS.txt HISTORY.txt TODO.txt"
 
