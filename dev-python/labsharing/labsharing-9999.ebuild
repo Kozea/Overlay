@@ -39,6 +39,8 @@ src_install() {
         fi
         fperms +x "${LABSHARING_DIR}/labsharing.py" || die
         fperms +x "${LABSHARING_DIR}/labsharing.fcgi" || die
+        fperms +x "${LABSHARING_DIR}/www_labsharing.py" || die
+        fperms +x "${LABSHARING_DIR}/www_labsharing.fcgi" || die
 }
 
 pkg_postinst() {
