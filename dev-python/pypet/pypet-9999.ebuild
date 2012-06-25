@@ -18,7 +18,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/sqlalchemy
-        dev-python/psycopg
-        dev-python/flask-wtf
-        dev-python/docutils-html5-writer"
+        dev-python/psycopg"
 DEPEND="${RDEPEND}"
