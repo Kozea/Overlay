@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
         dev-python/pytz
         dev-python/icalendar
         dev-python/soappy
+        dev-python/pypet
         dev-python/pyinotify
         dev-python/flask-sqlalchemy
         dev-python/pygal
