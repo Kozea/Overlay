@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Data manager for Hydra"
 HOMEPAGE="http://kozea.org/"
-EGIT_REPO_URI="ssh://git@kozea.fr:27015/~/${PN}"
+EGIT_REPO_URI="ssh://git@kozea.fr:27015/~/data"
 
 LICENSE="BSD"
 SLOT="0"
