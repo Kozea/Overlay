@@ -31,9 +31,12 @@ src_install() {
         insinto "${DATA_DIR}"
         rm -rf .git
         doins -r . || die
+        newinitd "${DATA_DIR}"/init.d/hydra-datajoin.sh hydra-datajoin || die
+        newinitd "${DATA_DIR}"/init.d/hydra-dataparse.sh hydra-dataparse || die
         fperms +x "${DATA_DIR}/datapop.py" || die
         fperms +x "${DATA_DIR}/dataparse.py" || die
         fperms +x "${DATA_DIR}/datajoin.py" || die
+        fperms +x "${DATA_DIR}/datamove.py" || die
 }
 
 pkg_postinst() {
