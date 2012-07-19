@@ -22,7 +22,7 @@ IUSE="svg test"
 
 DEPEND=""
 RDEPEND="${RDEPEND}
-    svg? ( dev-python/cairosvg )
+    svg? ( media-gfx/cairosvg )
     test? ( dev-python/pytest )
     >=dev-python/cssutils-0.9.9
     dev-python/lxml
