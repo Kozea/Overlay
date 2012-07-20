@@ -20,12 +20,15 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+css"
 
-RDEPEND="dev-python/lxml
+RDEPEND="
 	dev-python/pycairo
-	dev-python/cssutils
-	dev-python/tinycss"
+	css? (
+		dev-python/lxml
+		dev-python/cssselect
+		dev-python/tinycss
+	)"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}

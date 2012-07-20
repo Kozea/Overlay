@@ -18,15 +18,16 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="svg test"
+IUSE="+raster +svg test"
 
 DEPEND=""
-RDEPEND="${RDEPEND}
+RDEPEND="
+    ${DEPEND}
     svg? ( media-gfx/cairosvg )
     test? ( dev-python/pytest )
-    >=dev-python/cssutils-0.9.9
-    dev-python/lxml
-    dev-python/pystacia
+    raster? ( dev-python/pystacia )
+    dev-python/tinycss
+    >=dev-python/cssselect-0.6
     >=x11-libs/pango-1.29.3
     dev-python/pycairo
     >=dev-python/pygobject-3.0"
