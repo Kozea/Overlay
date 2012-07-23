@@ -19,7 +19,6 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-        media-gfx/weasyprint
         dev-python/multicorn[lxml,docutils]
         dev-python/csstyle
 		dev-python/imapclient
@@ -36,6 +35,7 @@ DEPEND="${RDEPEND}
         dev-python/pypet
         dev-python/pyinotify
         dev-python/flask-sqlalchemy
+        dev-python/flask-weasyprint
         dev-python/pygal
         dev-python/pyyaml
         dev-python/flup
