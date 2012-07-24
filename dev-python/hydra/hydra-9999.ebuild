@@ -21,13 +21,13 @@ RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/multicorn[lxml,docutils]
         dev-python/csstyle
-		dev-python/imapclient
+        dev-python/imapclient
         dev-python/flask
         dev-python/html5lib
         dev-python/docutils-html5-writer
         dev-python/python-ghostscript
         dev-python/wtforms
-        dev-python/cairosvg
+        media-gfx/cairosvg
         dev-python/imaging
         dev-python/pytz
         dev-python/icalendar
