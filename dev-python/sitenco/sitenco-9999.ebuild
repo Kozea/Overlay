@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 
         media-gfx/fontforge
 
+        dev-python/pygal
         dev-python/lxml
         dev-python/pygal[scipy]"
 
