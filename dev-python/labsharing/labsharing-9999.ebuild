@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
         media-gfx/weasyprint[svg]
         dev-python/cairosvg[lxml,css]
         dev-python/cssutils
+        dev-python/flask-weasyprint
         dev-python/pygal
         dev-python/pynuts
         dev-python/flup
