@@ -17,14 +17,14 @@ EGIT_REPO_URI="git://github.com/Kozea/${MY_PN}.git"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="svg test"
+IUSE="+raster +svg test"
 
 DEPEND=""
 RDEPEND="
     ${DEPEND}
     svg? ( media-gfx/cairosvg )
     test? ( dev-python/pytest )
-    raster? ( dev-python/pystacia )
+    raster? ( >=x11-libs/gdk-pixbuf-2.25 )
     dev-python/tinycss
     >=dev-python/cssselect-0.6
     >=x11-libs/pango-1.29.3
