@@ -21,7 +21,7 @@ IUSE="lighttpd"
 RDEPEND=""
 DEPEND="${RDEPEND}
         media-gfx/weasyprint[svg]
-        dev-python/cairosvg[lxml,css]
+        media-gfx/cairosvg[lxml,css]
         dev-python/cssutils
         dev-python/flask-weasyprint
         dev-python/pygal
