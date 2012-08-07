@@ -6,6 +6,10 @@ To use use it, run
 Then add the repository URL in /etc/layman/layman.cfg
     https://raw.github.com/Kozea/Overlay/master/repositories.xml
 
+Then synchronize the repositories and add the kozea overlay
+    layman -S
+    layman -a kozea
+
 Finally, add /var/lib/layman/kozea to the PORTDIR_OVERLAY variable
 in /etc/make.conf
 
