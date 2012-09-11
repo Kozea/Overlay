@@ -19,6 +19,7 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+        dev-python/python-ldap
         dev-python/gevent
         dev-python/log-colorizer
         dev-python/pygeoip
