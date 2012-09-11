@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="lxml docutils imap"
 
-DEPEND=">=dev-db/postgresql-server-9.1:9.1
+DEPEND=">=dev-db/postgresql-server-9.2:9.2
         dev-python/log-colorizer
         dev-python/sqlalchemy[postgres]
         lxml? ( dev-python/lxml )
