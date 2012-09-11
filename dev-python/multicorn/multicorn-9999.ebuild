@@ -1,7 +1,7 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
@@ -11,7 +11,7 @@ inherit distutils git-2
 MY_PN="Multicorn"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A data access library"
+DESCRIPTION="Python module of MultiCorn's PostgreSQL extension"
 HOMEPAGE="http://multicorn.org"
 EGIT_REPO_URI="git://github.com/Kozea/${MY_PN}.git"
 
@@ -29,13 +29,3 @@ DEPEND="${RDEPEND}
         docutils? ( dev-python/docutils )"
 
 S="${WORKDIR}/${MY_P}"
-
-src_compile() {
-    emake || die
-    distutils_src_compile
-}
-
-src_install() {
-    emake NO_PYTHON="1" DESTDIR="${D}" USE_PGXS=1 install || die
-    distutils_src_install
-}
