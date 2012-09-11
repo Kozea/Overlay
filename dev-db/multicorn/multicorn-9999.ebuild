@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-db/postgresql-server"
+DEPEND="dev-python/multicorn"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

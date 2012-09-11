@@ -15,7 +15,7 @@ SLOT="9.1"
 KEYWORDS="~amd64 ~x86"
 IUSE="lxml docutils imap"
 
-DEPEND=">=dev-db/postgresql-server-9.1:9.1"
+DEPEND=">=dev-python/multicorn-0.9.1:9.1"
 RDEPEND="${DEPEND}"
 
 src_compile() {
