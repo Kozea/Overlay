@@ -15,7 +15,7 @@ SLOT="9.2"
 KEYWORDS="~amd64 ~x86"
 IUSE="lxml docutils imap"
 
-DEPEND=">=dev-python/multicorn-0.9.2:9.2"
+DEPEND="dev-python/multicorn"
 RDEPEND="${DEPEND}"
 
 src_compile() {
