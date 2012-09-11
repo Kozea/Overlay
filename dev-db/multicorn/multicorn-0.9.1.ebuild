@@ -19,6 +19,7 @@ DEPEND="dev-python/multicorn"
 RDEPEND="${DEPEND}"
 
 src_compile() {
+    sed -e "s/pg_config/pg_config${PV:2:1}${PV:4:1}/" -i Makefile
     emake || die
 }
 
