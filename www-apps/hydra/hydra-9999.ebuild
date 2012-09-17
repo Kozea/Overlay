@@ -20,6 +20,7 @@ IUSE="lighttpd"
 RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/multicorn[lxml,docutils]
+        dev-db/multicorn
         dev-python/csstyle
         dev-python/imapclient
         dev-python/flask
