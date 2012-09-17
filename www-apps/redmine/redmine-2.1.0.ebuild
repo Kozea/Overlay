@@ -13,7 +13,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="fastcgi imagemagick ldap openid passenger"
+IUSE="imagemagick ldap openid passenger"
 
 RDEPEND=""
 
@@ -22,7 +22,6 @@ ruby_add_rdepend "
 	>=dev-ruby/coderay-1.0.6
 	dev-ruby/i18n:0.6
 	>=dev-ruby/rails-3.2.6:3.2
-	fastcgi? ( dev-ruby/ruby-fcgi )
 	imagemagick? ( >=dev-ruby/rmagick-2 )
 	ldap? ( >=dev-ruby/ruby-net-ldap-0.3.1 )
 	openid? ( >=dev-ruby/ruby-openid-2.1.4 )
