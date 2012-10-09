@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
         dev-python/pyyaml
         dev-python/docutils-html5-writer
         dev-python/flup
+        dev-python/sphinx
 
         media-gfx/fontforge
 
