@@ -19,6 +19,7 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+        net-misc/rabbitmq-server
         dev-python/python-ldap
         dev-python/gevent
         dev-python/log-colorizer
