@@ -26,10 +26,11 @@ RDEPEND="
     svg? ( media-gfx/cairosvg )
     test? ( dev-python/pytest )
     raster? ( >=x11-libs/gdk-pixbuf-2.25 )
-    dev-python/tinycss
+    =dev-python/tinycss-0.3
     >=dev-python/cssselect-0.6
-    >=x11-libs/pango-1.29.3
-    dev-python/pycairo
-    >=dev-python/pygobject-3.0"
+    || (
+      ( >=x11-libs/pango-1.29.3 dev-python/pycairo >=dev-python/pygobject-3.0 )
+      ( dev-python/pygtk )
+    )"
 
 S="${WORKDIR}/${MY_P}"

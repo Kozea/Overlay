@@ -5,11 +5,11 @@ EAPI=4
 SUPPORT_PYTHON_ABIS=1
 PYTHON_DEPEND="*:2.6"
 
-inherit distutils git-2
+inherit distutils
 
 DESCRIPTION="A CSS parser, and nothing else."
 HOMEPAGE="https://${PN}.org"
-EGIT_REPO_URI="git://github.com/SimonSapin/${PN}.git"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

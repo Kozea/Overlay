@@ -19,6 +19,7 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+        dev-db/multicorn
         dev-python/multicorn
         dev-python/pytz
         dev-python/pynuts
