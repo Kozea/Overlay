@@ -18,5 +18,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-python/fabtools-1.4.0"
+DEPEND=">=dev-python/fabric-1.4.0"
 RDEPEND="${DEPEND}"
