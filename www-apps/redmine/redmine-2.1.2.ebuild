@@ -13,7 +13,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="imagemagick ldap openid passenger"
+IUSE="imagemagick ldap lighttpd openid passenger"
 
 RDEPEND=""
 
@@ -53,6 +53,9 @@ all_ruby_install() {
 	rm -fr doc || die
 	dodoc README.rdoc || die
 	rm README.rdoc || die
+	if use !openid; then
+		rm -fr lib/plugins/open_id_authentication || die
+	fi
 
 	keepdir /var/log/${PN} || die
 	dosym /var/log/${PN}/ "${REDMINE_DIR}/log" || die
@@ -62,14 +65,21 @@ all_ruby_install() {
 	keepdir "${REDMINE_DIR}/files" || die
 	keepdir "${REDMINE_DIR}/public/plugin_assets" || die
 
-	fowners -R redmine:redmine \
+	if use lighttpd; then
+		USER="lighttpd"
+	else
+		USER="redmine"
+	fi
+
+	fowners -R ${USER}:${USER} \
 		"${REDMINE_DIR}/config" \
 		"${REDMINE_DIR}/files" \
 		"${REDMINE_DIR}/public/plugin_assets" \
 		"${REDMINE_DIR}/tmp" \
 		/var/log/${PN} || die
 	# for SCM
-	fowners redmine:redmine "${REDMINE_DIR}" || die
+	fowners ${USER}:${USER} "${REDMINE_DIR}" || die
+
 	# bug #406605
 	fperms -R go-rwx \
 		"${REDMINE_DIR}/config" \
