@@ -13,7 +13,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="imagemagick ldap lighttpd openid passenger"
+IUSE="imagemagick ldap lighttpd openid passenger sqlite3"
 
 RDEPEND=""
 
@@ -24,7 +24,9 @@ ruby_add_rdepend "
 	>=dev-ruby/rails-3.2.6:3.2
 	imagemagick? ( >=dev-ruby/rmagick-2 )
 	ldap? ( >=dev-ruby/ruby-net-ldap-0.3.1 )
+	lighttpd? ( www-servers/lighttpd )
 	openid? ( >=dev-ruby/ruby-openid-2.1.4 )
+	sqlite3? ( dev-ruby/sqlite3 )
 	passenger? ( www-apache/passenger )"
 
 REDMINE_DIR="/var/lib/${PN}"
