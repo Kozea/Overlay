@@ -19,7 +19,6 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-        dev-python/multicorn[lxml,docutils]
         dev-python/brigit
         dev-python/flask
         dev-python/pygments
@@ -27,8 +26,6 @@ DEPEND="${RDEPEND}
         dev-python/docutils-html5-writer
         dev-python/flup
         dev-python/sphinx
-
-        dev-db/multicorn
 
         media-gfx/fontforge
 
