@@ -28,6 +28,8 @@ DEPEND="${RDEPEND}
         dev-python/flup
         dev-python/sphinx
 
+        dev-db/multicorn
+
         media-gfx/fontforge
 
         dev-python/pygal
