@@ -24,7 +24,6 @@ ruby_add_rdepend "
 	>=dev-ruby/rails-3.2.6:3.2
 	imagemagick? ( >=dev-ruby/rmagick-2 )
 	fastcgi? ( dev-ruby/fcgi )
-	lighttpd? ( >=dev-ruby/fcgi )
 	openid? ( >=dev-ruby/ruby-openid-2.1.4 )
 	passenger? ( www-apache/passenger )"
 
