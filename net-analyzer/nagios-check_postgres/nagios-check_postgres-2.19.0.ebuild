@@ -19,5 +19,5 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 	exeinto /usr/$(get_libdir)/nagios/plugins
-	doexe check_postgres
+	newexe check_postgres.pl check_postgres
 }
