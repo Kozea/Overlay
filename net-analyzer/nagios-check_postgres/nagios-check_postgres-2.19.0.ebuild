@@ -17,6 +17,8 @@ IUSE=""
 DEPEND="net-analyzer/nagios-plugins"
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}"/check_postgres-${PV}
+
 src_install() {
 	exeinto /usr/$(get_libdir)/nagios/plugins
 	newexe check_postgres.pl check_postgres
