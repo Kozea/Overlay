@@ -22,6 +22,7 @@ ruby_add_rdepend "
 	>=dev-ruby/coderay-1.0.6
 	dev-ruby/i18n:0.6
 	>=dev-ruby/rails-3.2.6:3.2
+	<dev-ruby/builder-3.1:3
 	imagemagick? ( >=dev-ruby/rmagick-2 )
 	fastcgi? ( dev-ruby/fcgi )
 	openid? ( >=dev-ruby/ruby-openid-2.1.4 )
