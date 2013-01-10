@@ -13,7 +13,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="imagemagick ldap openid passenger"
+IUSE="fastcgi imagemagick ldap lighttpd openid passenger"
 
 RDEPEND=""
 
@@ -22,8 +22,9 @@ ruby_add_rdepend "
 	>=dev-ruby/coderay-1.0.6
 	dev-ruby/i18n:0.6
 	>=dev-ruby/rails-3.2.6:3.2
+	<dev-ruby/builder-3.1:3
 	imagemagick? ( >=dev-ruby/rmagick-2 )
-	ldap? ( >=dev-ruby/ruby-net-ldap-0.3.1 )
+	fastcgi? ( dev-ruby/fcgi )
 	openid? ( >=dev-ruby/ruby-openid-2.1.4 )
 	passenger? ( www-apache/passenger )"
 
@@ -53,6 +54,9 @@ all_ruby_install() {
 	rm -fr doc || die
 	dodoc README.rdoc || die
 	rm README.rdoc || die
+	if use !openid; then
+		rm -fr lib/plugins/open_id_authentication || die
+	fi
 
 	keepdir /var/log/${PN} || die
 	dosym /var/log/${PN}/ "${REDMINE_DIR}/log" || die
@@ -62,14 +66,21 @@ all_ruby_install() {
 	keepdir "${REDMINE_DIR}/files" || die
 	keepdir "${REDMINE_DIR}/public/plugin_assets" || die
 
-	fowners -R redmine:redmine \
+	if use lighttpd; then
+		USER="lighttpd"
+	else
+		USER="redmine"
+	fi
+
+	fowners -R ${USER}:${USER} \
 		"${REDMINE_DIR}/config" \
 		"${REDMINE_DIR}/files" \
 		"${REDMINE_DIR}/public/plugin_assets" \
 		"${REDMINE_DIR}/tmp" \
 		/var/log/${PN} || die
 	# for SCM
-	fowners redmine:redmine "${REDMINE_DIR}" || die
+	fowners ${USER}:${USER} "${REDMINE_DIR}" || die
+
 	# bug #406605
 	fperms -R go-rwx \
 		"${REDMINE_DIR}/config" \

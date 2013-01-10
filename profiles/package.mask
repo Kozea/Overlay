@@ -2,3 +2,4 @@
 =dev-python/multicorn-9999
 =dev-db/multicorn-9999
 =dev-python/tinycss-9999
+=dev-python/pynuts-9999

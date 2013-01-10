@@ -11,7 +11,7 @@ inherit git-2
 
 DESCRIPTION="The labSharing website"
 HOMEPAGE="http://kozea.org"
-EGIT_REPO_URI="ssh://git@kozea.fr:27015/~/${PN}"
+EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
 
 LICENSE="Proprietary"
 SLOT="0"

@@ -10,7 +10,7 @@ inherit git-2
 
 DESCRIPTION="The Site'n'co website generator"
 HOMEPAGE="http://kozea.org"
-EGIT_REPO_URI="ssh://git@kozea.fr:27015/~/${PN}"
+EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
 
 LICENSE="AGPL"
 SLOT="0"
@@ -19,7 +19,6 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-        dev-python/multicorn[lxml,docutils]
         dev-python/brigit
         dev-python/flask
         dev-python/pygments
