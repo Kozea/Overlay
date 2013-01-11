@@ -3,6 +3,9 @@
 # $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/mk-livestatus-1.2.0_p2.ebuild,v 1.2 2012/12/22 18:24:19 ago Exp $
 
 EAPI=3
+PYTHON_DEPEND="2:2.5"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 GENTOO_DEPEND_ON_PERL=no
 PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -74,6 +77,10 @@ src_configure() {
 		cd api/perl/
 		perl-module_src_configure
 	fi
+
+    if use python; then
+        python_copy_sources api/python
+    fi
 }
 
 src_compile() {
@@ -108,8 +115,12 @@ src_install() {
 		fi
 	fi
 	if use python; then
-		insinto $(python_get_sitedir)
-		doins api/python/livestatus.py || die
+        install_python() {
+            echo '$(python_get_sitedir)'
+            insinto $(python_get_sitedir)
+            doins livestatus.py || die
+        }
+        python_execute_function --source-dir api/python --action-message 'Installing for $(python_get_implementation) $(python_get_version)' -s install_python
 
 		if use examples; then
 			newdoc api/python/README README.python || die
