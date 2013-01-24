@@ -7,7 +7,7 @@ inherit git-2
 
 DESCRIPTION="Nagios plugins for Kozea"
 HOMEPAGE="https://github.com/Kozea/nagios-kozea-plugins"
-EGIT_REPO_URI="https://github.com/Kozea/nagios-kozea-plugins"
+EGIT_REPO_URI="git://github.com/Kozea/nagios-kozea-plugins.git"
 
 LICENSE="BSD"
 SLOT="0"
