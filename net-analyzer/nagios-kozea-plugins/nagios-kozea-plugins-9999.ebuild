@@ -3,7 +3,7 @@
 
 EAPI="2"
 
-inherit git-2
+inherit multilib git-2
 
 DESCRIPTION="Nagios plugins for Kozea"
 HOMEPAGE="https://github.com/Kozea/nagios-kozea-plugins"
