@@ -1,5 +1,6 @@
 =media-gfx/weasyprint-9999
 =dev-python/multicorn-9999
+=dev-python/pygal-9999
 =dev-db/multicorn-9999
 =dev-python/tinycss-9999
 =dev-python/pynuts-9999
