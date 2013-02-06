@@ -41,6 +41,7 @@ DEPEND="${RDEPEND}
         dev-python/pyyaml
         dev-python/flup
         dev-python/docutils-html5-writer
+        dev-python/pyquery
         dev-python/sqlalchemy_fdw"
 
 HYDRA_DIR="/var/lib/${PN}"
