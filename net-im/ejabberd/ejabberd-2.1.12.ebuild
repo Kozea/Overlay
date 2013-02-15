@@ -8,7 +8,7 @@ inherit eutils multilib pam ssl-cert
 
 DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://www.ejabberd.im/"
-SRC_URI="http://www.process-one.net/downloads/${PN}/${PV}/${P}.tgz
+SRC_URI="https://github.com/processone/${PN}/archive/v${PV}.tar.gz
 	mod_statsdx? ( mirror://gentoo/ejabberd-mod_statsdx-1080.patch.gz )"
 
 LICENSE="GPL-2"
