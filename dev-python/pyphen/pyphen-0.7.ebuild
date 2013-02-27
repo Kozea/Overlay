@@ -11,7 +11,7 @@ MY_PN="Pyphen"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Pure Python module to hyphenate text"
-HOMEPAGE="http://pypi.python.org/pypi/Pyphen/0.6"
+HOMEPAGE="http://pypi.python.org/pypi/Pyphen"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
