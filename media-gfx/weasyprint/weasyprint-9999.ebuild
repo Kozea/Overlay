@@ -22,12 +22,13 @@ IUSE="+raster +svg test"
 DEPEND=""
 RDEPEND="
     ${DEPEND}
-    svg? ( media-gfx/cairosvg )
-    test? ( dev-python/pytest )
-    raster? ( >=x11-libs/gdk-pixbuf-2.25[introspection] )
-    =dev-python/tinycss-0.3
+    x11-libs/pango
+    x11-libs/cairo
+    dev-python/lxml
+    >=dev-python/cffi-0.5
+    >=dev-python/cairocffi-0.3
+    >=media-gfx/cairosvg-0.4.1
     >=dev-python/cssselect-0.6
-    || (
-      ( >=x11-libs/pango-1.29.3[introspection] dev-python/pycairo >=dev-python/pygobject-3.0[cairo] )
-      ( dev-python/pygtk )
-    )"
+    =dev-python/tinycss-0.3
+    dev-python/pyphen
+    test? ( dev-python/pytest )"
