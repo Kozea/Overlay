@@ -22,6 +22,8 @@ IUSE=""
 
 RDEPEND="dev-python/flask
         dev-python/flask-uploads
+        dev-python/flask-dulwich
+        dev-python/docutils
         dev-python/flask-sqlalchemy
         dev-python/flask-wtf
         dev-python/docutils-html5-writer"
