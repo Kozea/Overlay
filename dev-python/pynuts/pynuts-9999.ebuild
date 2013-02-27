@@ -23,7 +23,6 @@ IUSE=""
 RDEPEND="dev-python/flask
         dev-python/flask-uploads
         dev-python/flask-sqlalchemy
-        dev-python/flask-csrf
         dev-python/flask-wtf
         dev-python/docutils-html5-writer"
 DEPEND="${RDEPEND}"
