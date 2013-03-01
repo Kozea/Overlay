@@ -42,16 +42,26 @@ DEPEND="${RDEPEND}
         dev-python/flup
         dev-python/docutils-html5-writer
         dev-python/pyquery
-        dev-python/sqlalchemy_fdw"
+        dev-python/sqlalchemy_fdw
+        dev-python/pyinotify
+        dev-ruby/sass"
 
 HYDRA_DIR="/var/lib/${PN}"
+THEMES_DIR=""
 
 src_install() {
         insinto "${HYDRA_DIR}"
+
+        rm -rf .git*
+        echo "Generating themes..."
+        ./${PN}/static/css/themes/generator.py --once --force
+        rm -rf .sass-cache
+
         rm -rf .git*
         doins -r . || die
         if use lighttpd; then
 	        fowners -R lighttpd:lighttpd "${HYDRA_DIR}" || die
+            fperms 750 "${HYDRA_DIR}" || die
         fi
         fperms +x "${HYDRA_DIR}/runserver.py" || die
         fperms +x "${HYDRA_DIR}/statuscheck.py" || die
