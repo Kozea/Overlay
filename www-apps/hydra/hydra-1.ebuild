@@ -75,5 +75,7 @@ src_install() {
 pkg_postinst() {
         einfo
         elog "${PN} is installed in ${HYDRA_DIR}"
+		elog "Don't forget to run sqitch:"
+		elog "cd ${HYDRA_DIR} && sqitch deploy --set hydra_is_testing=false --set hydra_folder=${HYDRA_DIR}/hydra"
         einfo
 }
