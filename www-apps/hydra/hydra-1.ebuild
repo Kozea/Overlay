@@ -11,6 +11,7 @@ inherit git-2
 DESCRIPTION="The hydra website generator"
 HOMEPAGE="http://kozea.org"
 EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
+EGIT_COMMIT="v${PV}"
 
 LICENSE="Proprietary"
 SLOT="0"
@@ -36,7 +37,7 @@ DEPEND="${RDEPEND}
         dev-python/pypet
         dev-python/pyinotify
         dev-python/flask-sqlalchemy
-        =dev-python/sqlalchemy-0.7*
+		=dev-python/sqlalchemy-0.7*
         dev-python/flask-weasyprint
         dev-python/pygal
         dev-python/pyyaml
