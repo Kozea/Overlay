@@ -8,8 +8,8 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils git-2
 
-DESCRIPTION="A CSS3 preprocessor"
-HOMEPAGE="http://csstyle.org"
+DESCRIPTION="A writer for docutils conforming to the HTML5 draft"
+HOMEPAGE="https://github.com/Kozea/docutils-html5-writer"
 EGIT_REPO_URI="git://github.com/Kozea/docutils-html5-writer.git"
 
 LICENSE="Public domain"
