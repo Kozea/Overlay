@@ -1,13 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/cssselect-0.7.1.ebuild,v 1.6 2012/11/14 19:31:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/cssselect-0.7.1-r1.ebuild,v 1.1 2013/02/15 18:39:10 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="parses CSS3 Selectors and translates them to XPath 1.0"
 HOMEPAGE="http://packages.python.org/cssselect/ http://pypi.python.org/pypi/cssselect"
@@ -15,33 +14,25 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc test"
 
-DEPEND="dev-python/setuptools
-	doc? ( dev-python/sphinx )
-	test? ( dev-python/lxml )"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	test? ( dev-python/lxml[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
-DOCS="AUTHORS CHANGES README.rst"
-
-src_compile() {
-	distutils_src_compile
+python_compile_all() {
 	if use doc ; then
-		"$(PYTHON -f)" setup.py build_sphinx || die
+		"${PYTHON}" setup.py build_sphinx || die
 	fi
 }
 
-src_test() {
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" ${PN}/tests.py -v
-	}
-	python_execute_function testing
+python_test() {
+	"${PYTHON}" ${PN}/tests.py -v || die "Tests fail with ${EPYTHON}"
 }
 
-src_install() {
-	distutils_src_install
-	if use doc ; then
-		dohtml -r docs/_build/html/
-	fi
+python_install_all() {
+	use doc && local HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
 }
