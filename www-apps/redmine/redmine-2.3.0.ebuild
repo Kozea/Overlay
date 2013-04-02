@@ -25,6 +25,7 @@ ruby_add_rdepend "
 	<dev-ruby/builder-3.1:3
 	imagemagick? ( >=dev-ruby/rmagick-2 )
 	fastcgi? ( dev-ruby/fcgi )
+	ldap? ( dev-ruby/ruby-net-ldap )
 	openid? ( >=dev-ruby/ruby-openid-2.1.4 )
 	passenger? ( www-apache/passenger )"
 
