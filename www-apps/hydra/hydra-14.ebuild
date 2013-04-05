@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
         dev-python/pypet
         dev-python/pyinotify
         dev-python/flask-sqlalchemy
-		=dev-python/sqlalchemy-0.7*
+        =dev-python/sqlalchemy-0.7*
         dev-python/flask-weasyprint
         dev-python/pygal
         dev-python/pyyaml
