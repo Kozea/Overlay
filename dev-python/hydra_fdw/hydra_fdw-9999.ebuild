@@ -10,7 +10,7 @@ inherit distutils git-2
 
 DESCRIPTION="A fdw for hydra."
 HOMEPAGE="http://kozea.org"
-EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/hydra_fdw"
+EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/hydrafdw"
 
 LICENSE="Proprietary"
 SLOT="0"
