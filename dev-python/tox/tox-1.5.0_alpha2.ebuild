@@ -12,6 +12,7 @@ inherit distutils eutils
 DESCRIPTION="virtualenv-based automation of test activities"
 HOMEPAGE="http://tox.testrun.org http://pypi.python.org/pypi/tox"
 SRC_URI="https://bitbucket.org/hpk42/tox/get/1b8bdf9.tar.gz"
+S="${WORKDIR}/hpk42-tox-1b8bdf9ab87e"
 
 LICENSE="BSD"
 SLOT="0"
