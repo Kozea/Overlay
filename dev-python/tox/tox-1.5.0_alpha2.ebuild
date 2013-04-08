@@ -28,10 +28,6 @@ DEPEND="dev-python/setuptools
 		doc? ( dev-python/sphinx )"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.4.2-rm_version_test.patch
-}
-
 src_compile() {
 	distutils_src_compile
 	use doc && emake -C doc html
