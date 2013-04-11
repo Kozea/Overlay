@@ -25,8 +25,8 @@ RDEPEND="
     x11-libs/pango
     x11-libs/cairo
     dev-python/lxml
-    >=dev-python/cffi-0.5
-    >=dev-python/cairocffi-0.3[raster?]
+    >=dev-python/cffi-0.6
+    >=dev-python/cairocffi-0.4[raster?]
     >=media-gfx/cairosvg-0.4.1
     >=dev-python/cssselect-0.6
     =dev-python/tinycss-0.3
