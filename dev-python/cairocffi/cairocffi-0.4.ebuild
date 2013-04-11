@@ -19,6 +19,6 @@ IUSE="raster"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-         dev-python/cffi
+         >=dev-python/cffi-0.6
          x11-libs/cairo
          raster? ( x11-libs/gdk-pixbuf )"
