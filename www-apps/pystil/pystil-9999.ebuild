@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
         dev-python/log-colorizer
         dev-python/pygeoip
         dev-python/pika
-        dev-python/flask-sqlalchemy
+        <=dev-python/flask-sqlalchemy-0.8
         dev-python/flask"
 
 PYSTIL_DIR="/var/lib/${PN}"
