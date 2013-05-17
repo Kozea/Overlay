@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI="5"
 
-inherit distutils git-2
+PYTHON_COMPAT=( python3_3 )
+
+inherit distutils-r1 git-2
 
 DESCRIPTION="An elegant site web traffic analyzer"
 HOMEPAGE="http://pystil.org"
@@ -19,36 +18,7 @@ IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-        net-misc/rabbitmq-server
-        dev-python/python-ldap
-        dev-python/gevent
-        dev-python/log-colorizer
-        dev-python/pygeoip
-        dev-python/pika
-        <=dev-python/flask-sqlalchemy-0.8
-        dev-python/flask"
-
-PYSTIL_DIR="/var/lib/${PN}"
-
-src_install() {
-        insinto "${PYSTIL_DIR}"
-        rm -rf .git
-        doins -r . || die
-        if use lighttpd; then
-	        fowners -R lighttpd:lighttpd . || die
-        fi
-        fperms +x "${PYSTIL_DIR}/pystil_prod.py" || die
-        fperms +x "${PYSTIL_DIR}/bin/datafeed.py" || die
-        fperms +x "${PYSTIL_DIR}/migrate.py" || die
-        fperms +x "${PYSTIL_DIR}/bin/webapp.py" || die
-}
-
-pkg_postinst() {
-        einfo
-        elog "${PN} is installed in ${PYSTIL_DIR}"
-        einfo
-}
-
-pkg_postrm() {
-    return
-}
+		www-servers/tornado
+		dev-python/sqlalchemy
+		dev-python/psycopg
+		dev-python/pygal"
