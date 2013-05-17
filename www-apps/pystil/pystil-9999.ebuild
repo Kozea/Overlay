@@ -4,7 +4,7 @@
 EAPI="5"
 
 PYTHON_COMPAT=( python3_3 )
-
+PYTHON_DEPEND="3"
 inherit distutils-r1 git-2
 
 DESCRIPTION="An elegant site web traffic analyzer"
@@ -14,7 +14,6 @@ EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lighttpd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
