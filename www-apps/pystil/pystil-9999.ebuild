@@ -20,4 +20,5 @@ DEPEND="${RDEPEND}
 		www-servers/tornado
 		dev-python/sqlalchemy
 		dev-python/psycopg
-		dev-python/pygal"
+		dev-python/pygal
+		dev-python/Momoko"
