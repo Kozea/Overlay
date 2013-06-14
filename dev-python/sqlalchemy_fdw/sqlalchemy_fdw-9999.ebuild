@@ -16,5 +16,5 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="dev-python/sqlalchemy[postgres]"
+DEPEND="dev-python/sqlalchemy"
 RDEPEND="${DEPEND}"
