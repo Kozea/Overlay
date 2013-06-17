@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
         dev-python/multicorn[lxml,docutils]
         dev-db/multicorn
         dev-python/imapclient
-        dev-python/flask
+        >=dev-python/flask-0.10
         dev-python/html5lib
         dev-python/docutils-html5-writer
         dev-python/python-ghostscript
