@@ -10,6 +10,7 @@ inherit distutils-r1 git-2
 DESCRIPTION="Virtual Python Environment builder"
 HOMEPAGE="http://www.virtualenv.org/ http://pypi.python.org/pypi/virtualenv"
 EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
+EGIT_BRANCH="develop"
 
 LICENSE="MIT"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
