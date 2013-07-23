@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222-r1.ebuild,v 1.6 2011/10/12 15:19:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20120731.ebuild,v 1.1 2013/07/19 18:39:00 nirbheek Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -13,7 +13,7 @@
 # users. http://fontforge.sourceforge.net/faq.html#libraries. To see what
 # libraries fontforge thinks with use $ fontforge --library-status
 
-EAPI=3
+EAPI="4"
 
 PYTHON_DEPEND="python? 2"
 inherit eutils fdo-mime python autotools
@@ -24,12 +24,12 @@ DESCRIPTION="postscript font editor and converter"
 HOMEPAGE="http://fontforge.sourceforge.net/"
 SRC_URI="mirror://sourceforge/fontforge/${PN}_full-${PV}.tar.bz2
 	doc? ( mirror://sourceforge/fontforge/fontforge_htdocs-${HTDOCSV}.tar.bz2 )
-	cjk? ( mirror://gentoo/cidmaps-${CIDMAPV}.tgz )"	# http://fontforge.sf.net/cidmaps.tgz
+	cjk? ( mirror://gentoo/cidmaps-${CIDMAPV}.tgz )" # http://fontforge.org/cidmaps.tgz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="cjk cairo doc gif debug jpeg nls pasteafter png +python tiff tilepath truetype truetype-debugger pango type3 svg unicode +X"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="cjk cairo doc gif debug jpeg nls pasteafter png +python tiff tilepath truetype truetype-debugger pango type3 svg unicode X"
 
 RDEPEND="gif? ( >=media-libs/giflib-4.1.0-r1 )
 	jpeg? ( virtual/jpeg )
@@ -41,9 +41,11 @@ RDEPEND="gif? ( >=media-libs/giflib-4.1.0-r1 )
 	unicode? ( >=media-libs/libuninameslist-030713 )
 	cairo? ( >=x11-libs/cairo-1.6.4[X] )
 	pango? ( >=x11-libs/pango-1.20.3 )
-	X? (
-		x11-libs/libXi
-		x11-proto/inputproto )
+    X? (
+    	x11-libs/libXi
+    	x11-libs/libX11
+    	x11-proto/inputproto
+    )
 	!media-gfx/pfaedit"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -66,8 +68,12 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-lxkbui.patch"
-	epatch "${FILESDIR}/${P}-libz.so-linkage.patch"
+	# Version is #define-d as a string, even though the field is an int
+	sed  -i -e '/LibFF_VersionDate/s/"//g' fontforge/libffstamp.h || die
+
+	epatch "${FILESDIR}/${PN}-20110222-lxkbui.patch"
+	epatch "${FILESDIR}/${PN}-20110222-libz.so-linkage.patch"
+	epatch "${FILESDIR}/${PN}-20110222-remove-useless-extern.patch"
 	if use doc; then
 		chmod -x "${WORKDIR}"/html/*.html || die
 	fi
@@ -103,9 +109,11 @@ src_install() {
 		doins "${WORKDIR}"/*.cidmap || die
 	fi
 
-	doicon Packaging/fontforge.png || die
-	insinto /usr/share/applications
-	doins Packaging/fontforge.desktop || die
+	for i in 16x16 22x22 24x24 32x32 48x48 scalable; do
+		doicon -s "$i" "Packaging/icons/${i}/apps/"* || die
+	done
+
+	domenu Packaging/fontforge.desktop || die
 	insinto /usr/share/mime/application
 	doins Packaging/fontforge.xml || die
 
