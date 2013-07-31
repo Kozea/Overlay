@@ -9,7 +9,7 @@ MY_PN="Babel"
 MY_P="${MY_PN}-${PV}"
 
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="A collection of tools for internationalizing Python applications."
 HOMEPAGE="http://babel.pocoo.org/"
