@@ -3,8 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.2.ebuild,v 1.5 2012/03/09 10:32:19 phajdan.jr Exp $
 
 EAPI="5"
-SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_6,2_7,3_3} )
 
 MY_PN="Babel"
 MY_P="${MY_PN}-${PV}"
