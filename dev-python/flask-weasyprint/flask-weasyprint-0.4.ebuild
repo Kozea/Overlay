@@ -21,7 +21,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/flask
+RDEPEND=">=dev-python/flask-0.10
+         >=dev-python/werkzeug-0.9
          >=media-gfx/weasyprint-0.12"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
