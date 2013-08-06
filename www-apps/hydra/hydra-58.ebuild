@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
         dev-python/python-ghostscript
         =dev-python/wtforms-1.0*
         media-gfx/cairosvg
-        dev-python/imaging
+        virtual/python-imaging
         dev-python/pytz
         =dev-python/icalendar-3.2*
         dev-python/soappy
