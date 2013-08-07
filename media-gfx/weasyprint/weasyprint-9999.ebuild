@@ -4,12 +4,12 @@
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit distutils git
+inherit distutils-r1 git
 
 MY_PN="WeasyPrint"
 
 DESCRIPTION="WeasyPrint converts HTML/CSS documents to PDF."
-HOMEPAGE="https://${PN}.org"
+HOMEPAGE="http://${PN}.org"
 EGIT_REPO_URI="git://github.com/Kozea/${MY_PN}.git"
 
 LICENSE="BSD"
