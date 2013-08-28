@@ -8,3 +8,6 @@
 =www-apps/hydra-9999
 =dev-python/flask-sqlalchemy-9999
 =dev-python/virtualenv-9999
+=dev-db/postgres-base-9.3*
+=dev-db/postgres-server-9.3*
+=dev-python/icalendar-9999
