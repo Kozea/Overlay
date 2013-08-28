@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
+    sed -e "s/install: python_code//" -i Makefile
     emake || die
 }
 
