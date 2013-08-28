@@ -24,9 +24,9 @@ S="${WORKDIR}/${MY_P}"
 
 src_compile() {
     sed -e "s/install: python_code//" -i Makefile
-    emake || die
+    emake PYTHON_OVERRIDE=/usr/bin/python3.3 || die
 }
 
 src_install() {
-    emake NO_PYTHON="1" DESTDIR="${D}" USE_PGXS=1 install || die
+    emake DESTDIR="${D}" USE_PGXS=1 install || die
 }
