@@ -19,4 +19,5 @@ RESTRICT="test"
 
 RDEPEND=""
 DEPEND="dev-python/setuptools
+    dev-python/pytz
     dev-python/python-dateutil"
