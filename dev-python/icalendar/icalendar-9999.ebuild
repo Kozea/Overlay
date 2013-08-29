@@ -4,7 +4,7 @@
 EAPI=5
 PYTHON_COMPAT=( python3_3 )
 
-inherit distutils git-2
+inherit distutils-r1 git-2
 
 DESCRIPTION="Package used for parsing and generating iCalendar files (RFC 2445)."
 HOMEPAGE="http://github.com/collective/icalendar"
