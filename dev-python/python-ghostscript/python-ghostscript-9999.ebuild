@@ -8,7 +8,6 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="Package used for ghostscript."
 EGIT_REPO_URI="git://github.com/Kozea/ghostscript.git"
-EGIT_BRANCH="python3"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
