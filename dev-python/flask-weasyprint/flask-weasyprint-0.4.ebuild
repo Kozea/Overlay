@@ -5,7 +5,7 @@
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_3} )
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="Flask-WeasyPrint"
 MY_P="${MY_PN}-${PV}"
