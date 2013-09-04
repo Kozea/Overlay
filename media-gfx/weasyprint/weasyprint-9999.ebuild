@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit distutils-r1 git
+inherit distutils-r1 git-2
 
 MY_PN="WeasyPrint"
 
