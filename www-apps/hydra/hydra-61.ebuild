@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
         media-gfx/cairosvg
         virtual/python-imaging
         dev-python/pytz
-        =dev-python/icalendar-3.2*
+        dev-python/icalendar
         dev-python/pypet
         dev-python/pyinotify
         >=dev-python/flask-sqlalchemy-0.17
