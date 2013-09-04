@@ -61,11 +61,11 @@ src_install() {
         doins -r . || die
         if use lighttpd; then
 	        fowners -R lighttpd:lighttpd "${HYDRA_DIR}" || die
-	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/static || die
-	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/data || die
+	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/hydra/static || die
+	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/hydra/data || die
             fperms 750 "${HYDRA_DIR}" || die
-            fperms -R g+rws "${HYDRA_DIR}"/static || die
-            fperms -R g+rws "${HYDRA_DIR}"/data || die
+            fperms -R g+rws "${HYDRA_DIR}"/hydra/static || die
+            fperms -R g+rws "${HYDRA_DIR}"/hydra/data || die
         fi
         fperms +x "${HYDRA_DIR}/runserver.py" || die
         fperms +x "${HYDRA_DIR}/statuscheck.py" || die
