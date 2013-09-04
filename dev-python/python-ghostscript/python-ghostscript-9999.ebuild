@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_3 )
 inherit distutils-r1 git-2
 
 DESCRIPTION="Package used for ghostscript."
-EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
+EGIT_REPO_URI="git://github.com/Kozea/ghostscript.git"
 EGIT_BRANCH="python3"
 
 LICENSE="LGPL-2.1"
