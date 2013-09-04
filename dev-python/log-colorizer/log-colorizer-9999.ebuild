@@ -12,7 +12,6 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Defines a python logging formatter and a default handler for nice shell output"
 HOMEPAGE="https://github.com/Kozea/${MY_PN}"
 EGIT_REPO_URI="git://github.com/Kozea/${MY_PN}.git"
-EGIT_BRANCH="python3"
 
 LICENSE="BSD"
 SLOT="0"
