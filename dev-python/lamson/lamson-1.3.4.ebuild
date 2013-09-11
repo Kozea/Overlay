@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/chardet
-         dev-python/jinja2
+         dev-python/jinja
          dev-python/mock
          dev-python/python-daemon
          dev-python/python-modargs"
