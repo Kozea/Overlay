@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND=""
 DEPEND=""
 
-IMG_DIR="/var/lib/{$PN}"
+IMG_DIR="/var/lib/${PN}"
 
 src_install() {
         insinto "${IMG_DIR}"
