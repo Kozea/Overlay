@@ -8,6 +8,7 @@ inherit git-2
 DESCRIPTION="Database of medicine images"
 HOMEPAGE="http://kozea.org"
 EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
+FEATURES="-sandbox"
 
 LICENSE="Proprietary"
 SLOT="0"
