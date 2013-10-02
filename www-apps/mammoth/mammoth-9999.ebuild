@@ -26,4 +26,5 @@ src_install() {
         rm -rf .git*
         doins -r . || die
         fowners -R postgres:postgres "${IMG_DIR}" || die
+        fperms -R go-rwx "${IMG_DIR}" || die
 }
