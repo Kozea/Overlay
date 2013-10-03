@@ -66,7 +66,7 @@ src_install() {
             fperms -R g+rws "${HYDRA_DIR}"/hydra/data || die
         fi
         dosym /var/lib/mammoth/cip7 ${HYDRA_DIR}/hydra/static/cip
-        dosym /var/lib/hydra-themes ${HYDRA_DIR}/hydra/static/css
+        dosym /var/lib/hydra-themes/css ${HYDRA_DIR}/hydra/static/css
         fperms +x "${HYDRA_DIR}/runserver.py" || die
         fperms +x "${HYDRA_DIR}/statuscheck.py" || die
         fperms +x "${HYDRA_DIR}/hydra-groupinfo.fcgi" || die
