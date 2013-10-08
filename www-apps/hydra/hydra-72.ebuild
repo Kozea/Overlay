@@ -56,6 +56,7 @@ src_install() {
 
         rm -rf .git*
         rm -rf ./${PN}/static/css/
+        rm -rf ./${PN}/static/sass/
         doins -r . || die
         if use lighttpd; then
 	        fowners -R lighttpd:lighttpd "${HYDRA_DIR}" || die
