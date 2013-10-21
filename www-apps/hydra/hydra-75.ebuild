@@ -9,7 +9,7 @@ inherit git-2
 DESCRIPTION="The hydra website generator"
 HOMEPAGE="http://kozea.org"
 EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
-EGIT_COMMIT="v${PV}"
+EGIT_BRANCH="v${PV}"
 
 LICENSE="Proprietary"
 SLOT="0"
