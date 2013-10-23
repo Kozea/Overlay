@@ -60,11 +60,9 @@ src_install() {
         doins -r . || die
         if use lighttpd; then
 	        fowners -R lighttpd:lighttpd "${HYDRA_DIR}" || die
-	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/hydra/static || die
-	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/hydra/data || die
+	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/hydra/static "${HYDRA_DIR}"/hydra/data || die
             fperms 750 "${HYDRA_DIR}" || die
-            fperms -R g+rws "${HYDRA_DIR}"/hydra/static || die
-            fperms -R g+rws "${HYDRA_DIR}"/hydra/data || die
+            fperms -R g+rws "${HYDRA_DIR}"/hydra/static "${HYDRA_DIR}"/hydra/data || die
         fi
         dosym /var/lib/mammoth/cip7 ${HYDRA_DIR}/hydra/static/cip
         dosym /var/lib/hydra-themes/css ${HYDRA_DIR}/hydra/static/css
