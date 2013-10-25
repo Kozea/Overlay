@@ -9,7 +9,7 @@ inherit git-2
 DESCRIPTION="The hydra website generator"
 HOMEPAGE="http://kozea.org"
 EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
-EGIT_COMMIT="v${PV}"
+EGIT_BRANCH="v${PV}"
 
 LICENSE="Proprietary"
 SLOT="0"
@@ -60,11 +60,9 @@ src_install() {
         doins -r . || die
         if use lighttpd; then
 	        fowners -R lighttpd:lighttpd "${HYDRA_DIR}" || die
-	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/hydra/static || die
-	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/hydra/data || die
+	        fowners -R lighttpd:postgres "${HYDRA_DIR}"/hydra/static "${HYDRA_DIR}"/hydra/data || die
             fperms 750 "${HYDRA_DIR}" || die
-            fperms -R g+rws "${HYDRA_DIR}"/hydra/static || die
-            fperms -R g+rws "${HYDRA_DIR}"/hydra/data || die
+            fperms -R g+rws "${HYDRA_DIR}"/hydra/static "${HYDRA_DIR}"/hydra/data || die
         fi
         dosym /var/lib/mammoth/cip7 ${HYDRA_DIR}/hydra/static/cip
         dosym /var/lib/hydra-themes/css ${HYDRA_DIR}/hydra/static/css
