@@ -8,7 +8,7 @@ inherit git-2
 DESCRIPTION="The hydra themes"
 HOMEPAGE="http://kozea.org"
 EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/hydra"
-EGIT_COMMIT="v${PV}"
+EGIT_BRANCH="v${PV}"
 
 LICENSE="Proprietary"
 SLOT="0"
