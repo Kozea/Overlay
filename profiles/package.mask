@@ -11,3 +11,4 @@
 =dev-db/postgres-base-9.3*
 =dev-db/postgres-server-9.3*
 =dev-python/icalendar-9999
+=dev-python/docutils-html5-writer-9999
