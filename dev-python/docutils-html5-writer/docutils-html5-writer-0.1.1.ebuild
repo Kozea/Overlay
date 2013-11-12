@@ -20,5 +20,3 @@ IUSE=""
 
 RDEPEND="dev-python/html5lib"
 DEPEND=""
-
-S="${WORKDIR}/docutils_html5"
