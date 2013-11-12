@@ -20,3 +20,5 @@ IUSE=""
 
 RDEPEND="dev-python/html5lib"
 DEPEND=""
+
+S="${WORKDIR}/${MY_P}"
