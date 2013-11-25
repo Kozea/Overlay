@@ -36,5 +36,6 @@ python_test() {
 
 python_install_all() {
 	use doc && local HTML_DOCS=( docs/build/html/. )
+	sed -i -e "s:'bin/dulwich', 'bin/dul-daemon', 'bin/dul-web'::" setup.py || die
 	distutils-r1_python_install_all
 }
