@@ -3,14 +3,14 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.9.3.ebuild,v 1.1 2013/10/18 22:56:00 radhermit Exp $
 
 EAPI=5
-SLOT=3
-PYTHON_COMPAT=( python3_3 )
+SLOT=2
+PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
 
-inherit distutils-r1 git-2
+inherit distutils-r1
 
 DESCRIPTION="Dulwich is a pure-Python implementation of the Git file formats and protocols."
 HOMEPAGE="http://samba.org/~jelmer/dulwich/ http://pypi.python.org/pypi/dulwich"
-EGIT_REPO_URI="git://github.com/eberle1080/dulwich-py3k.git"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
