@@ -24,7 +24,7 @@ IUSE="lxml docutils imap"
 
 DEPEND=""
 RDEPEND="dev-python/log-colorizer
-        dev-python/sqlalchemy[postgres]
+        dev-python/sqlalchemy
         lxml? ( dev-python/lxml )
         imap? ( dev-python/imapclient )
         docutils? ( dev-python/docutils )"
