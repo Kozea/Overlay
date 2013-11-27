@@ -15,5 +15,5 @@ KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE=""
 RESTRICT="test"
 
-RDEPEND=""
-DEPEND=""
+RDEPEND="app-text/ghostscript-gpl"
+DEPEND="${RDEPEND}"
