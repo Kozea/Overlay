@@ -25,7 +25,6 @@ DEPEND="dev-python/setuptools
 RDEPEND="${DEPEND}"
 
 src_compile() {
-    epatch "${FILESDIR}"/no-distribute.patch
 	distutils_src_compile
 	use doc && emake -C doc html
 }
