@@ -25,7 +25,7 @@ DEPEND="dev-python/setuptools
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	distutils_src_compile
+	distutils-r1_src_compile
 	use doc && emake -C doc html
 }
 
@@ -40,6 +40,6 @@ src_test() {
 }
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 	use doc && dohtml -r doc/_build/html/
 }
