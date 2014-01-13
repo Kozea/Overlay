@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc test"
 
 # When bumping, please check setup.py for the proper py version
-PY_VER="1.4.17"
+PY_VER="1.4.19"
 RDEPEND=">=dev-python/py-${PY_VER}[${PYTHON_USEDEP}]"
 
 #pexpect dep based on https://bitbucket.org/hpk42/pytest/issue/386/tests-fail-with-pexpect-30
