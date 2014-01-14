@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~spar
 IUSE="ssl"
 
 RDEPEND="
-    dev-libs/libevent
+    dev-libs/libevent[ssl?]
     ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}"
 
