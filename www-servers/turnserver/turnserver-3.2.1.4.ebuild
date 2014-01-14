@@ -11,7 +11,7 @@ SRC_URI="https://rfc5766-turn-server.googlecode.com/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="ssl redis"
+IUSE="ssl"
 
 RDEPEND="
     dev-libs/libevent
