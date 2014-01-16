@@ -16,6 +16,6 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
     www-servers/tornado
-    dev-python/log_colorizer
+    dev-python/log-colorizer
     dev-python/jedi
     dev-python/filemagic"
