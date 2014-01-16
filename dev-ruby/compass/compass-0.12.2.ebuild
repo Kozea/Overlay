@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.markdown"
