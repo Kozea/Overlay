@@ -25,7 +25,7 @@ RDEPEND="dev-python/flask
         dev-python/docutils
         dev-python/flask-uploads
         dev-python/flask-weasyprint
-        dev-python/flask-sqlalchemy
+        <dev-python/flask-sqlalchemy-0.9
         >=dev-python/flask-wtf-0.9
         dev-python/docutils-html5-writer"
 DEPEND="${RDEPEND}"
