@@ -29,8 +29,8 @@ src_install() {
         if use lighttpd; then
 	        fowners -R lighttpd:lighttpd "${CABARET_DIR}" || die
         fi
-        fperms +x "${CABARET_DIR}/cabaret.fcgi" || die
-        fperms +x "${CABARET_DIR}/cabaret.py" || die
+        fperms +x "${CABARET_DIR}/demo/cabaret.fcgi" || die
+        fperms +x "${CABARET_DIR}/demo/cabaret.py" || die
 }
 
 pkg_postinst() {
