@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Cabaret for Pygal"
 HOMEPAGE="http://pygal.org"
-EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/pygal"
+EGIT_REPO_URI="git://github.com/Kozea/pygal.git"
 
 LICENSE="LGPL"
 SLOT="0"
