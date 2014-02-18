@@ -19,6 +19,7 @@ RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/flipflop
         dev-python/flask
+        dev-python/log-colorizer
         dev-python/pygal"
 
 CABARET_DIR="/var/lib/${PN}"
