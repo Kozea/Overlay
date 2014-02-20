@@ -3,7 +3,6 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/flup/flup-1.0.2-r1.ebuild,v 1.6 2013/10/22 11:50:20 grobian Exp $
 
 EAPI=5
-
 PYTHON_COMPAT=( python3_3 )
 
 inherit distutils-r1 git-2

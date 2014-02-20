@@ -5,6 +5,7 @@
 =dev-python/tinycss-9999
 =dev-python/pynuts-9999
 =dev-python/pika-9999
+=dev-python/flipflop-9999
 =www-apps/hydra-9999
 =dev-python/flask-sqlalchemy-9999
 =dev-python/virtualenv-9999
