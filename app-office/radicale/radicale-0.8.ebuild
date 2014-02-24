@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="fastcgi ldap sql ssl"
 
 RDEPEND="
-	fastcgi? ( dev-python/flup[${PYTHON_USEDEP}] )
+	fastcgi? ( dev-python/flup dev-python/flipflop )
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
 	sql? ( dev-python/sqlalchemy[${PYTHON_USEDEP}] )"
 
