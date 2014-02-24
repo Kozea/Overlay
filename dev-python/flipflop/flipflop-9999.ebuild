@@ -12,7 +12,7 @@ HOMEPAGE="git://github.com/Kozea/${PN}.git"
 EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
 
 LICENSE="BSD"
-SLOT="3"
+SLOT="0"
 KEYWORDS="amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
