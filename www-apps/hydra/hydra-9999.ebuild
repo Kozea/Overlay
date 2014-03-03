@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
         dev-python/flask-weasyprint
         dev-python/pygal
         dev-python/pyyaml
-        dev-python/flup
+        dev-python/flipflop
         dev-python/docutils-html5-writer
         dev-python/pyquery
         dev-python/sqlalchemy_fdw
