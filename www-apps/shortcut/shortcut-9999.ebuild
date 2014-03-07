@@ -8,7 +8,7 @@ PYTHON_DEPEND="3"
 inherit distutils-r1 git-2
 
 DESCRIPTION="WebRTC server"
-HOMEPAGE="http://webrtc.keleos.fr/"
+HOMEPAGE="https://webrtc.keleos.fr/"
 EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
 
 LICENSE="BSD"
