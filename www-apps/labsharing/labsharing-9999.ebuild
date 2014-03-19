@@ -23,10 +23,12 @@ DEPEND="${RDEPEND}
         media-gfx/cairosvg
         dev-python/cssutils
         dev-python/flask-weasyprint
+        =dev-python/flask-uploads-0.1.3*
         dev-python/pygal
-        dev-python/pynuts
+        =dev-python/pynuts-0.4.4*
         dev-python/flup
-        dev-python/dulwich"
+        dev-python/psycopg
+        =dev-python/dulwich-0.9.4*"
 
 LABSHARING_DIR="/var/lib/${PN}"
 
