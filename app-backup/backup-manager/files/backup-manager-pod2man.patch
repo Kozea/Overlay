@@ -1,14 +1,11 @@
-*** backup-manager-purge.old    2014-03-26 13:36:53.157436444 +0100
---- backup-manager-purge    2014-03-26 13:36:40.423335437 +0100
-*************** than I<ttl> days will be outdated.
-*** 53,60 ****
-  
-  =head1 OPTIONAL ARGS
-  
-- =over 4
-- 
-  =item B<--files-from=>file
-  
-  A file containing a list of archives to parse, one archive per line.
---- 53,58 ----
-
+--- backup-manager-purge.old    2014-03-26 14:29:23.637303862 +0100
++++ backup-manager-purge    2014-03-26 13:36:53.157436444 +0100
+@@ -53,6 +53,8 @@
+ 
+ =head1 OPTIONAL ARGS
+ 
++=over 4
++
+ =item B<--files-from=>file
+ 
+ A file containing a list of archives to parse, one archive per line.
