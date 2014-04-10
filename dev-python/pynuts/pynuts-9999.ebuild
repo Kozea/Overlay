@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/flask
-        dev-python/dulwich
+        dev-python/dulwich[python_targets_python3_3]
         dev-python/docutils
         dev-python/flask-uploads
         dev-python/flask-weasyprint
