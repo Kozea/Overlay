@@ -126,13 +126,17 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	use doc && emake DESTDIR="${D}" comments-install
+	if use doc; then
+        emake DESTDIR="${D}" comments-install
+	fi
 	emake -C topology DESTDIR="${D}" install
 	dobin ./utils/postgis_restore.pl
 
 	dodoc CREDITS TODO loader/README.* doc/*txt
 
-	use doc && dohtml -r doc/html/*
+	if use doc; then
+    	dohtml -r doc/html/*
+	fi
 
 	docinto topology
 	dodoc topology/{TODO,README}
