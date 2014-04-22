@@ -13,8 +13,7 @@ EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="scipy"
+IUSE=""
 
-RDEPEND="dev-python/lxml
-         scipy? ( sci-libs/scipy )"
+RDEPEND="dev-python/lxml"
 DEPEND="${RDEPEND}"
