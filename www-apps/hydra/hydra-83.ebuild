@@ -46,6 +46,7 @@ DEPEND="${RDEPEND}
         www-apps/hydra-themes
         dev-python/docutils-html5-writer
         dev-python/pyquery
+        dev-python/qrcode
         dev-python/sqlalchemy_fdw
         dev-python/pyinotify"
 
