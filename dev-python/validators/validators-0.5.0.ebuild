@@ -23,3 +23,9 @@ RDEPEND="
     >=dev-python/six-1.4.0
     >=dev-python/decorator-3.4.0
 "
+
+src_install() {
+    rm -rf test
+    distutils-r1_src_install
+}
+

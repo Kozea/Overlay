@@ -29,3 +29,7 @@ RDEPEND="
 
 S="${WORKDIR}/${MY_P}"
 
+src_install() {
+    rm -rf test
+    distutils-r1_src_install
+}
