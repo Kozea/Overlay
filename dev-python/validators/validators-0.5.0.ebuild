@@ -24,8 +24,7 @@ RDEPEND="
     >=dev-python/decorator-3.4.0
 "
 
-src_install() {
+python_install_all() {
     rm -rf tests
-    distutils-r1_src_install
 }
 
