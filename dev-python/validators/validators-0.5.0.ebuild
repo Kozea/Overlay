@@ -24,8 +24,8 @@ RDEPEND="
     >=dev-python/decorator-3.4.0
 "
 
-src_compile() {
-    distutils-r1_src_compile
+python_prepare_all() {
     rm -rf tests
+    distutils-r1_python_prepare_all
 }
 
