@@ -29,7 +29,7 @@ RDEPEND="
 
 S="${WORKDIR}/${MY_P}"
 
-src_install() {
+python_prepare_all() {
     rm -rf tests
-    distutils-r1_src_install
+    distutils-r1_python_prepare_all
 }
