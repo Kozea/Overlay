@@ -25,7 +25,7 @@ DEPEND="
 RDEPEND="
     >=dev-python/pyparsing-2.0.1
     >=dev-python/sqlalchemy-0.7.8
-    >=dev-python/pycopg-2.4.6
+    >=dev-python/psycopg-2.4.6
     >=dev-python/sqlalchemy-utils-0.16.24
     >=dev-python/validators-0.3.0
 "
