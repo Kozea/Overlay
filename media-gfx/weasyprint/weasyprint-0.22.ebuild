@@ -29,7 +29,7 @@ RDEPEND="
     >=media-gfx/cairosvg-0.4.1
     >=dev-python/cssselect-0.6
     =dev-python/tinycss-0.3
-    dev-python/pyphen
+    >=dev-python/pyphen-0.8
     test? ( dev-python/pytest )"
 
 S="${WORKDIR}/${MY_P}"
