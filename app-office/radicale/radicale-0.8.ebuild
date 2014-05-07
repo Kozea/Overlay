@@ -6,7 +6,7 @@ EAPI=5
 
 # radicale also supports python3_{2,3}
 # but python-ldap and flup are blocking here
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 PYTHON_REQ_USE="ssl?"
 
 inherit distutils-r1 user

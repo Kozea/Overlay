@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.9.3.ebuild,v 1.1 2013/10/18 22:56:00 radhermit Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python3_{3,4} )
 
 inherit distutils-r1 git-2
 

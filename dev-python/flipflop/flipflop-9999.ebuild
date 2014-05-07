@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/flup/flup-1.0.2-r1.ebuild,v 1.6 2013/10/22 11:50:20 grobian Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python3_{3,4} )
 
 inherit distutils-r1 git-2
 
@@ -13,7 +13,7 @@ EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND=""

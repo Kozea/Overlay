@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="3"
-SUPPORT_PYTHON_ABIS="1"
+EAPI="5"
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 
-inherit distutils
+inherit distutils-r1 git-2
 
 DESCRIPTION="Pure Python GeoIP API"
 HOMEPAGE="http://code.google.com/p/pygeoip/"

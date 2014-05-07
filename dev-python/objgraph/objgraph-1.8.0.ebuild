@@ -3,10 +3,9 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.2.ebuild,v 1.5 2012/03/09 10:32:19 phajdan.jr Exp $
 
 EAPI="5"
-SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy2_0 )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Draws Python object reference graphs with graphviz"
 HOMEPAGE="http://mg.pov.lt/objgraph/"

@@ -2,9 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
+PYTHON_COMPAT=( python3_{3,4} )
 
-PYTHON_COMPAT=( python3_3 )
-PYTHON_DEPEND="3"
 inherit distutils-r1 git-2
 
 DESCRIPTION="An elegant site web traffic analyzer"
@@ -21,4 +20,4 @@ DEPEND="${RDEPEND}
 		dev-python/sqlalchemy
 		dev-python/psycopg
 		dev-python/pygal
-		dev-python/Momoko"
+		dev-python/momoko"
