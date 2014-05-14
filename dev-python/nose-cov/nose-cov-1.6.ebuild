@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/tox/tox-1.3.ebuild,v 1.2 2012/02/15 11:32:00 djc Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy )
 
 inherit distutils-r1
 

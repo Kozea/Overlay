@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
-PYTHON_COMPAT=( python{3_3,3_4} pypy2_0 )
+PYTHON_COMPAT=( python{3_3,3_4} pypy )
 
 EGIT_BRANCH="stable-fork-python3"
 inherit distutils-r1 git-2

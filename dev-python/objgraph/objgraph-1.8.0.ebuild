@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.2.ebuild,v 1.5 2012/03/09 10:32:19 phajdan.jr Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy )
 
 inherit distutils-r1
 
