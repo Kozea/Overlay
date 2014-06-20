@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Hadōkey website"
 HOMEPAGE="http://hadokey.kozea.fr"
-EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
+EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/hadōkey"
 
 LICENSE="Proprietary"
 SLOT="0"
