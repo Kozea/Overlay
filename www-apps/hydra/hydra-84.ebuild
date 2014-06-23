@@ -43,7 +43,6 @@ DEPEND="${RDEPEND}
         dev-python/pyyaml
         dev-python/flipflop
         www-apps/mammoth
-        www-apps/hydra-themes
         dev-python/docutils-html5-writer
         dev-python/pyquery
         dev-python/qrcode
