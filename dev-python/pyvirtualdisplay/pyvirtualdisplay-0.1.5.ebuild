@@ -21,3 +21,11 @@ RDEPEND="dev-python/easyprocess"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+python_compile() {
+        distutils-r1_python_compile
+        if $(python_is_python3); then
+                2to3 --no-diffs -nw ${PN} || die
+        fi
+}
+
