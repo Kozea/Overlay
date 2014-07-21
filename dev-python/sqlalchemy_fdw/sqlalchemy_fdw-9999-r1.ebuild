@@ -9,7 +9,6 @@ inherit distutils-r1 git-2
 DESCRIPTION="A postgresql dialect based on psycopg2 adding support for Foreign Data Wrappers."
 HOMEPAGE="http://www.multicorn.org"
 EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
-EGIT_BRANCH="python3"
 
 LICENSE="BSD"
 SLOT="0"
