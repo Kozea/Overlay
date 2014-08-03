@@ -2,33 +2,28 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python{3_3,3_4} )
 
 inherit git-2
 
-DESCRIPTION="The Site'n'co website generator"
-HOMEPAGE="http://kozea.org"
-EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
+DESCRIPTION="Simple websites for simple projects."
+HOMEPAGE="https://github.com/Kozea/sitenco"
+EGIT_REPO_URI="https://github.com/Kozea/sitenco"
 
-LICENSE="AGPL"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lighttpd"
+IUSE="git lighttpd"
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-        dev-python/brigit
+RDEPEND="
+        git? ( dev-python/brigit )
+        lighttpd? ( dev-python/flipflop )
         dev-python/flask
-        dev-python/pygments
         dev-python/pyyaml
         dev-python/docutils-html5-writer
-        dev-python/flipflop
         dev-python/sphinx
-
-        media-gfx/fontforge
-
-        dev-python/lxml
         dev-python/pygal"
+DEPEND="${RDEPEND}"
 
 SITENCO_DIR="/var/lib/${PN}"
 
