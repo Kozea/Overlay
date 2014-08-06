@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+raster +svg test"
+IUSE="test"
 
 DEPEND=""
 RDEPEND="
@@ -25,7 +25,7 @@ RDEPEND="
     x11-libs/cairo
     dev-python/lxml
     >=dev-python/cffi-0.6
-    >=dev-python/cairocffi-0.4[raster?]
+    >=dev-python/cairocffi-0.4
     >=media-gfx/cairosvg-0.4.1
     >=dev-python/cssselect-0.6
     =dev-python/tinycss-0.3
