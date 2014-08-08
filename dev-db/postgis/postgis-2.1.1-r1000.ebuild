@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.1.ebuild,v 1.1 2013/11/11 07:23:59 patrick Exp $
 
 EAPI="5"
-POSTGRES_COMPAT=( 9.{0,1,2,3} )
+POSTGRES_COMPAT=( 9.{0,1,2,3,4} )
 
 inherit autotools eutils versionator
 
