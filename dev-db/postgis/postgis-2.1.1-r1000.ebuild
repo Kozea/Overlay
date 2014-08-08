@@ -21,6 +21,7 @@ IUSE="doc gtk test"
 
 RDEPEND="
 		|| (
+			dev-db/postgresql-server:9.4
 			dev-db/postgresql-server:9.3
 			dev-db/postgresql-server:9.2
 			dev-db/postgresql-server:9.1
