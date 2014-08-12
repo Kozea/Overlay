@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
         dev-db/multicorn
         dev-python/babel
         dev-python/imapclient
-        dev-python/dateutil
+        dev-python/python-dateutil
         dev-python/hydra_fdw
         >=dev-python/flask-0.10
         dev-python/html5lib
