@@ -3,12 +3,8 @@
 
 EAPI="5"
 
-inherit git-2
-
 DESCRIPTION="Database of medicine images"
 HOMEPAGE="http://kozea.org"
-EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
-FEATURES="-sandbox"
 
 LICENSE="Proprietary"
 SLOT="0"
@@ -17,14 +13,3 @@ IUSE=""
 
 RDEPEND=""
 DEPEND=""
-
-IMG_DIR="/var/lib/${PN}"
-
-src_install() {
-        insinto "${IMG_DIR}"
-        git clean -fxd
-        rm -rf .git*
-        doins -r . || die
-        fowners -R postgres:postgres "${IMG_DIR}" || die
-        fperms -R go-rwx "${IMG_DIR}" || die
-}
