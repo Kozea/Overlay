@@ -13,7 +13,7 @@ EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
 LICENSE="Proprietary"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lighttpd"
+IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -26,9 +26,6 @@ src_install() {
         insinto "${KOZEA_DIR}"
         rm -rf .git*
         doins -r . || die
-        if use lighttpd; then
-	        fowners -R lighttpd:lighttpd "${KOZEA_DIR}" || die
-        fi
         fperms +x "${KOZEA_DIR}/run.py" || die
         fperms +x "${KOZEA_DIR}/kozea.fcgi" || die
 }

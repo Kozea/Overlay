@@ -13,11 +13,10 @@ EGIT_REPO_URI="https://github.com/Kozea/sitenco.git"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="git lighttpd"
+IUSE="git"
 
 RDEPEND="
         git? ( dev-python/brigit )
-        lighttpd? ( dev-python/flipflop )
         dev-python/flask
         dev-python/pyyaml
         dev-python/docutils-html5-writer
@@ -31,9 +30,6 @@ src_install() {
         insinto "${SITENCO_DIR}"
         rm -rf .git*
         doins -r . || die
-        if use lighttpd; then
-	        fowners -R lighttpd:lighttpd "${SITENCO_DIR}" || die
-        fi
         fperms +x "${SITENCO_DIR}/sitenco.fcgi" || die
         fperms +x "${SITENCO_DIR}/run.py" || die
 }

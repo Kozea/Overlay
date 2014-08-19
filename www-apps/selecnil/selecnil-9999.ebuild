@@ -13,7 +13,7 @@ EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
 LICENSE="Proprietary"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lighttpd"
+IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -29,9 +29,6 @@ src_install() {
         insinto "${SELECNIL_DIR}"
         rm -rf .git*
         doins -r . || die
-        if use lighttpd; then
-	        fowners -R lighttpd:lighttpd "${SELECNIL_DIR}" || die
-        fi
         fperms +x "${SELECNIL_DIR}/selecnil.fcgi" || die
         fperms +x "${SELECNIL_DIR}/selecnil.py" || die
 }

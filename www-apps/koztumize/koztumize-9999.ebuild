@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/Kozea/Koztumize.git"
 LICENSE="AGPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lighttpd"
+IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -31,9 +31,6 @@ src_install() {
         insinto "${KOZTUMIZE_DIR}"
         rm -rf .git*
         doins -r . || die
-        if use lighttpd; then
-	        fowners -R lighttpd:lighttpd "${KOZTUMIZE_DIR}" || die
-        fi
 }
 
 pkg_postinst() {

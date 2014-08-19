@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
         virtual/python-imaging
         dev-python/pytz
         dev-python/icalendar
+        dev-python/alembic
         dev-python/pypet
         dev-python/pyinotify
         >=dev-python/flask-sqlalchemy-0.17

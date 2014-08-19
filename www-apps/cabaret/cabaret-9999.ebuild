@@ -13,7 +13,7 @@ EGIT_REPO_URI="git://github.com/Kozea/pygal.git"
 LICENSE="LGPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lighttpd"
+IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -27,9 +27,6 @@ CABARET_DIR="/var/lib/${PN}"
 src_install() {
         insinto "${CABARET_DIR}"
         doins -r demo || die
-        if use lighttpd; then
-	        fowners -R lighttpd:lighttpd "${CABARET_DIR}" || die
-        fi
         fperms +x "${CABARET_DIR}/demo/cabaret.fcgi" || die
         fperms +x "${CABARET_DIR}/demo/cabaret.py" || die
 }

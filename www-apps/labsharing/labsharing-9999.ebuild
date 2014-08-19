@@ -15,7 +15,7 @@ EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
 LICENSE="Proprietary"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lighttpd"
+IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -36,9 +36,6 @@ src_install() {
         insinto "${LABSHARING_DIR}"
         rm -rf .git*
         doins -r . || die
-        if use lighttpd; then
-	        fowners -R lighttpd:lighttpd "${LABSHARING_DIR}" || die
-        fi
         fperms +x "${LABSHARING_DIR}/labsharing.py" || die
         fperms +x "${LABSHARING_DIR}/labsharing.fcgi" || die
         fperms +x "${LABSHARING_DIR}/www_labsharing.py" || die

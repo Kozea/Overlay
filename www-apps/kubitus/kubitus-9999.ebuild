@@ -15,7 +15,7 @@ EGIT_REPO_URI="ssh://git@git.kozea.fr:27015/~/${PN}"
 LICENSE="Proprietary"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lighttpd"
+IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -28,9 +28,6 @@ src_install() {
         insinto "${KUBITUS_DIR}"
         rm -rf .git*
         doins -r . || die
-        if use lighttpd; then
-	        fowners -R lighttpd:lighttpd "${KUBITUS_DIR}" || die
-        fi
         fperms +x "${KUBITUS_DIR}/run.py" || die
         fperms +x "${KUBITUS_DIR}/kubitus.fcgi" || die
 }
