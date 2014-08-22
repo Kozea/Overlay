@@ -27,8 +27,7 @@ src_install() {
         insinto "${HADOKEY_DIR}"
         rm -rf .git*
         doins -r . || die
-        fperms +x "${HADOKEY_DIR}/ok.py" || die
-        fperms +x "${HADOKEY_DIR}/ok.fcgi" || die
+        fperms +x "${HADOKEY_DIR}/hadokey.py" || die
 }
 
 pkg_postinst() {
