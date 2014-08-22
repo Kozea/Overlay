@@ -28,8 +28,7 @@ src_install() {
         insinto "${KUBITUS_DIR}"
         rm -rf .git*
         doins -r . || die
-        fperms +x "${KUBITUS_DIR}/run.py" || die
-        fperms +x "${KUBITUS_DIR}/kubitus.fcgi" || die
+        fperms +x "${KUBITUS_DIR}/kubitus.py" || die
 }
 
 pkg_postinst() {
