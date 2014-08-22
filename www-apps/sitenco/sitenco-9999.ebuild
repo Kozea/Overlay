@@ -30,8 +30,7 @@ src_install() {
         insinto "${SITENCO_DIR}"
         rm -rf .git*
         doins -r . || die
-        fperms +x "${SITENCO_DIR}/sitenco.fcgi" || die
-        fperms +x "${SITENCO_DIR}/run.py" || die
+        fperms +x "${SITENCO_DIR}/sitenco.py" || die
 }
 
 pkg_postinst() {
