@@ -27,7 +27,6 @@ src_install() {
         rm -rf .git*
         doins -r . || die
         fperms +x "${KOZEA_DIR}/run.py" || die
-        fperms +x "${KOZEA_DIR}/kozea.fcgi" || die
 }
 
 pkg_postinst() {
