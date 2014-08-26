@@ -14,7 +14,7 @@ HOMEPAGE="http://pynuts.org/"
 EGIT_REPO_URI="git://github.com/Kozea/${MY_PN}.git"
 
 LICENSE="BSD"
-SLOT="3"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
