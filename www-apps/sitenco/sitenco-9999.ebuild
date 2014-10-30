@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Simple websites for simple projects."
 HOMEPAGE="https://github.com/Kozea/sitenco"
-EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
+EGIT_REPO_URI="https://github.com/Kozea/sitenco.git"
 
 LICENSE="BSD"
 SLOT="0"
