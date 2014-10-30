@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Super simple Python web-interface to Nagios"
 HOMEPAGE="https://github.com/Kozea/nagipy"
-EGIT_REPO_URI="https://github.com/Kozea/nagipy.git"
+EGIT_REPO_URI="git@github.com:Kozea/nagipy.git"
 
 LICENSE="BSD"
 SLOT="0"
