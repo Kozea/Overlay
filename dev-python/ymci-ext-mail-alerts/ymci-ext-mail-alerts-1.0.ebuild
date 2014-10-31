@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3_4 )
 
 inherit distutils-r1
 
-DESCRIPTION="Your Modern Continous Integration server - ACL"
+DESCRIPTION="Your Modern Continous Integration server - Mail alerts"
 HOMEPAGE="http://github.com/Kozea/ymci"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
