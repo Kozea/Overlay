@@ -24,6 +24,6 @@ NGINX_DIR="/var/lib/nginx/${PN}"
 
 src_install() {
         insinto "${NGINX_DIR}"
-        rm -rf .git*
+        rm -rf .git* chef
         doins -r . || die
 }
