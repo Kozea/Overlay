@@ -7,7 +7,7 @@
 -require "https" -- 
 -local https = require "ssl.https" -- /usr/share/lua/5.1/https.lua
 +-- require("ssl") -- 
-+local https = require "ssl"
++local https = require("ssl.https")
  local ltn12  = require("ltn12")
   
  -- setup some app-level vars
