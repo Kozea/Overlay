@@ -1,0 +1,14 @@
+--- access.lua  2014-10-31 16:33:39.863498270 +0100
++++ access.lua  2014-10-31 16:33:42.213539601 +0100
+@@ -7,8 +7,8 @@
+ -- load the source, we need to grab the actual thing. Building from source
+ -- wasn't practical.
+ -- TODO: make this more generic but still work with Ubuntu
+--- require("ssl") -- 
+-local https = require "ssl" -- /usr/share/lua/5.1/https.lua
++require "https" -- 
++local https = require "ssl.https" -- /usr/share/lua/5.1/https.lua
+ local ltn12  = require("ltn12")
+  
+ -- setup some app-level vars
+
