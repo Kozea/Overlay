@@ -16,6 +16,7 @@ IUSE=""
 
 RDEPEND="
 	www-servers/nginx[nginx_modules_http_lua]
+	dev-lua/lua-cjson
 	dev-lua/luasec"
 
 DEPEND="${RDEPEND}"
