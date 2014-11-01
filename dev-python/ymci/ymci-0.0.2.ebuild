@@ -24,6 +24,6 @@ RDEPEND="
         dev-python/wtforms-alchemy
         dev-python/pbkdf2
         dev-python/pygal
-        >=dev-python/pygments-2.0_rc1
+        >=dev-python/pygments-2.0_pre
         dev-python/simplepam"
 DEPEND=""
