@@ -26,4 +26,5 @@ RDEPEND="
         dev-python/pygal
         >=dev-python/pygments-2.0_pre
         dev-python/simplepam"
-DEPEND=""
+
+DEPEND="dev-python/eventlet"
