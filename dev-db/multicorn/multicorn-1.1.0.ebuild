@@ -15,14 +15,14 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-python/multicorn
-        >=dev-db/postgresql-server-9.2"
+        >=virtual/postgresql-9.2"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
     sed -e "s/install: python_code//" -i Makefile
-    emake PYTHON_OVERRIDE=/usr/bin/python3.3 || die
+    emake PYTHON_OVERRIDE=/usr/bin/python3.4 || die
 }
 
 src_install() {
