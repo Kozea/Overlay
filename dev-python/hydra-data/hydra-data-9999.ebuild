@@ -11,7 +11,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Data manager for Hydra"
 HOMEPAGE="http://kozea.org/"
-EGIT_REPO_URI="https://github.com/Kozea/hydrata"
+EGIT_REPO_URI="git@github.com:Kozea/hydrata.git"
 
 LICENSE="BSD"
 SLOT="0"
