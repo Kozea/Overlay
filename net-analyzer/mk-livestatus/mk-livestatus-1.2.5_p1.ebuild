@@ -69,7 +69,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf
+	econf --with-nagios4
 
 	if use perl; then
 		cd api/perl/
