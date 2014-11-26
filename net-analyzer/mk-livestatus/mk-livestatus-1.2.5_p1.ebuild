@@ -2,15 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/mk-livestatus-1.2.0_p2.ebuild,v 1.2 2012/12/22 18:24:19 ago Exp $
 
-EAPI=3
-PYTHON_DEPEND="2:2.5"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 GENTOO_DEPEND_ON_PERL=no
 PERL_EXPORT_PHASE_FUNCTIONS=no
 
-MY_PV="${PV/_p/p}"
+MY_PV="${PV/_p/i}"
 MY_P="${PN}-${MY_PV}"
 
 inherit perl-module python eutils
