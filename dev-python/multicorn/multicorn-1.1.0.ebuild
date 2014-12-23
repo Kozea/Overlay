@@ -16,12 +16,13 @@ SRC_URI="https://github.com/Kozea/${MY_PN}/archive/v${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lxml docutils imap"
+IUSE="ldap lxml docutils imap"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/log-colorizer
         >=dev-python/sqlalchemy-0.8
+        ldap? ( dev-python/python3-ldap )
         lxml? ( dev-python/lxml )
         imap? ( dev-python/imapclient )
         docutils? ( dev-python/docutils )"
