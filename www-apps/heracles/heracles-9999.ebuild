@@ -19,6 +19,6 @@ DEPEND="${RDEPEND}
         dev-python/wtforms
         dev-python/sqlalchemy
         dev-python/psycopg
-        dev-python/wtforms-sqlalchemy
+        dev-python/wtforms-alchemy
         dev-python/pbkdf2
         dev-python/pygal"
