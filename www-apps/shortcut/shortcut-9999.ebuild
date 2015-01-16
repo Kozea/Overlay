@@ -4,7 +4,6 @@
 EAPI="5"
 
 PYTHON_COMPAT=( python3_4 )
-PYTHON_DEPEND="3"
 inherit distutils-r1 git-2
 
 DESCRIPTION="WebRTC server"
