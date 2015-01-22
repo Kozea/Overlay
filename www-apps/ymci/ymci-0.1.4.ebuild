@@ -4,11 +4,9 @@
 EAPI=5
 PYTHON_COMPAT=( python3_4 )
 
-inherit distutils-r1
-
 DESCRIPTION="Your Modern Continous Integration server"
 HOMEPAGE="git://github.com/Kozea/${PN}.git"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI=""
 
 LICENSE="MIT"
 SLOT="0"
