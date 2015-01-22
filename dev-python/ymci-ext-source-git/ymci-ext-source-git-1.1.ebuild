@@ -16,6 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/ymci
+	www-apps/ymci
 	dev-vcs/git"
 DEPEND=""

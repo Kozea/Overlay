@@ -15,5 +15,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/ymci"
+RDEPEND="www-apps/ymci"
 DEPEND=""
