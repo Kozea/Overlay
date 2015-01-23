@@ -15,7 +15,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-python/multicorn
-        >=virtual/postgresql-9.2"
+        >=dev-db/postgresql-9.2"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

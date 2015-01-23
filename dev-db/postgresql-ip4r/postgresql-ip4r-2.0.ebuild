@@ -19,7 +19,7 @@ IUSE=""
 
 
 
-DEPEND=">=virtual/postgresql-9.1"
+DEPEND=">=dev-db/postgresql-9.1"
 RDEPEND="${DEPEND}"
 
 src_compile() {
