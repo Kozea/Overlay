@@ -21,7 +21,7 @@ IUSE=""
 
 RDEPEND=">=dev-python/flask-0.10
          >=dev-python/werkzeug-0.9
-         >=media-gfx/weasyprint-0.12"
+         >=dev-python/weasyprint-0.12"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 

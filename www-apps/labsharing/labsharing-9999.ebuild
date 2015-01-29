@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-        media-gfx/weasyprint[svg]
+        dev-python/weasyprint[svg]
         media-gfx/cairosvg
         dev-python/cssutils
         dev-python/flask-weasyprint
