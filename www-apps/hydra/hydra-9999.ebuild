@@ -19,6 +19,7 @@ DEPEND="${RDEPEND}
         dev-db/postgis
         dev-db/multicorn
         dev-python/babel
+        dev-python/mandrill
         dev-python/imapclient
         dev-python/python-dateutil
         dev-python/hydra_fdw
