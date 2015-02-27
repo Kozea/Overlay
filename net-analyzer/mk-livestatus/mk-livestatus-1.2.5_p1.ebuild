@@ -60,8 +60,6 @@ src_prepare() {
 	# Module::install itself.
 	rm -rf api/perl/inc
 
-    epatch "${FILESDIR}/missing-include.patch"
-
 	if use perl; then
 		perl-module_src_prepare
 	fi
