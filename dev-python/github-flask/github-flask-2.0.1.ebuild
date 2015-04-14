@@ -3,25 +3,24 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/flask-babel-0.8.ebuild,v 1.1 2012/04/19 07:55:06 patrick Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python3_4 )
+PYTHON_COMPAT=( python{2_7,3_4} )
 
 inherit distutils-r1
 
-MY_PN="Flask-Github"
+MY_PN="GitHub-Flask"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Adds support for authorizing users with Github to Flask"
-HOMEPAGE="https://github.com/jarodl/flask-github"
+DESCRIPTION="Flask extension for authenticating users with GitHub and making requests to the API."
+HOMEPAGE="https://github.com/cenkalti/github-flask"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/flask
-         dev-python/requests
-	 dev-python/oauth2"
+         dev-python/requests"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
