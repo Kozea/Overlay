@@ -20,7 +20,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/flask
-         dev-python/requests"
+         dev-python/requests
+	 dev-python/oauth2"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
