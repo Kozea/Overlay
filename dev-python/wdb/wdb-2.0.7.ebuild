@@ -10,12 +10,10 @@ DESCRIPTION="An improbable web debugger through WebSockets"
 HOMEPAGE="https://github.com/Kozea/${PN}"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-    www-servers/tornado
-    dev-python/log-colorizer
-    dev-python/jedi
-    dev-python/filemagic"
+    >=dev-python/log-colorizer-1.6
+    >=dev-python/jedi-0.8"
