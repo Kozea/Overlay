@@ -20,10 +20,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
+    =dev-python/wdb-2.1.1*
     >=www-servers/tornado-3.2
     >=dev-python/log-colorizer-1.6
-    >=dev-python/jedi-0.8
+    >=dev-python/jedi-0.9
     >=dev-python/psutil-2.1
+    >=dev-python/filemagic-1.6
     dev-python/tornado-systemd
-    dev-python/pyinotify
-    dev-python/filemagic"
+    dev-python/pyinotify"

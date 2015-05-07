@@ -16,4 +16,4 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
     >=dev-python/log-colorizer-1.6
-    >=dev-python/jedi-0.8"
+    >=dev-python/jedi-0.9"
