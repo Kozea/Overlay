@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
         dev-python/multicorn[lxml,docutils]
         dev-db/postgis
         dev-db/multicorn
-        dev-python/babel
+        dev-python/Babel
         dev-python/mandrill
         dev-python/imapclient
         dev-python/python-dateutil
