@@ -28,6 +28,8 @@ python_prepare_all() {
 	sed -e '/datadir =/s:os\.path\.dirname(__file__):os.environ["BUILD_DIR"]:' \
 		-i tests/messages/test_frontend.py || die
 	sed -e '/^intersphinx_mapping/,+3d' -i docs/conf.py || die
+	# Remove the date from the version number
+	sed -e 's/tag_date = true/tag_date = false/' -i setup.cfg || die
 	distutils-r1_python_prepare_all
 }
 
@@ -41,6 +43,12 @@ python_test() {
 python_compile_all() {
 	use doc && emake -C docs html
 }
+
+python_install() {
+	distutils-r1_python_install import_cldr
+	distutils-r1_python_install
+}
+
 
 python_install_all() {
 	use doc && local HTML_DOCS=( docs/_build/html/. )
