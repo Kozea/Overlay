@@ -16,5 +16,5 @@ RDEPEND="
 	www-servers/tornado
 	dev-python/python-ghostscript
 	dev-python/PyPDF2
-	media-gfx/imagemagick"
+	media-gfx/imagemagick[jpeg,png]"
 DEPEND="${RDEPEND}"
