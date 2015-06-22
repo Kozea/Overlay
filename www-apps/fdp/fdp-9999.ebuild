@@ -14,7 +14,7 @@ IUSE=""
 
 RDEPEND="
 	www-servers/tornado
-	dev-python/python-ghostscript
+	dev-python/wand
 	dev-python/PyPDF2
 	media-gfx/imagemagick[jpeg,png]"
 DEPEND="${RDEPEND}"
