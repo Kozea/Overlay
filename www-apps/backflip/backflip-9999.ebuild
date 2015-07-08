@@ -22,5 +22,6 @@ RDEPEND="
 	dev-python/pygal
 	dev-python/sqlalchemy
 	dev-python/mandrill
-	dev-python/psycopg"
+	dev-python/psycopg
+	net-libs/nodejs[npm]"
 DEPEND="${RDEPEND}"
