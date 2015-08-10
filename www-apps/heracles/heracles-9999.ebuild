@@ -21,4 +21,5 @@ DEPEND="${RDEPEND}
         dev-python/psycopg
         dev-python/wtforms-alchemy
         dev-python/pbkdf2
+        dev-python/pygal_maps_fr
         dev-python/pygal"
