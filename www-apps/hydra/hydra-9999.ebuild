@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
         dev-python/docutils-html5-writer
         dev-python/python-ghostscript
         =dev-python/wtforms-2.0*
+        dev-python/wtforms-alchemy
         media-gfx/cairosvg
         virtual/python-imaging
         dev-python/pytz
@@ -39,6 +40,7 @@ DEPEND="${RDEPEND}
         >=dev-python/sqlalchemy-0.9
         dev-python/flask-weasyprint
         >=dev-python/pygal-1.4
+        dev-python/pygal_maps_fr
         dev-python/pyyaml
         dev-python/flipflop
         www-apps/mammoth
