@@ -8,7 +8,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="We all need a top model for hydra related things"
 HOMEPAGE="https://github.com/Kozea/${PN}"
-EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
+EGIT_REPO_URI="https://github.com/Kozea/top_model.git"
 
 LICENSE="Proprietary"
 SLOT="0"
