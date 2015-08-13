@@ -13,6 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
+	dev-python/xlrd
 	dev-python/flask-alcool
 	dev-python/flask-babel
 	dev-python/flask-bcrypt
