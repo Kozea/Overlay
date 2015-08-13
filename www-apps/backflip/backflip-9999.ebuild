@@ -24,5 +24,6 @@ RDEPEND="
 	dev-python/mandrill
 	dev-python/psycopg
 	net-libs/nodejs[npm]
-	dev-ruby/sass"
+	dev-ruby/sass
+	www-servers/uwsgi[python]"
 DEPEND="${RDEPEND}"
