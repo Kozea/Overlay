@@ -16,6 +16,6 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	dev-python/flask
 	dev-python/github-flask
-	dev-python/cachecontrol
+	dev-python/CacheControl
 	dev-python/python-dateutil
 	dev-python/pytz"
