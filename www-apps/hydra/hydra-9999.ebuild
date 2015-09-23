@@ -43,6 +43,7 @@ DEPEND="${RDEPEND}
         dev-python/pygal_maps_fr
         dev-python/pyyaml
         dev-python/flipflop
+	media-fonts/cantarell
         www-apps/mammoth
         dev-python/docutils-html5-writer
         dev-python/pyquery
