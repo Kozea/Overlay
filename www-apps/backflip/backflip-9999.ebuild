@@ -21,6 +21,7 @@ RDEPEND="
 	dev-python/flask-sqlalchemy
 	dev-python/flask-weasyprint
 	dev-python/flask-wtf
+	dev-python/plainform
 	dev-python/pygal
 	dev-python/sqlalchemy
 	dev-python/mandrill
