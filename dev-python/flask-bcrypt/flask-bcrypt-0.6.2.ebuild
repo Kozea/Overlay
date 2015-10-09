@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/flask
-         dev-python/python-bcrypt"
+         dev-python/bcrypt"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
