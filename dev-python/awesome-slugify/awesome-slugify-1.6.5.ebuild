@@ -16,5 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="
+	dev-python/regex
+	dev-python/unidecode"
 DEPEND=""
