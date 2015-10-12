@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/flask-wtf/flask-wtf-0.10.2.ebuild,v 1.1 2014/09/09 06:54:18 patrick Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python3_4 )
+PYTHON_COMPAT=( python{3_4,3_5} )
 
 inherit distutils-r1
 

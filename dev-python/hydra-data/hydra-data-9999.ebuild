@@ -20,7 +20,7 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="dev-python/psycopg
-    =dev-python/pika-9999
+    dev-python/pika
     net-misc/rabbitmq-server"
 
 DATA_DIR="/var/lib/${PN}"

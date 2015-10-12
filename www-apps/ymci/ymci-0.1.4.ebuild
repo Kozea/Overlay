@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python3_4 )
+PYTHON_COMPAT=( python{3_4,3_5} )
 
 DESCRIPTION="Your Modern Continous Integration server"
 HOMEPAGE="git://github.com/Kozea/${PN}.git"
