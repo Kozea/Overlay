@@ -7,8 +7,8 @@ PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4,3_5} )
 
 inherit distutils-r1
 
-DESCRIPTION="Factory Boy support for pytest."
-HOMEPAGE="http://packages.python.org/pytest-factoryboy/"
+DESCRIPTION="A port of Ruby on Rails inflector to Python"
+HOMEPAGE="http://packages.python.org/inflection/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
@@ -16,9 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/pytest
-         dev-python/inflection
-         dev-python/factory-boy"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
