@@ -49,6 +49,7 @@ DEPEND="${RDEPEND}
         dev-python/pyquery
         dev-python/qrcode
         dev-python/sqlalchemy_fdw
+        dev-python/flask-login
         dev-python/sqlalchemy-searchable
 	net-libs/nodejs
         dev-python/pyinotify"
