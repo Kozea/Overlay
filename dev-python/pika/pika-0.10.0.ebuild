@@ -2,14 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
-PYTHON_COMPAT=( python{3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4,3_5} )
 
-EGIT_BRANCH="stable-fork-python3"
-inherit distutils-r1 git-2
+inherit distutils-r1
 
 DESCRIPTION="Pika is a pure-Python implementation of the AMQP 0-9-1 protocol."
-HOMEPAGE="https://github.com/Kozea/${PN}"
-EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
+HOMEPAGE="http://${PN}.github.com/"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL"
 SLOT="0"
@@ -18,3 +17,5 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
+
+#S="${WORKDIR}/${MY_P}"
