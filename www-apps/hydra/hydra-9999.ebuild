@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
         =dev-python/wtforms-2.0*
         dev-python/wtforms-alchemy
         media-gfx/cairosvg
-        virtual/python-imaging
+        dev-python/pillow
         dev-python/pytz
         dev-python/icalendar
         dev-python/alembic
