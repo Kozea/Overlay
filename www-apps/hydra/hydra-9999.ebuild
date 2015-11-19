@@ -16,7 +16,6 @@ RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/pillow[truetype]
         dev-python/multicorn[lxml,docutils]
-        dev-db/postgis
         dev-db/multicorn
         dev-python/Babel
         dev-python/mandrill
