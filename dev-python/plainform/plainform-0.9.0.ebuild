@@ -16,5 +16,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-python/wtforms-2.0"
+RDEPEND=">=dev-python/wtforms-2.1[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
