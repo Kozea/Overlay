@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
         dev-python/html5lib
         dev-python/docutils-html5-writer
         dev-python/python-ghostscript
-        =dev-python/wtforms-2.0*
+        >=dev-python/wtforms-2.0
         dev-python/wtforms-alchemy
         media-gfx/cairosvg
         dev-python/pillow
