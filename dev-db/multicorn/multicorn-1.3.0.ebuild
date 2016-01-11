@@ -22,10 +22,6 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_prepare() {
-        epatch "${FILESDIR}/${PN}-dropped-attributes.patch"
-}
-
 src_compile() {
     sed -e "s/install: python_code//" -i Makefile
     emake PYTHON_OVERRIDE=/usr/bin/python3.4 || die
