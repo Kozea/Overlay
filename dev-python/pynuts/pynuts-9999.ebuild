@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
-PYTHON_COMPAT=( python3_{3,4} )
+PYTHON_COMPAT=( python3_{3,4,5} )
 
 inherit distutils-r1 git-2
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/flask
-        dev-python/dulwich[python_targets_python3_3]
+        dev-python/dulwich
         dev-python/docutils
         dev-python/flask-uploads
         dev-python/flask-weasyprint
