@@ -50,5 +50,6 @@ DEPEND="${RDEPEND}
         dev-python/sqlalchemy_fdw
         dev-python/flask-login
         dev-python/sqlalchemy-searchable
+        dev-python/fawn
 	net-libs/nodejs
         dev-python/pyinotify"
