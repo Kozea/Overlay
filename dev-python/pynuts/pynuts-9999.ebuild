@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Documents for nuts"
 HOMEPAGE="http://pynuts.org/"
 EGIT_REPO_URI="git://github.com/Kozea/${MY_PN}.git"
-#EGIT_BRANCH="python3"
+EGIT_BRANCH="python3"
 
 LICENSE="BSD"
 SLOT="3"
