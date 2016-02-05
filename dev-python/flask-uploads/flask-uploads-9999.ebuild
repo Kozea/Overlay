@@ -3,13 +3,13 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/flask-babel-0.8.ebuild,v 1.1 2012/04/19 07:55:06 patrick Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python3_{3,4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
-inherit distutils-r1 mercurial
+inherit distutils-r1
 
 DESCRIPTION="Flexible and efficient upload handling for Flask"
 HOMEPAGE="http://packages.python.org/Flask-Uploads/"
-EHG_REPO_URI="https://bitbucket.org/mattupstate/${PN}"
+SRC_URI="https://bitbucket.org/mattupstate/flask-uploads/get/default.tar.gz"
 
 LICENSE="BSD"
 SLOT="3"
@@ -19,3 +19,4 @@ IUSE=""
 RDEPEND="dev-python/flask"
 DEPEND="${RDEPEND}
        dev-python/setuptools"
+S="${WORKDIR}/mattupstate-flask-uploads-caf5ac26fd33"
