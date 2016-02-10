@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
         dev-python/flask-weasyprint
         =dev-python/flask-uploads-0.1.3*
         dev-python/pygal
-        =dev-python/pynuts-0.4.4*
+        =dev-python/pynuts-9999
         dev-python/flup
         dev-python/psycopg
         =dev-python/dulwich-0.9.4*"
