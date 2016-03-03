@@ -13,6 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
+	dev-lang/python[sqlite]
 	dev-python/flask
 	dev-python/pygal
 	dev-python/oauth2client
