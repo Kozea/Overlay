@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
         dev-python/python-dateutil
         dev-python/hydra_fdw
         >=dev-python/flask-0.10
+        dev-python/itsdangerous
         dev-python/html5lib
         dev-python/docutils-html5-writer
         dev-python/python-ghostscript
