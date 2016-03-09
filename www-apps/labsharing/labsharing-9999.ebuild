@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
         =dev-python/pynuts-9999
         dev-python/flup
         dev-python/psycopg
-        =dev-python/dulwich-0.9.4*"
+        >=dev-python/dulwich-0.12"
 
 LABSHARING_DIR="/var/lib/${PN}"
 
