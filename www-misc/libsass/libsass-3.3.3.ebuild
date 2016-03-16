@@ -12,3 +12,8 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 DEPEND="${DEPEND}"
+
+src_install() {
+	mkdir -p "${D}/usr/local"
+	emake DESTDIR="${D}" install
+}
