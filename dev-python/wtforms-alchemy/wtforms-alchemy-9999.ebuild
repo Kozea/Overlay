@@ -12,6 +12,7 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Generates WTForms forms from SQLAlchemy models"
 HOMEPAGE="https://github.com/kvesteri/wtforms-alchemy"
 EGIT_REPO_URI="git://github.com/paradoxxxzero/${PN}.git"
+EGIT_BRANCH="include_relationships"
 
 LICENSE="BSD"
 SLOT="0"
