@@ -14,7 +14,7 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-python/log_colorizer
+	dev-python/log-colorizer
 	dev-python/flask
 	dev-python/sqlalchemy
 	dev-python/wtforms
