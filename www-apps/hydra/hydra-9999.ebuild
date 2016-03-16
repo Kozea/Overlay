@@ -21,7 +21,6 @@ DEPEND="${RDEPEND}
         dev-python/mandrill
         dev-python/imapclient
         dev-python/python-dateutil
-        dev-python/hydra_fdw
         >=dev-python/flask-0.10
         dev-python/itsdangerous
         dev-python/html5lib
