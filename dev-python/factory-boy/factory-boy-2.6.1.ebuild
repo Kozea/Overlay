@@ -21,6 +21,7 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+	dev-python/faker
 	dev-python/setuptools"
 
 S="${WORKDIR}/${MY_P}"
