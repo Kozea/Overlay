@@ -30,7 +30,7 @@ RDEPEND="
         dev-python/pyyaml
         dev-python/sqlalchemy
         dev-python/sqlalchemy-searchable
-        =dev-python/wtforms-2.0*
+        dev-python/wtforms
         dev-python/wtforms-alchemy
         dev-python/alembic
         dev-python/sqlalchemy_fdw
