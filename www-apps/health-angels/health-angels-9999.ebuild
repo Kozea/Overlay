@@ -18,4 +18,4 @@ DEPEND="${RDEPEND}
 	dev-python/flask
 	dev-python/sqlalchemy
 	dev-python/wtforms
-	>=dev-python/wtforms-alchemy-9999"
+	dev-python/wtforms-alchemy"
