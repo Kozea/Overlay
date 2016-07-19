@@ -15,6 +15,7 @@ IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}
         dev-python/flask
+        dev-python/flask_sqlalchemy
         dev-python/oauth2client
         dev-python/httplib2
         dev-python/sqlalchemy"
