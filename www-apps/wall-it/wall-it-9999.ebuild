@@ -15,6 +15,7 @@ IUSE=""
 RDEPEND="
 	dev-lang/python[sqlite]
 	dev-python/flask
+	dev-python/weasyprint
 	dev-python/pygal
 	dev-python/oauth2client
 	dev-python/httplib2"
