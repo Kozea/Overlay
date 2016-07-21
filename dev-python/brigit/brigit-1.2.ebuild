@@ -8,7 +8,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="A very simple python git wrapper module"
 HOMEPAGE="https://github.com/Kozea/${PN}"
-EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
