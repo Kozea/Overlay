@@ -21,9 +21,8 @@ SLOT="0"
 RDEPEND="
 	>=dev-python/pyflakes-0.8.1[${PYTHON_USEDEP}]
 	<dev-python/pyflakes-1.1[${PYTHON_USEDEP}]
-	>=dev-python/pep8-1.5.7[${PYTHON_USEDEP}]
-	!=dev-python/pep8-1.6.1[${PYTHON_USEDEP}]
-	!=dev-python/pep8-1.6.2[${PYTHON_USEDEP}]
+	>=dev-python/pycodestyle-2.0.0[${PYTHON_USEDEP}]
+	<dev-python/pycodestyle-2.1.0[${PYTHON_USEDEP}]
 	"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
