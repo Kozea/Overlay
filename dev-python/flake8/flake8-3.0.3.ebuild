@@ -34,8 +34,8 @@ DEPEND="${RDEPEND}
 	        <dev-python/mccabe-0.6.0[${PYTHON_USEDEP}]
 	)"
 PDEPEND="
-	>=dev-python/mccabe-0.2.1[${PYTHON_USEDEP}]
-	<dev-python/mccabe-0.5[${PYTHON_USEDEP}]"
+	>=dev-python/mccabe-0.5.0[${PYTHON_USEDEP}]
+	<dev-python/mccabe-0.6.0[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all
