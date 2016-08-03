@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-        dev-python/flask
-        dev-python/weasyprint"
+RDEPEND="
+        dev-python/flask[${PYTHON_USEDEP}]
+        dev-python/weasyprint[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"

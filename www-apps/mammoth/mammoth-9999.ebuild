@@ -12,4 +12,4 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=""
-DEPEND=""
+DEPEND="${RDEPEND}"

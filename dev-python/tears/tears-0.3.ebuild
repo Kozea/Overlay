@@ -14,6 +14,7 @@ LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
-RDEPEND=""
-DEPEND="${RDEPEND}
-    dev-python/flask-sqlalchemy"
+
+RDEPEND="
+    dev-python/flask-sqlalchemy[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"

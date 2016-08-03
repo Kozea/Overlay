@@ -17,6 +17,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-    www-servers/tornado
-    dev-python/pyopenssl"
+    www-servers/tornado[${PYTHON_USEDEP}]
+    dev-python/pyopenssl[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"

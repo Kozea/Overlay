@@ -17,6 +17,6 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-mac
 IUSE=""
 
 RDEPEND="
-	>=dev-python/docopt-0.4.0
-	>=dev-python/requests-0.13.2"
+	>=dev-python/docopt-0.4.0[${PYTHON_USEDEP}]
+	>=dev-python/requests-0.13.2[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"

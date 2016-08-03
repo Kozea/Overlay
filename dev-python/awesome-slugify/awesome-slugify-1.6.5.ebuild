@@ -17,6 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/regex
-	dev-python/unidecode"
+	dev-python/regex[${PYTHON_USEDEP}]
+	dev-python/unidecode[${PYTHON_USEDEP}]"
 DEPEND=""

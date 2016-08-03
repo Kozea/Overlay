@@ -15,24 +15,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
 RDEPEND="
-        dev-python/Babel
-        dev-python/flask
-        dev-python/flask-sqlalchemy
-        dev-python/flask-weasyprint
-        dev-python/multicorn[lxml,docutils]
-        dev-python/mandrill
-        dev-python/pillow[truetype]
-        dev-python/pygal
-        dev-python/pygal_maps_fr
-        dev-python/pytz
-        dev-python/pyyaml
-        dev-python/sqlalchemy
-        dev-python/sqlalchemy-searchable
-        dev-python/wtforms
-        dev-python/wtforms-alchemy
-        dev-python/alembic
-        dev-python/sqlalchemy_fdw
-        dev-python/docutils-html5-writer
-        dev-python/python-ghostscript"
+        dev-python/Babel[${PYTHON_USEDEP}]
+        dev-python/flask[${PYTHON_USEDEP}]
+        dev-python/flask-sqlalchemy[${PYTHON_USEDEP}]
+        dev-python/flask-weasyprint[${PYTHON_USEDEP}]
+        dev-python/multicorn[lxml,docutils,${PYTHON_USEDEP}]
+        dev-python/mandrill[${PYTHON_USEDEP}]
+        dev-python/pillow[truetype,${PYTHON_USEDEP}]
+        dev-python/pygal[${PYTHON_USEDEP}]
+        dev-python/pygal_maps_fr[${PYTHON_USEDEP}]
+        dev-python/pytz[${PYTHON_USEDEP}]
+        dev-python/pyyaml[${PYTHON_USEDEP}]
+        dev-python/sqlalchemy[${PYTHON_USEDEP}]
+        dev-python/sqlalchemy-searchable[${PYTHON_USEDEP}]
+        dev-python/wtforms[${PYTHON_USEDEP}]
+        dev-python/wtforms-alchemy[${PYTHON_USEDEP}]
+        dev-python/alembic[${PYTHON_USEDEP}]
+        dev-python/sqlalchemy_fdw[${PYTHON_USEDEP}]
+        dev-python/docutils-html5-writer[${PYTHON_USEDEP}]
+        dev-python/python-ghostscript[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"

@@ -12,10 +12,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-	dev-python/flask
-	dev-python/github-flask
-	dev-python/CacheControl
-	dev-python/python-dateutil
-	dev-python/pytz"
+RDEPEND="
+	dev-python/flask[${PYTHON_USEDEP}]
+	dev-python/github-flask[${PYTHON_USEDEP}]
+	dev-python/CacheControl[${PYTHON_USEDEP}]
+	dev-python/python-dateutil[${PYTHON_USEDEP}]
+	dev-python/pytz[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"

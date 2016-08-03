@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/html5lib"
-DEPEND=""
+RDEPEND="dev-python/html5lib[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"

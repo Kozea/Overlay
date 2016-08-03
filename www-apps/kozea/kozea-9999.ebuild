@@ -12,6 +12,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}
+RDEPEND="
         dev-python/flask"
+DEPEND="${RDEPEND}"

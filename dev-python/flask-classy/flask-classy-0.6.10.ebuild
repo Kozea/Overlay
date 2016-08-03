@@ -19,9 +19,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-python/flask-0.9"
+RDEPEND=">=dev-python/flask-0.9[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"
 

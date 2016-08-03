@@ -19,10 +19,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/flask
-         dev-python/requests"
+RDEPEND="dev-python/flask[${PYTHON_USEDEP}]
+         dev-python/requests[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"
 

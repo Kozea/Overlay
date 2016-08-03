@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/decorator-3.4.0-r1.ebuild,v 1.8 2014/04/02 21:20:36 chutzpah Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python3_{3,4} )
+PYTHON_COMPAT=( python3_{3,4,5} )
 
 inherit distutils-r1
 
@@ -23,11 +23,11 @@ DEPEND="
     dev-python/setuptools[${PYTHON_USEDEP}]
 "
 RDEPEND="
-    >=dev-python/pyparsing-2.0.1
-    >=dev-python/sqlalchemy-0.7.8
-    >=dev-python/psycopg-2.4.6
-    >=dev-python/sqlalchemy-utils-0.16.24
-    >=dev-python/validators-0.3.0
+    >=dev-python/pyparsing-2.0.1[${PYTHON_USEDEP}]
+    >=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
+    >=dev-python/psycopg-2.4.6[${PYTHON_USEDEP}]
+    >=dev-python/sqlalchemy-utils-0.16.24[${PYTHON_USEDEP}]
+    >=dev-python/validators-0.3.0[${PYTHON_USEDEP}]
 "
 
 S="${WORKDIR}/${MY_P}"

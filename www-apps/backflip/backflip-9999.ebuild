@@ -13,19 +13,19 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/xlrd
-	dev-python/flask-alcool
-	dev-python/flask-babel
-	dev-python/flask-bcrypt
-	dev-python/flask-login
-	dev-python/flask-sqlalchemy
-	dev-python/flask-weasyprint
-	dev-python/flask-wtf
-	dev-python/plainform
-	dev-python/pygal
-	dev-python/sqlalchemy
-	dev-python/mandrill
-	dev-python/psycopg
+	dev-python/xlrd[${PYTHON_USEDEP}]
+	dev-python/flask-alcool[${PYTHON_USEDEP}]
+	dev-python/flask-babel[${PYTHON_USEDEP}]
+	dev-python/flask-bcrypt[${PYTHON_USEDEP}]
+	dev-python/flask-login[${PYTHON_USEDEP}]
+	dev-python/flask-sqlalchemy[${PYTHON_USEDEP}]
+	dev-python/flask-weasyprint[${PYTHON_USEDEP}]
+	dev-python/flask-wtf[${PYTHON_USEDEP}]
+	dev-python/plainform[${PYTHON_USEDEP}]
+	dev-python/pygal[${PYTHON_USEDEP}]
+	dev-python/sqlalchemy[${PYTHON_USEDEP}]
+	dev-python/mandrill[${PYTHON_USEDEP}]
+	dev-python/psycopg[${PYTHON_USEDEP}]
 	net-libs/nodejs[npm]
 	www-servers/uwsgi[python]"
 DEPEND="${RDEPEND}"

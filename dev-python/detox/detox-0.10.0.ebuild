@@ -16,15 +16,15 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-        dev-python/tornado-systemd
-        dev-python/pyyaml
-        dev-python/wtforms
-        dev-python/sqlalchemy
-        dev-python/psycopg
-        dev-python/wtforms-alchemy
-        dev-python/pbkdf2
-        dev-python/pygal
-        >=dev-python/pygments-2.0_pre
-        dev-python/simplepam"
+        dev-python/tornado-systemd[${PYTHON_USEDEP}]
+        dev-python/pyyaml[${PYTHON_USEDEP}]
+        dev-python/wtforms[${PYTHON_USEDEP}]
+        dev-python/sqlalchemy[${PYTHON_USEDEP}]
+        dev-python/psycopg[${PYTHON_USEDEP}]
+        dev-python/wtforms-alchemy[${PYTHON_USEDEP}]
+        dev-python/pbkdf2[${PYTHON_USEDEP}]
+        dev-python/pygal[${PYTHON_USEDEP}]
+        >=dev-python/pygments-2.0_pre[${PYTHON_USEDEP}]
+        dev-python/simplepam[${PYTHON_USEDEP}]"
 
 DEPEND="dev-python/eventlet"

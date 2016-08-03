@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python3_{3,4} )
+PYTHON_COMPAT=( python3_{3,4,5} )
 
 inherit distutils-r1 git-2
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/setuptools"
-RDEPEND=""
+RDEPEND="dev-python/setuptools"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"

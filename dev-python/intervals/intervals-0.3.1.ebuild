@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python3_{3,4} )
+PYTHON_COMPAT=( python3_{3,4,5} )
 
 inherit distutils-r1
 
@@ -16,5 +16,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-python/infinity-0.1.3"
+	>=dev-python/infinity-0.1.3[${PYTHON_USEDEP}]"
 DEPEND=""

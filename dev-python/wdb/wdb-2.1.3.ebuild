@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
-PYTHON_COMPAT=( python3_{3,4} )
+PYTHON_COMPAT=( python3_{3,4,5} )
 
 inherit distutils-r1
 
@@ -15,5 +15,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-    >=dev-python/log-colorizer-1.6
-    >=dev-python/jedi-0.9"
+    >=dev-python/log-colorizer-1.6[${PYTHON_USEDEP}]
+    >=dev-python/jedi-0.9[${PYTHON_USEDEP}]"

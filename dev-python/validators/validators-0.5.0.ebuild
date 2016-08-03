@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/decorator-3.4.0-r1.ebuild,v 1.8 2014/04/02 21:20:36 chutzpah Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python3_{3,4} )
+PYTHON_COMPAT=( python3_{3,4,5} )
 
 inherit distutils-r1
 
@@ -20,8 +20,8 @@ DEPEND="
     dev-python/setuptools[${PYTHON_USEDEP}]
 "
 RDEPEND="
-    >=dev-python/six-1.4.0
-    >=dev-python/decorator-3.4.0
+    >=dev-python/six-1.4.0[${PYTHON_USEDEP}]
+    >=dev-python/decorator-3.4.0[${PYTHON_USEDEP}]
 "
 
 python_prepare_all() {

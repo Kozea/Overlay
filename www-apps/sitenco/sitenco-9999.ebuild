@@ -16,12 +16,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="git"
 
 RDEPEND="
-        git? ( dev-python/brigit )
-        dev-python/flask
-        dev-python/pyyaml
-        dev-python/docutils-html5-writer
-        dev-python/sphinx
-        dev-python/pygal"
+        git? ( dev-python/brigit[${PYTHON_USEDEP}] )
+        dev-python/flask[${PYTHON_USEDEP}]
+        dev-python/pyyaml[${PYTHON_USEDEP}]
+        dev-python/docutils-html5-writer[${PYTHON_USEDEP}]
+        dev-python/sphinx[${PYTHON_USEDEP}]
+        dev-python/pygal[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 SITENCO_DIR="/var/lib/${PN}"

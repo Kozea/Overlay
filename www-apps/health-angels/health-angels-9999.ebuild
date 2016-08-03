@@ -12,10 +12,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-	dev-python/log-colorizer
-	dev-python/flask
-	dev-python/sqlalchemy
-	dev-python/wtforms
-	dev-python/wtforms-alchemy"
+RDEPEND="
+	dev-python/log-colorizer[${PYTHON_USEDEP}]
+	dev-python/flask[${PYTHON_USEDEP}]
+	dev-python/sqlalchemy[${PYTHON_USEDEP}]
+	dev-python/wtforms[${PYTHON_USEDEP}]
+	dev-python/wtforms-alchemy[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"

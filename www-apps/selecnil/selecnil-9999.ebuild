@@ -15,13 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-        dev-python/flipflop
-        dev-python/flask
-        dev-python/selenium
-        dev-python/pillow
-        dev-python/pyvirtualdisplay"
+RDEPEND="
+        dev-python/flask[${PYTHON_USEDEP}]
+        dev-python/selenium[${PYTHON_USEDEP}]
+        dev-python/pillow[${PYTHON_USEDEP}]
+        dev-python/pyvirtualdisplay[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"
 
 SELECNIL_DIR="/var/lib/${PN}"
 

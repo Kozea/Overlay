@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~x86 amd64"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND=""
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	eautoreconf

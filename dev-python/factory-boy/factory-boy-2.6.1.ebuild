@@ -19,10 +19,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}
+RDEPEND="
 	dev-python/fake-factory
 	dev-python/setuptools"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 

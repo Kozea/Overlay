@@ -12,14 +12,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-        dev-python/tornado-systemd
-        www-servers/tornado
-        dev-python/wtforms
-        dev-python/sqlalchemy
-        dev-python/psycopg
-        dev-python/wtforms-alchemy
-        dev-python/pbkdf2
-        dev-python/pygal_maps_fr
-        dev-python/pygal"
+RDEPEND="
+        dev-python/tornado-systemd[${PYTHON_USEDEP}]
+        www-servers/tornado[${PYTHON_USEDEP}]
+        dev-python/wtforms[${PYTHON_USEDEP}]
+        dev-python/sqlalchemy[${PYTHON_USEDEP}]
+        dev-python/psycopg[${PYTHON_USEDEP}]
+        dev-python/wtforms-alchemy[${PYTHON_USEDEP}]
+        dev-python/pbkdf2[${PYTHON_USEDEP}]
+        dev-python/pygal_maps_fr[${PYTHON_USEDEP}]
+        dev-python/pygal[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"

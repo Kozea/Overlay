@@ -19,11 +19,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-python/flask-0.10
-         >=dev-python/werkzeug-0.9
-         >=dev-python/weasyprint-0.12"
+RDEPEND=">=dev-python/flask-0.10[${PYTHON_USEDEP}]
+         >=dev-python/werkzeug-0.9[${PYTHON_USEDEP}]
+         >=dev-python/weasyprint-0.12[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"
 

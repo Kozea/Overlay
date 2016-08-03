@@ -19,11 +19,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-python/sqlalchemy-0.8
-	>=dev-python/wtforms-1.0.4
-	>=dev-python/wtforms-components-0.9.2
-	>=dev-python/sqlalchemy-utils-0.23.1
-	>=dev-python/six-1.4.1"
-DEPEND=""
+	>=dev-python/sqlalchemy-0.8[${PYTHON_USEDEP}]
+	>=dev-python/wtforms-1.0.4[${PYTHON_USEDEP}]
+	>=dev-python/wtforms-components-0.9.2[${PYTHON_USEDEP}]
+	>=dev-python/sqlalchemy-utils-0.23.1[${PYTHON_USEDEP}]
+	>=dev-python/six-1.4.1[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"

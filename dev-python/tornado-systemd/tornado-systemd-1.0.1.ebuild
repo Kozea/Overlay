@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python3_{3,4} )
+PYTHON_COMPAT=( python3_{3,4,5} )
 
 inherit distutils-r1
 
@@ -19,6 +19,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=www-servers/tornado-3.2"
-DEPEND=""
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"

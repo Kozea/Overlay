@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_{6,7} python3_{3,4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
 
 inherit distutils-r1 multilib
 
@@ -17,5 +17,5 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-solaris"
 IUSE=""
 
-RDEPEND="=dev-python/pyasn1-0.1.7"
+RDEPEND="=dev-python/pyasn1-0.1.7[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"

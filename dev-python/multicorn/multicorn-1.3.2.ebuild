@@ -18,13 +18,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ldap lxml docutils imap"
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-        dev-python/log-colorizer
-        >=dev-python/sqlalchemy-0.8
-        ldap? ( dev-python/python3-ldap )
-        lxml? ( dev-python/lxml )
-        imap? ( dev-python/imapclient )
-        docutils? ( dev-python/docutils )"
+RDEPEND="
+        dev-python/log-colorizer[${PYTHON_USEDEP}]
+        >=dev-python/sqlalchemy-0.8[${PYTHON_USEDEP}]
+        ldap? ( dev-python/python3-ldap[${PYTHON_USEDEP}] )
+        lxml? ( dev-python/lxml[${PYTHON_USEDEP}] )
+        imap? ( dev-python/imapclient[${PYTHON_USEDEP}] )
+        docutils? ( dev-python/docutils[${PYTHON_USEDEP}] )"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
