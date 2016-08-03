@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python3_3 )
 
 inherit git-2
 
@@ -16,10 +15,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-        dev-python/flask[${PYTHON_USEDEP}]
-        dev-python/selenium[${PYTHON_USEDEP}]
-        dev-python/pillow[${PYTHON_USEDEP}]
-        dev-python/pyvirtualdisplay[${PYTHON_USEDEP}]"
+        dev-python/flask
+        dev-python/selenium
+        dev-python/pillow
+        dev-python/pyvirtualdisplay"
 DEPEND="${RDEPEND}"
 
 SELECNIL_DIR="/var/lib/${PN}"

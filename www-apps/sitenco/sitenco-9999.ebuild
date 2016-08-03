@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python{3_3,3_4,3_5} )
 
 inherit git-2
 
@@ -16,12 +15,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="git"
 
 RDEPEND="
-        git? ( dev-python/brigit[${PYTHON_USEDEP}] )
-        dev-python/flask[${PYTHON_USEDEP}]
-        dev-python/pyyaml[${PYTHON_USEDEP}]
-        dev-python/docutils-html5-writer[${PYTHON_USEDEP}]
-        dev-python/sphinx[${PYTHON_USEDEP}]
-        dev-python/pygal[${PYTHON_USEDEP}]"
+        git? ( dev-python/brigit )
+        dev-python/flask
+        dev-python/pyyaml
+        dev-python/docutils-html5-writer
+        dev-python/sphinx
+        dev-python/pygal"
 DEPEND="${RDEPEND}"
 
 SITENCO_DIR="/var/lib/${PN}"

@@ -13,9 +13,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-        dev-python/flask[${PYTHON_USEDEP}]
-        dev-python/flask-sqlalchemy[${PYTHON_USEDEP}]
-        dev-python/oauth2client[${PYTHON_USEDEP}]
-        dev-python/httplib2[${PYTHON_USEDEP}]
-        dev-python/sqlalchemy[${PYTHON_USEDEP}]"
+        dev-python/flask
+        dev-python/flask-sqlalchemy
+        dev-python/oauth2client
+        dev-python/httplib2
+        dev-python/sqlalchemy"
 DEPEND="${RDEPEND}"

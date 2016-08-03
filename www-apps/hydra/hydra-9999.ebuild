@@ -13,44 +13,44 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-        dev-python/top_model[${PYTHON_USEDEP}]
-        dev-python/pillow[truetype,${PYTHON_USEDEP}]
-        dev-python/multicorn[lxml,docutils${PYTHON_USEDEP}]
+        dev-python/top_model
+        dev-python/pillow[truetype]
+        dev-python/multicorn[lxml,docutils]
         dev-db/multicorn
-        dev-python/multicorn[${PYTHON_USEDEP}]
-        dev-python/Babel[${PYTHON_USEDEP}]
-        dev-python/mandrill[${PYTHON_USEDEP}]
-        dev-python/imapclient[${PYTHON_USEDEP}]
-        dev-python/python-dateutil[${PYTHON_USEDEP}]
-        >=dev-python/flask-0.10[${PYTHON_USEDEP}]
-        dev-python/itsdangerous[${PYTHON_USEDEP}]
-        dev-python/html5lib[${PYTHON_USEDEP}]
-        dev-python/docutils-html5-writer[${PYTHON_USEDEP}]
-        dev-python/python-ghostscript[${PYTHON_USEDEP}]
-        >=dev-python/wtforms-2.0[${PYTHON_USEDEP}]
-        dev-python/wtforms-alchemy[${PYTHON_USEDEP}]
-        media-gfx/cairosvg[${PYTHON_USEDEP}]
-        dev-python/pillow[${PYTHON_USEDEP}]
-        dev-python/pytz[${PYTHON_USEDEP}]
-        dev-python/icalendar[${PYTHON_USEDEP}]
-        dev-python/alembic[${PYTHON_USEDEP}]
-        dev-python/pypet[${PYTHON_USEDEP}]
-        dev-python/pyinotify[${PYTHON_USEDEP}]
-        >=dev-python/flask-sqlalchemy-0.17[${PYTHON_USEDEP}]
-        >=dev-python/sqlalchemy-0.9[${PYTHON_USEDEP}]
-        dev-python/flask-weasyprint[${PYTHON_USEDEP}]
-        >=dev-python/pygal-1.4[${PYTHON_USEDEP}]
+        dev-python/multicorn
+        dev-python/Babel
+        dev-python/mandrill
+        dev-python/imapclient
+        dev-python/python-dateutil
+        >=dev-python/flask-0.10
+        dev-python/itsdangerous
+        dev-python/html5lib
+        dev-python/docutils-html5-writer
+        dev-python/python-ghostscript
+        >=dev-python/wtforms-2.0
+        dev-python/wtforms-alchemy
+        media-gfx/cairosvg
+        dev-python/pillow
+        dev-python/pytz
+        dev-python/icalendar
+        dev-python/alembic
+        dev-python/pypet
+        dev-python/pyinotify
+        >=dev-python/flask-sqlalchemy-0.17
+        >=dev-python/sqlalchemy-0.9
+        dev-python/flask-weasyprint
+        >=dev-python/pygal-1.4
         dev-python/pygal_maps_fr
-        dev-python/pyyaml[${PYTHON_USEDEP}]
+        dev-python/pyyaml
         media-fonts/cantarell
         www-apps/mammoth
-        dev-python/docutils-html5-writer[${PYTHON_USEDEP}]
-        dev-python/pyquery[${PYTHON_USEDEP}]
-        dev-python/qrcode[${PYTHON_USEDEP}]
-        dev-python/sqlalchemy_fdw[${PYTHON_USEDEP}]
-        dev-python/flask-login[${PYTHON_USEDEP}]
-        dev-python/sqlalchemy-searchable[${PYTHON_USEDEP}]
-        dev-python/fawn[${PYTHON_USEDEP}]
+        dev-python/docutils-html5-writer
+        dev-python/pyquery
+        dev-python/qrcode
+        dev-python/sqlalchemy_fdw
+        dev-python/flask-login
+        dev-python/sqlalchemy-searchable
+        dev-python/fawn
         net-libs/nodejs
-        dev-python/pyinotify[${PYTHON_USEDEP}]"
+        dev-python/pyinotify"
 RDEPEND="${RDEPEND}"

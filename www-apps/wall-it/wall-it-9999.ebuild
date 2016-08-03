@@ -13,10 +13,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-lang/python[sqlite,${PYTHON_USEDEP}]
-	dev-python/flask[${PYTHON_USEDEP}]
-	dev-python/weasyprint[${PYTHON_USEDEP}]
-	dev-python/pygal[${PYTHON_USEDEP}]
-	dev-python/oauth2client[${PYTHON_USEDEP}]
-	dev-python/httplib2[${PYTHON_USEDEP}]"
+	dev-lang/python[sqlite]
+	dev-python/flask
+	dev-python/weasyprint
+	dev-python/pygal
+	dev-python/oauth2client
+	dev-python/httplib2"
 DEPEND="${RDEPEND}"

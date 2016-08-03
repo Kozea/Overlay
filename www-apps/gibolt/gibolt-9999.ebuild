@@ -13,9 +13,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/flask[${PYTHON_USEDEP}]
-	dev-python/github-flask[${PYTHON_USEDEP}]
-	dev-python/CacheControl[${PYTHON_USEDEP}]
-	dev-python/python-dateutil[${PYTHON_USEDEP}]
-	dev-python/pytz[${PYTHON_USEDEP}]"
+	dev-python/flask
+	dev-python/github-flask
+	dev-python/CacheControl
+	dev-python/python-dateutil
+	dev-python/pytz"
 DEPEND="${RDEPEND}"
