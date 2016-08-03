@@ -14,6 +14,7 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+        dev-python/top_model
         dev-python/pillow[truetype]
         dev-python/multicorn[lxml,docutils]
         dev-db/multicorn
