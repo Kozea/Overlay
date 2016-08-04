@@ -3,9 +3,8 @@
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} )
-DISTUTILS_SINGLE_IMPL=1
 
-inherit python-r1 eutils
+inherit python-single-r1 eutils
 
 MY_PN="Multicorn"
 MY_P="${MY_PN}-${PV}"
@@ -27,10 +26,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_compile() {
     sed -e "s/install: python_code//" -i Makefile
-    python_compile() {
-        emake PYTHON_OVERRIDE="${PYTHON}" || die
-    }
-    python_foreach_impl python_compile
+    emake PYTHON_OVERRIDE="${EPYTHON}" || die
 }
 
 src_install() {
