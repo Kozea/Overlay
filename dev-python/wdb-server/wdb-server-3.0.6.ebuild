@@ -21,9 +21,7 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
     =dev-python/wdb-${PV}*[${PYTHON_USEDEP}]
-    >=www-servers/tornado-3.2[${PYTHON_USEDEP}]
-    >=dev-python/log-colorizer-1.6[${PYTHON_USEDEP}]
-    >=dev-python/jedi-0.9[${PYTHON_USEDEP}]
+    >=www-servers/tornado-4.2[${PYTHON_USEDEP}]
     >=dev-python/psutil-2.1[${PYTHON_USEDEP}]
     >=dev-python/filemagic-1.6[${PYTHON_USEDEP}]
     dev-python/tornado-systemd[${PYTHON_USEDEP}]

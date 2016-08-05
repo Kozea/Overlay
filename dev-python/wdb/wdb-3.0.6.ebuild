@@ -15,5 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
+    dev-python/uncompyle6[${PYTHON_USEDEP}]
     >=dev-python/log-colorizer-1.6[${PYTHON_USEDEP}]
     >=dev-python/jedi-0.9[${PYTHON_USEDEP}]"
