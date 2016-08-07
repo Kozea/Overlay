@@ -18,8 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-    dev-python/psycopg[python2_7]
-    dev-python/pika[python2_7]
+    dev-python/psycopg
+    dev-python/pika
     net-misc/rabbitmq-server"
 DEPEND="${RDEPEND}"
 
