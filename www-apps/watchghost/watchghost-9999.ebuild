@@ -12,5 +12,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-        www-servers/tornado"
+        www-servers/tornado
+        dev-python/aioftp"
 DEPEND="${RDEPEND}"
