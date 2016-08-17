@@ -22,7 +22,7 @@ IUSE="test"
 # Note: specific subslot of pango since it inlines some of pango headers.
 RDEPEND="x11-libs/pango:0/0
 	>=media-gfx/cairosvg-1.0.7[${PYTHON_USEDEP}]
-	>=dev-python/html5lib-0.999[${PYTHON_USEDEP}]
+	>=dev-python/html5lib-0.999999999[${PYTHON_USEDEP}]
 	dev-python/cffi:=[${PYTHON_USEDEP}]
 	>=dev-python/lxml-3.0[${PYTHON_USEDEP}]
 	>=dev-python/cairocffi-0.5[${PYTHON_USEDEP}]
