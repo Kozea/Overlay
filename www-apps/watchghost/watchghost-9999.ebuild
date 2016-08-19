@@ -2,6 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
+PYTHON_COMPAT=( python2_7 python3_{4,5} pypy )
+
+inherit distutils-r1
 
 DESCRIPTION="Your invisible but loud monitoring pet"
 HOMEPAGE="https://gitlab.com/localg-host/watchghost"
