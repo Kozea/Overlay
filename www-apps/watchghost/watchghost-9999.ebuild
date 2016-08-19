@@ -4,7 +4,7 @@
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_{4,5} pypy )
 
-inherit distutils-r1
+inherit distutils-r1 git-2
 
 DESCRIPTION="Your invisible but loud monitoring pet"
 HOMEPAGE="https://gitlab.com/localg-host/watchghost"
@@ -13,6 +13,7 @@ LICENSE="AGPL3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+EGIT_REPO_URI="https://gitlab.com/localg-host/{$PN}.git"
 
 RDEPEND="
         www-servers/tornado
