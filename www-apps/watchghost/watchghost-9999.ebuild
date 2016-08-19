@@ -13,7 +13,7 @@ LICENSE="AGPL3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-EGIT_REPO_URI="https://gitlab.com/localg-host/{$PN}.git"
+EGIT_REPO_URI="https://gitlab.com/localg-host/${PN}.git"
 
 RDEPEND="
         www-servers/tornado
