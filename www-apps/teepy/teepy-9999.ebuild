@@ -13,7 +13,7 @@ LICENSE="Proprietary"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
-EGIT_REPO_URI="https://github.com/Kozea/${PN}.git"
+EGIT_REPO_URI="git@github.com:Kozea/${PN}.git"
 
 RDEPEND="
         dev-python/psycopg
