@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Provides fulltext search capabilities for declarative SQLAlchemy models."
 HOMEPAGE="http://pypi.python.org/pypi/${MY_PN}"
-SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="https://github.com/kvesteri/sqlalchemy-searchable/archive/48d74eef714db8b31ed83365d19100d9aaa849ae.zip"
 
 LICENSE="BSD"
 SLOT="0"
