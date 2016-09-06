@@ -30,5 +30,4 @@ RDEPEND="
     >=dev-python/validators-0.3.0[${PYTHON_USEDEP}]
 "
 
-S="${WORKDIR}/${MY_P}"
-
+S="${WORKDIR}/sqlalchemy-searchable-48d74eef714db8b31ed83365d19100d9aaa849ae/"
