@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/python-dateutil
-	dev-python/Babel"
+DEPEND="dev-python/python-dateutil[${PYTHON_USEDEP}]
+	dev-python/Babel[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 DOCS=( README.rst )
