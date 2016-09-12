@@ -19,5 +19,3 @@ IUSE=""
 DEPEND="dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/Babel[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-
-DOCS=( README.rst )
