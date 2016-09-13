@@ -13,7 +13,6 @@ IUSE=""
 
 RDEPEND="
         dev-python/flask
-        dev-python/libsass
         dev-python/mandrill
         dev-python/top_model"
 DEPEND="${RDEPEND}"
