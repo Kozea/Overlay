@@ -12,22 +12,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-    dev-python/aiohttp
-    dev-python/log-colorizer
-    dev-python/pytz
-    dev-python/pyyaml
-    dev-python/pygal_maps_fr
-    dev-python/pygal
-    dev-python/weasyprint
-    dev-python/flask-weasyprint
     dev-python/flask-login
-    dev-python/flask
-    dev-python/wtforms-alchemy
-    dev-python/wtforms
     dev-python/alembic
-    dev-python/sqlalchemy_fdw
-    dev-python/docutils-html5-writer
-    dev-python/python-ghostscript
     dev-python/python-dateutil
     dev-python/top_model
     dev-python/vobject"
