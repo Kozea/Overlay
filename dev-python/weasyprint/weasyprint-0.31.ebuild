@@ -26,7 +26,7 @@ RDEPEND="x11-libs/pango:0/0
 	dev-python/cffi:=[${PYTHON_USEDEP}]
 	>=dev-python/lxml-3.0[${PYTHON_USEDEP}]
 	>=dev-python/cairocffi-0.5[${PYTHON_USEDEP}]
-	~dev-python/tinycss-0.3[${PYTHON_USEDEP}]
+	>=dev-python/tinycss-0.4[${PYTHON_USEDEP}]
 	>=dev-python/cssselect-0.6[${PYTHON_USEDEP}]
 	>=dev-python/pyphen-0.8[${PYTHON_USEDEP}]"
 # x11-libs/gdk-pixbuf # optional dep
