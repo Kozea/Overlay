@@ -35,5 +35,6 @@ RDEPEND="
         dev-python/sqlalchemy_fdw[${PYTHON_USEDEP}]
         dev-python/docutils-html5-writer[${PYTHON_USEDEP}]
         dev-python/rrule34[${PYTHON_USEDEP}]
+        dev-python/raven[${PYTHON_USEDEP}]
         dev-python/python-ghostscript[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
