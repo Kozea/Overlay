@@ -52,5 +52,6 @@ RDEPEND="
         dev-python/sqlalchemy-searchable
         dev-python/fawn
         net-libs/nodejs
+        dev-python/raven
         dev-python/pyinotify"
 RDEPEND="${RDEPEND}"
