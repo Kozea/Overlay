@@ -13,7 +13,7 @@
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 python3_5 )
 
 inherit python-r1 eutils autotools toolchain-funcs flag-o-matic multilib db-use user systemd
 
@@ -37,12 +37,12 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 #		http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2
 #	)"
 
-LICENSE="GPL-2 ISC BSD BSD-2 HPND JNIC openssl"
+LICENSE="Apache-2.0 BSD BSD-2 GPL-2 HPND ISC MPL-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="berkdb +caps dlz doc fetchlimit filter-aaaa fixed-rrset geoip gost gssapi idn ipv6
-json ldap libressl mysql nslint odbc postgres python rpz seccomp selinux sit ssl static-libs
-+threads urandom xml"
+IUSE="berkdb +caps dlz dnstap doc filter-aaaa fixed-rrset geoip gost gssapi idn ipv6
+json ldap libressl lmdb mysql nslint odbc postgres python rpz seccomp selinux ssl static-libs
++threads urandom xml +zlib"
 # sdb-ldap - patch broken
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
@@ -52,7 +52,8 @@ REQUIRED_USE="postgres? ( dlz )
 	odbc? ( dlz )
 	ldap? ( dlz )
 	gost? ( !libressl ssl )
-	threads? ( caps )"
+	threads? ( caps )
+	dnstap? ( threads )"
 # sdb-ldap? ( dlz )
 
 DEPEND="
@@ -71,7 +72,10 @@ DEPEND="
 	gssapi? ( virtual/krb5 )
 	gost? ( >=dev-libs/openssl-1.0.0:0[-bindist] )
 	seccomp? ( sys-libs/libseccomp )
-	json? ( dev-libs/json-c )"
+	json? ( dev-libs/json-c )
+	lmdb? ( dev-db/lmdb )
+	zlib? ( sys-libs/zlib )
+	dnstap? ( dev-libs/fstrm dev-libs/protobuf-c )"
 #	sdb-ldap? ( net-nds/openldap )
 
 RDEPEND="${DEPEND}
@@ -153,14 +157,12 @@ src_configure() {
 		--enable-full-report \
 		--without-readline \
 		$(use_enable caps linux-caps) \
-		$(use_enable fetchlimit) \
 		$(use_enable filter-aaaa) \
 		$(use_enable fixed-rrset) \
 		$(use_enable ipv6) \
 		$(use_enable rpz rpz-nsdname) \
 		$(use_enable rpz rpz-nsip) \
 		$(use_enable seccomp) \
-		$(use_enable sit) \
 		$(use_enable threads) \
 		$(use_with berkdb dlz-bdb) \
 		$(use_with dlz dlopen) \
@@ -174,10 +176,12 @@ src_configure() {
 		$(use_with mysql dlz-mysql) \
 		$(use_with odbc dlz-odbc) \
 		$(use_with postgres dlz-postgres) \
+		$(use_with lmdb) \
 		$(use_with python) \
 		$(use_with ssl ecdsa) \
 		$(use_with ssl openssl "${EPREFIX}"/usr) \
 		$(use_with xml libxml2) \
+		$(use_with zlib) \
 		${myconf}
 
 	# $(use_enable static-libs static) \
@@ -239,7 +243,7 @@ src_install() {
 
 	# ftp://ftp.rs.internic.net/domain/named.cache:
 	insinto /var/bind
-	newins "${FILESDIR}"/named.cache-r2 named.cache
+	newins "${FILESDIR}"/named.cache-r3 named.cache
 
 	insinto /var/bind/pri
 	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
