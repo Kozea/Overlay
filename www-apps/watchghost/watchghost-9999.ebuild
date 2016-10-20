@@ -19,3 +19,8 @@ RDEPEND="
         www-servers/tornado
         dev-python/aioftp"
 DEPEND="${RDEPEND}"
+
+python_prepare_all() {
+    rm -rf tests
+    distutils-r1_python_prepare_all
+}
