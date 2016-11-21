@@ -18,3 +18,8 @@ IUSE=""
 
 RDEPEND=""
 DEPEND=""
+
+python_prepare_all() {
+    rm -rf test
+    distutils-r1_python_prepare_all
+}
