@@ -40,6 +40,7 @@ RDEPEND="
         dev-python/libsass
         dev-python/requests
         dev-python/multicorn
+        dev-python/cutter
         dev-db/multicorn
         test? (
             dev-python/pytest
