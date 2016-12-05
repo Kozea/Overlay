@@ -13,7 +13,7 @@
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_7 python3_3 python3_4 python3_5 )
+PYTHON_COMPAT=( python2_7 python3_4 )
 
 inherit python-r1 eutils autotools toolchain-funcs flag-o-matic multilib db-use user systemd
 
@@ -75,7 +75,8 @@ DEPEND="
 	json? ( dev-libs/json-c )
 	lmdb? ( dev-db/lmdb )
 	zlib? ( sys-libs/zlib )
-	dnstap? ( dev-libs/fstrm dev-libs/protobuf-c )"
+	dnstap? ( dev-libs/fstrm dev-libs/protobuf-c )
+	python? ( dev-python/ply[${PYTHON_USEDEP}] )"
 #	sdb-ldap? ( net-nds/openldap )
 
 RDEPEND="${DEPEND}
