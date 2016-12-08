@@ -38,7 +38,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 S="${WORKDIR}/${MY_P}"
 
 python_prepare_all() {
-	epatch "${FILESDIR}"/$"{PN}"-0.33-close-files.patch
+	epatch "${FILESDIR}"/"${PN}"-0.33-close-files.patch
 	distutils-r1_python_prepare_all
 }
 
