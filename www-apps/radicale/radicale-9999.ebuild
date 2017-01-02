@@ -33,9 +33,6 @@ pkg_setup() {
 python_install_all() {
 	rm README* || die
 
-	# init file
-	newinitd "${FILESDIR}"/radicale.init.d radicale
-
 	# directories
 	diropts -m0750
 	dodir ${RDIR}
