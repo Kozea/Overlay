@@ -22,6 +22,9 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
+RDEPEND="dev-python/vobject"
+DEPEND="${RDEPEND}"
+
 RDIR=/var/lib/radicale
 LDIR=/var/log/radicale
 
