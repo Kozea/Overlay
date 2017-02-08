@@ -17,7 +17,8 @@ EGIT_REPO_URI="https://gitlab.com/localg-host/${PN}.git"
 
 RDEPEND="
         www-servers/tornado
-        dev-python/aioftp"
+        dev-python/aioftp
+        dev-python/asyncssh"
 DEPEND="${RDEPEND}"
 
 python_prepare_all() {
