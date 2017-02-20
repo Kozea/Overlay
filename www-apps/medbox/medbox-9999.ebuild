@@ -8,7 +8,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="A single box for your medicine"
 HOMEPAGE="https://github.com/Kozea/medbox"
-EGIT_REPO_URI="git://github.com/Kozea/${PN}.git"
+EGIT_REPO_URI="git@github.com/Kozea/${PN}.git"
 
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
