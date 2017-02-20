@@ -16,6 +16,6 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
 RDEPEND="
-    dev-python/top-model[${PYTHON_USEDEP}]
+    dev-python/top_model[${PYTHON_USEDEP}]
     dev-python/unrest[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
