@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/pygal/pygal-2.0.0.ebuild,v 1.1 2015/01/31 09:40:24 yngwin Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4,3_5} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4,3_5,3_6} )
 
 inherit distutils-r1
 

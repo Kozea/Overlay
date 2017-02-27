@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/alembic/alembic-0.6.4.ebuild,v 1.2 2014/07/06 12:36:26 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4,3_5} )
+PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4,3_5,3_6} )
 
 inherit distutils-r1
 

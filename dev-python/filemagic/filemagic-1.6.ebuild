@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.4.18.ebuild,v 1.1 2013/10/30 08:00:35 radhermit Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4,3_5} pypy )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4,3_5,3_6} pypy )
 inherit distutils-r1
 
 DESCRIPTION="A Python API for libmagic, the library behind the Unix file command"
