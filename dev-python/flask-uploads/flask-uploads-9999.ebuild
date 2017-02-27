@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/flask-babel-0.8.ebuild,v 1.1 2012/04/19 07:55:06 patrick Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
+PYTHON_COMPAT=( python2_7 python3_{3,4,5,6} )
 
 inherit distutils-r1
 
