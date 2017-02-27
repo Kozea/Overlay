@@ -1,16 +1,15 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI="5"
 
-PYTHON_COMPAT=( python2_7 python3_{3,4,5,6} pypy)
+PYTHON_COMPAT=( python2_7 python3_{4,5,6} pypy)
 
 inherit distutils-r1
 
 DESCRIPTION="Library for accessing resources protected by OAuth 2.0"
 HOMEPAGE="https://github.com/google/oauth2client"
-SRC_URI="https://github.com/google/oauth2client/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/google/oauth2client/archive/v${PV/_p/-post}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -29,8 +28,17 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )
 "
 
+S="${WORKDIR}"/${P/_p/-post}
+
 # Needs network
 RESTRICT=test
+
+python_prepare_all() {
+	sed -i \
+		-e "s:find_packages():find_packages(exclude=['tests','tests.*']):" \
+		setup.py || die
+	distutils-r1_python_prepare_all
+}
 
 python_test() {
 	nosetests || die
