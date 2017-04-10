@@ -36,5 +36,6 @@ RDEPEND="
         dev-python/docutils-html5-writer[${PYTHON_USEDEP}]
         dev-python/rrule34[${PYTHON_USEDEP}]
         dev-python/raven[${PYTHON_USEDEP}]
-        dev-python/python-ghostscript[${PYTHON_USEDEP}]"
+        dev-python/python-ghostscript[${PYTHON_USEDEP}]
+        dev-python/vobject[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
