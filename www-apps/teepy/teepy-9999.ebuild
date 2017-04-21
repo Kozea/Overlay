@@ -41,6 +41,8 @@ RDEPEND="
         dev-python/requests
         dev-python/multicorn
         dev-python/cutter
+        dev-python/rrule34
+        dev-python/vobject
         dev-db/multicorn
         test? (
             dev-python/pytest
