@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
+        www-client/firefox-bin
         x11-base/xorg-server[xvfb]
         dev-python/flask
         dev-python/selenium
