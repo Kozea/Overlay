@@ -1,17 +1,14 @@
 This is a Gentoo overlay for stuff we use or make at Kozea.
 
-To use use it, run
-    emerge layman
-
-Then add the repository URL in /etc/layman/layman.cfg
-    https://raw.github.com/Kozea/Overlay/master/repositories.xml
+To use use it, create the file /etc/portage/repos.conf/kozea.conf
+    [kozea]
+    location = /var/lib/portage/repos/kozea
+    sync-type = git
+    sync-uri = https://github.com/Kozea/Overlay.git
+    auto-sync = yes
 
 Then synchronize the repositories and add the kozea overlay
-    layman -S
-    layman -a kozea
-
-Finally, add /var/lib/layman/kozea to the PORTDIR_OVERLAY variable
-in /etc/portage/make.conf
+    emaint sync -r kozea
 
 See the Gentoo documentation for details:
     http://www.gentoo.org/proj/en/overlays/userguide.xml
