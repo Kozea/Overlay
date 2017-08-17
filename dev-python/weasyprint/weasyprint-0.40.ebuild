@@ -24,10 +24,9 @@ RDEPEND="x11-libs/pango:0/0
 	>=media-gfx/cairosvg-1.0.7[${PYTHON_USEDEP}]
 	>=dev-python/html5lib-0.999999999[${PYTHON_USEDEP}]
 	dev-python/cffi:=[${PYTHON_USEDEP}]
-	>=dev-python/lxml-3.0[${PYTHON_USEDEP}]
 	>=dev-python/cairocffi-0.5[${PYTHON_USEDEP}]
 	>=dev-python/tinycss2-0.5[${PYTHON_USEDEP}]
-	>=dev-python/cssselect-0.6[${PYTHON_USEDEP}]
+	>=dev-python/cssselect2-0.2[${PYTHON_USEDEP}]
 	>=dev-python/pyphen-0.8[${PYTHON_USEDEP}]"
 # x11-libs/gdk-pixbuf # optional dep
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
