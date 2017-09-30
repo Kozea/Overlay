@@ -19,11 +19,11 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="dev-python/lxml[${PYTHON_USEDEP}]
+RDEPEND="dev-python/defusedxml[${PYTHON_USEDEP}]
 	dev-python/cairocffi[${PYTHON_USEDEP}]
 	dev-python/pillow[${PYTHON_USEDEP}]
-	dev-python/tinycss[${PYTHON_USEDEP}]
-	dev-python/cssselect[${PYTHON_USEDEP}]"
+	dev-python/tinycss2[${PYTHON_USEDEP}]
+	dev-python/cssselect2[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
