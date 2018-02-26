@@ -37,7 +37,7 @@ RDEPEND="
         dev-python/pypet
         dev-python/pyinotify
         >=dev-python/flask-sqlalchemy-0.17
-        >=dev-python/sqlalchemy-0.9
+        =dev-python/sqlalchemy-1.2.2
         dev-python/flask-weasyprint
         >=dev-python/pygal-1.4
         dev-python/pygal_maps_fr
