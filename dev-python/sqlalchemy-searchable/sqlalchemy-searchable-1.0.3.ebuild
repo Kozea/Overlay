@@ -23,10 +23,8 @@ DEPEND="
     dev-python/setuptools[${PYTHON_USEDEP}]
 "
 RDEPEND="
-    >=dev-python/pyparsing-2.0.1[${PYTHON_USEDEP}]
-    >=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
-    >=dev-python/psycopg-2.4.6[${PYTHON_USEDEP}]
-    >=dev-python/sqlalchemy-utils-0.16.24[${PYTHON_USEDEP}]
+    >=dev-python/sqlalchemy-0.9.0[${PYTHON_USEDEP}]
+    >=dev-python/sqlalchemy-utils-0.29.0[${PYTHON_USEDEP}]
     >=dev-python/validators-0.3.0[${PYTHON_USEDEP}]
 "
 
