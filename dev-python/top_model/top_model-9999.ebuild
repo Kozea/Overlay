@@ -28,7 +28,7 @@ RDEPEND="
         dev-python/pytz[${PYTHON_USEDEP}]
         dev-python/pyyaml[${PYTHON_USEDEP}]
         dev-python/sqlalchemy[${PYTHON_USEDEP}]
-        dev-python/sqlalchemy-searchable[${PYTHON_USEDEP}]
+        >=dev-python/sqlalchemy-searchable-1.0.3[${PYTHON_USEDEP}]
         dev-python/wtforms[${PYTHON_USEDEP}]
         dev-python/wtforms-alchemy[${PYTHON_USEDEP}]
         dev-python/alembic[${PYTHON_USEDEP}]
