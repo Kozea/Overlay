@@ -11,7 +11,7 @@ MY_PN="SQLAlchemy-Searchable"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Provides fulltext search capabilities for declarative SQLAlchemy models."
 HOMEPAGE="http://pypi.python.org/pypi/${PN}"
-SRC_URI="https://pypi.python.org/packages/50/03/7d9c0cbafccd29a2ed48cfa6fe0b8de1d9a7798b09db89b7aff0098779e2/SQLAlchemy-Searchable-1.0.3.tar.gz"
+SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
