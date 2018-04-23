@@ -26,7 +26,7 @@ RDEPEND="
 	>=net-libs/http-parser-2.8.0:=
 	>=net-libs/nghttp2-1.29.0
 	sys-libs/zlib
-	icu? ( >=dev-libs/icu-61.1:= )
+	icu? ( >=dev-libs/icu-60.0:= )
 	ssl? ( >=dev-libs/openssl-1.0.2n:0=[-bindist] )
 "
 DEPEND="
