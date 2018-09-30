@@ -29,7 +29,6 @@ RDEPEND="
 	>=dev-python/cffi-0.6:=[${PYTHON_USEDEP}]
 	>=dev-python/cssselect2-0.1[${PYTHON_USEDEP}]
 	>=dev-python/html5lib-0.999999999[${PYTHON_USEDEP}]
-	>=dev-python/lxml-3.0[${PYTHON_USEDEP}]
 	>=dev-python/pyphen-0.8[${PYTHON_USEDEP}]
 	>=dev-python/tinycss2-0.5[${PYTHON_USEDEP}]
 	>=media-gfx/cairosvg-1.0.20[${PYTHON_USEDEP}]
