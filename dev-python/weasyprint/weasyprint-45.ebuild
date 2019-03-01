@@ -34,7 +34,9 @@ RDEPEND="
 	>=media-gfx/cairosvg-1.0.20[${PYTHON_USEDEP}]
 	>=dev-python/pdfrw-0.4[${PYTHON_USEDEP}]
 "
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+DEPEND="
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/pytest-runner[${PYTHON_USEDEP}]
 	test? (
 		  ${RDEPEND}
 		  dev-python/pytest-cov[${PYTHON_USEDEP}]

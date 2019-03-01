@@ -19,7 +19,9 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="dev-python/defusedxml[${PYTHON_USEDEP}]
+RDEPEND="
+	dev-python/pytest-runner[${PYTHON_USEDEP}]
+	dev-python/defusedxml[${PYTHON_USEDEP}]
 	dev-python/cairocffi[${PYTHON_USEDEP}]
 	dev-python/pillow[${PYTHON_USEDEP}]
 	dev-python/tinycss2[${PYTHON_USEDEP}]
