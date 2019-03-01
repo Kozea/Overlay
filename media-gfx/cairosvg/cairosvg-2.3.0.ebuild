@@ -20,7 +20,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-	dev-python/pytest-runner[${PYTHON_USEDEP}]
 	dev-python/defusedxml[${PYTHON_USEDEP}]
 	dev-python/cairocffi[${PYTHON_USEDEP}]
 	dev-python/pillow[${PYTHON_USEDEP}]
@@ -30,4 +29,9 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-DOCS=( NEWS.rst README.rst TODO.rst )
+DOCS=( README.rst )
+
+src_prepare() {
+	default
+	sed -i "s/pytest-runner//" setup.cfg || die "setup.cfg sed failed"
+}

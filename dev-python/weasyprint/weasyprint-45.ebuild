@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-PYTHON_COMPAT=( python3_{4,5,6,7} pypy3 )
+PYTHON_COMPAT=( python3_{5,6,7} pypy3 )
 
 RESTRICT="test"
 
@@ -36,7 +36,6 @@ RDEPEND="
 "
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/pytest-runner[${PYTHON_USEDEP}]
 	test? (
 		  ${RDEPEND}
 		  dev-python/pytest-cov[${PYTHON_USEDEP}]
@@ -48,6 +47,11 @@ DEPEND="
 "
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	default
+	sed -i "s/pytest-runner//" setup.cfg || die "setup.cfg sed failed"
+}
 
 python_test() {
 	py.test || die "testsuite failed under ${EPYTHON}"
