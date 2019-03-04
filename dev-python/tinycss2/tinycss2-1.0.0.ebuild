@@ -28,3 +28,9 @@ DOCS=( CHANGES README.rst )
 python_test() {
 	py.test || die "testsuite failed under ${EPYTHON}"
 }
+
+src_prepare() {
+        default
+        sed -i "s/pytest-runner//" setup.cfg || die "setup.cfg sed failed"
+}
+
