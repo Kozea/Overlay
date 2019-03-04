@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -19,15 +19,17 @@ IUSE="cpu_flags_x86_sse2 debug doc icu inspector +npm +snapshot +ssl systemtap t
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	inspector? ( icu ssl )
+	npm? ( ssl )
 "
 
 RDEPEND="
-	>=dev-libs/libuv-1.19.2:=
-	>=net-libs/http-parser-2.8.0:=
-	>=net-libs/nghttp2-1.29.0
+	>=dev-libs/libuv-1.26.0:=
+	>=net-dns/c-ares-1.15.0
+	>=net-libs/http-parser-2.9.0:=
+	>=net-libs/nghttp2-1.34.0
 	sys-libs/zlib
-	icu? ( >=dev-libs/icu-60.0:= )
-	ssl? ( >=dev-libs/openssl-1.0.2n:0=[-bindist] )
+	icu? ( >=dev-libs/icu-63.1:= )
+	ssl? ( =dev-libs/openssl-1.1.0*:0= )
 "
 DEPEND="
 	${RDEPEND}
@@ -35,10 +37,12 @@ DEPEND="
 	systemtap? ( dev-util/systemtap )
 	test? ( net-misc/curl )
 "
-S="${WORKDIR}/node-v${PV}"
 PATCHES=(
-	"${FILESDIR}"/gentoo-global-npm-config.patch
+	"${FILESDIR}"/${PN}-10.3.0-global-npm-config.patch
+	"${FILESDIR}"/${PN}-11.4.0-stdarg_h.patch
+	"${FILESDIR}"/${PN}-99999999-llhttp.patch
 )
+S="${WORKDIR}/node-v${PV}"
 
 pkg_pretend() {
 	(use x86 && ! use cpu_flags_x86_sse2) && \
@@ -67,7 +71,7 @@ src_prepare() {
 	# proper libdir, hat tip @ryanpcmcquen https://github.com/iojs/io.js/issues/504
 	local LIBDIR=$(get_libdir)
 	sed -i -e "s|lib/|${LIBDIR}/|g" tools/install.py || die
-	sed -i -e "s/'lib'/'${LIBDIR}'/" lib/module.js deps/npm/lib/npm.js || die
+	sed -i -e "s/'lib'/'${LIBDIR}'/" deps/npm/lib/npm.js || die
 
 	# Avoid writing a depfile, not useful
 	sed -i -e "/DEPFLAGS =/d" tools/gyp/pylib/gyp/generator/make.py || die
@@ -91,7 +95,10 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=( --shared-http-parser --shared-libuv --shared-nghttp2 --shared-zlib )
+	local myconf=(
+		--shared-cares --shared-http-parser --shared-libuv --shared-nghttp2
+		--shared-zlib
+	)
 	use debug && myconf+=( --debug )
 	use icu && myconf+=( --with-intl=system-icu ) || myconf+=( --with-intl=none )
 	use inspector || myconf+=( --without-inspector )
@@ -143,8 +150,9 @@ src_install() {
 		for i in `grep -rl 'fonts.googleapis.com' "${S}"/out/doc/api/*`; do
 			sed -i '/fonts.googleapis.com/ d' $i;
 		done
-		# Install docs!
-		dohtml -r "${S}"/doc/*
+		# Install docs
+		docinto html
+		dodoc -r "${S}"/doc/*
 	fi
 
 	if use npm; then
@@ -183,6 +191,8 @@ src_install() {
 				"${find_name[@]}" \
 			\) \) -exec rm -rf "{}" \;
 	fi
+
+	mv "${ED}"/usr/share/doc/node "${ED}"/usr/share/doc/${PF} || die
 }
 
 src_test() {
@@ -191,10 +201,10 @@ src_test() {
 }
 
 pkg_postinst() {
-	einfo "The global npm config lives in /etc/npm. This deviates slightly"
-	einfo "from upstream which otherwise would have it live in /usr/etc/."
-	einfo ""
-	einfo "Protip: When using node-gyp to install native modules, you can"
-	einfo "avoid having to download extras by doing the following:"
-	einfo "$ node-gyp --nodedir /usr/include/node <command>"
+	elog "The global npm config lives in /etc/npm. This deviates slightly"
+	elog "from upstream which otherwise would have it live in /usr/etc/."
+	elog ""
+	elog "Protip: When using node-gyp to install native modules, you can"
+	elog "avoid having to download extras by doing the following:"
+	elog "$ node-gyp --nodedir /usr/include/node <command>"
 }
