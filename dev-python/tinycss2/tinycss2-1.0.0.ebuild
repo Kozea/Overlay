@@ -23,7 +23,7 @@ RDEPEND="dev-python/webencodings[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
-DOCS=( CHANGES README.rst )
+DOCS=( README.rst )
 
 python_test() {
 	py.test || die "testsuite failed under ${EPYTHON}"
