@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-PYTHON_COMPAT=( python3_{5,6,7} pypy3 )
+PYTHON_COMPAT=( python3_{6,7} pypy3 )
 
 RESTRICT="test"
 
@@ -31,7 +31,7 @@ RDEPEND="
 	>=dev-python/html5lib-0.999999999[${PYTHON_USEDEP}]
 	>=dev-python/pyphen-0.8[${PYTHON_USEDEP}]
 	>=dev-python/tinycss2-0.5[${PYTHON_USEDEP}]
-	>=media-gfx/cairosvg-1.0.20[${PYTHON_USEDEP}]
+	>=media-gfx/cairosvg-2.4.0[${PYTHON_USEDEP}]
 	>=dev-python/pdfrw-0.4[${PYTHON_USEDEP}]
 "
 DEPEND="
