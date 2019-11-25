@@ -21,9 +21,10 @@ RDEPEND="
 	dev-python/certifi[${PYTHON_USEDEP}]
 	>=dev-python/setuptools-36.2.1[${PYTHON_USEDEP}]
 	>=dev-python/virtualenv-clone-0.2.5[${PYTHON_USEDEP}]
-	dev-python/invoke
-	dev-python/attrs
-	dev-python/parver
+	dev-python/six[${PYTHON_USEDEP}]
+	dev-python/invoke[${PYTHON_USEDEP}]
+	dev-python/attrs[${PYTHON_USEDEP}]
+	dev-python/parver[${PYTHON_USEDEP}]
 	dev-python/virtualenv[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	test? (
