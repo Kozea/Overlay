@@ -25,7 +25,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-    epatch "${FILESDIR}"/${PN}-fix-10.patch
+    epatch "${FILESDIR}"/${PN}-fix-11.patch
+    epatch "${FILESDIR}"/${PN}-fix-12.patch
     sed -e "s/install: python_code//" -i Makefile
     sed -e "s/all: preflight-check/all: /" -i Makefile
     emake PYTHON_OVERRIDE="${EPYTHON}" || die

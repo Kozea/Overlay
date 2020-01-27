@@ -1,0 +1,84 @@
+diff --git a/src/multicorn.c b/src/multicorn.c
+index ab483759..d0b1c80b 100644
+--- a/src/multicorn.c
++++ b/src/multicorn.c
+@@ -257,7 +257,7 @@ multicornGetForeignRelSize(PlannerInfo *root,
+ 
+ 		for (i = 0; i < desc->natts; i++)
+ 		{
+-			Form_pg_attribute att = desc->attrs[i];
++			Form_pg_attribute att = TupleDescAttr(desc, i);
+ 
+ 			if (!att->attisdropped)
+ 			{
+@@ -599,7 +599,7 @@ multicornAddForeignUpdateTargets(Query *parsetree,
+ 
+ 	for (i = 0; i < desc->natts; i++)
+ 	{
+-		Form_pg_attribute att = desc->attrs[i];
++		Form_pg_attribute att = TupleDescAttr(desc, i);
+ 
+ 		if (!att->attisdropped)
+ 		{
+@@ -681,7 +681,7 @@ multicornBeginForeignModify(ModifyTableState *mtstate,
+ 	}
+ 	for (i = 0; i < desc->natts; i++)
+ 	{
+-		Form_pg_attribute att = desc->attrs[i];
++		Form_pg_attribute att = TupleDescAttr(desc, i);
+ 
+ 		if (!att->attisdropped)
+ 		{
+diff --git a/src/python.c b/src/python.c
+index 2f9fd803..cbd560b0 100644
+--- a/src/python.c
++++ b/src/python.c
+@@ -459,7 +459,7 @@ getColumnsFromTable(TupleDesc desc, PyObject **p_columns, List **columns)
+ 
+ 		for (i = 0; i < desc->natts; i++)
+ 		{
+-			Form_pg_attribute att = desc->attrs[i];
++			Form_pg_attribute att = TupleDescAttr(desc, i);
+ 
+ 			if (!att->attisdropped)
+ 			{
+@@ -1214,7 +1214,7 @@ pythonDictToTuple(PyObject *p_value,
+ 	for (i = 0; i < slot->tts_tupleDescriptor->natts; i++)
+ 	{
+ 		char	   *key;
+-		Form_pg_attribute attr = slot->tts_tupleDescriptor->attrs[i];
++		Form_pg_attribute attr = TupleDescAttr(slot->tts_tupleDescriptor,i);
+ 		AttrNumber	cinfo_idx = attr->attnum - 1;
+ 
+ 		if (cinfos[cinfo_idx] == NULL)
+@@ -1263,7 +1263,7 @@ pythonSequenceToTuple(PyObject *p_value,
+ 	for (i = 0, j = 0; i < slot->tts_tupleDescriptor->natts; i++)
+ 	{
+ 		PyObject   *p_object;
+-		Form_pg_attribute attr = slot->tts_tupleDescriptor->attrs[i];
++		Form_pg_attribute attr = TupleDescAttr(slot->tts_tupleDescriptor,i);
+ 		AttrNumber	cinfo_idx = attr->attnum - 1;
+ 
+ 		if (cinfos[cinfo_idx] == NULL)
+@@ -1658,7 +1658,7 @@ tupleTableSlotToPyObject(TupleTableSlot *slot, ConversionInfo ** cinfos)
+ 
+ 	for (i = 0; i < tupdesc->natts; i++)
+ 	{
+-		Form_pg_attribute attr = tupdesc->attrs[i];
++		Form_pg_attribute attr = TupleDescAttr(tupdesc,i);
+ 		bool		isnull;
+ 		Datum		value;
+ 		PyObject   *item;
+diff --git a/src/query.c b/src/query.c
+index 40461157..3b51f3e7 100644
+--- a/src/query.c
++++ b/src/query.c
+@@ -103,7 +103,7 @@ initConversioninfo(ConversionInfo ** cinfos, AttInMetadata *attinmeta)
+ 
+ 	for (i = 0; i < attinmeta->tupdesc->natts; i++)
+ 	{
+-		Form_pg_attribute attr = attinmeta->tupdesc->attrs[i];
++		Form_pg_attribute attr = TupleDescAttr(attinmeta->tupdesc,i);
+ 		Oid			outfuncoid;
+ 		bool		typIsVarlena;
+ 

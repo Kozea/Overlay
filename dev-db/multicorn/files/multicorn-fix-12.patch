@@ -1,0 +1,136 @@
+diff --git a/src/multicorn.h b/src/multicorn.h
+index 45723327..3076469f 100644
+--- a/src/multicorn.h
++++ b/src/multicorn.h
+@@ -22,6 +22,13 @@
+ 
+ /* Data structures */
+ 
++#define C_LOG(...) do { \
++	errstart(NOTICE, __FILE__, __LINE__, PG_FUNCNAME_MACRO, TEXTDOMAIN); \
++	errmsg(__VA_ARGS__); \
++	errfinish(0); \
++} while (0)
++
++
+ typedef struct CacheEntry
+ {
+ 	Oid			hashkey;
+
+diff --git a/src/query.c b/src/query.c
+index 3b51f3e7..bbbd15fd 100644
+--- a/src/query.c
++++ b/src/query.c
+@@ -10,6 +10,12 @@
+ #include "utils/lsyscache.h"
+ #include "miscadmin.h"
+ #include "parser/parsetree.h"
++#include "pg_config.h"
++
++/* Third argument to get_attname was introduced in [8237f27] (release 11) */
++#if PG_VERSION_NUM >= 110000
++#define get_attname(x, y) get_attname(x, y, true)
++#endif
+ 
+ void extractClauseFromOpExpr(Relids base_relids,
+ 						OpExpr *node,
+
+diff --git a/src/multicorn.c b/src/multicorn.c
+index d0b1c80b..18d8b572 100644
+--- a/src/multicorn.c
++++ b/src/multicorn.c
+@@ -12,7 +12,9 @@
+ #include "optimizer/planmain.h"
+ #include "optimizer/restrictinfo.h"
+ #include "optimizer/clauses.h"
++#if PG_VERSION_NUM < 120000
+ #include "optimizer/var.h"
++#endif
+ #include "access/reloptions.h"
+ #include "access/relscan.h"
+ #include "access/sysattr.h"
+diff --git a/src/multicorn.h b/src/multicorn.h
+index 3076469f..10cc6e37 100644
+--- a/src/multicorn.h
++++ b/src/multicorn.h
+@@ -13,7 +13,10 @@
+ #include "nodes/bitmapset.h"
+ #include "nodes/makefuncs.h"
+ #include "nodes/pg_list.h"
++
++#if PG_VERSION_NUM < 120000
+ #include "nodes/relation.h"
++#endif
+ #include "utils/builtins.h"
+ #include "utils/syscache.h"
+ 
+diff --git a/src/query.c b/src/query.c
+index bbbd15fd..dd8997e4 100644
+--- a/src/query.c
++++ b/src/query.c
+@@ -1,5 +1,9 @@
+ #include "multicorn.h"
++#if PG_VERSION_NUM < 120000
+ #include "optimizer/var.h"
++#else
++#include "optimizer/optimizer.h"
++#endif
+ #include "optimizer/clauses.h"
+ #include "optimizer/pathnode.h"
+ #include "optimizer/subselect.h"
+
+diff --git a/src/multicorn.c b/src/multicorn.c
+index 18d8b572..8c81d77e 100644
+--- a/src/multicorn.c
++++ b/src/multicorn.c
+@@ -300,6 +300,7 @@ multicornGetForeignRelSize(PlannerInfo *root,
+ 	/* Inject the "rows" and "width" attribute into the baserel */
+ #if PG_VERSION_NUM >= 90600
+ 	getRelSize(planstate, root, &baserel->rows, &baserel->reltarget->width);
++	planstate->width = baserel->reltarget->width;
+ #else
+ 	getRelSize(planstate, root, &baserel->rows, &baserel->width);
+ #endif
+@@ -416,6 +417,8 @@ multicornGetForeignPlan(PlannerInfo *root,
+ 	MulticornPlanState *planstate = (MulticornPlanState *) baserel->fdw_private;
+ 	ListCell   *lc;
+ 
++	best_path->path.pathtarget->width = planstate->width;
++
+ 	scan_clauses = extract_actual_clauses(scan_clauses, false);
+ 	/* Extract the quals coming from a parameterized path, if any */
+ 	if (best_path->path.param_info)
+diff --git a/src/multicorn.h b/src/multicorn.h
+index 10cc6e37..0bfa6b86 100644
+--- a/src/multicorn.h
++++ b/src/multicorn.h
+@@ -69,6 +69,15 @@ typedef struct MulticornPlanState
+ 	int			startupCost;
+ 	ConversionInfo **cinfos;
+ 	List	   *pathkeys; /* list of MulticornDeparsedSortGroup) */
++
++	/* For some reason, `baserel->reltarget->width` gets changed
++	 * outside of our control somewhere between GetForeignPaths and
++	 * GetForeignPlan, which breaks tests.
++	 *
++	 * XXX: This is very crude hack to transfer width, calculated by
++	 * getRelSize to GetForeignPlan.
++	 */
++	int width;
+ }	MulticornPlanState;
+ 
+ typedef struct MulticornExecState
+
+diff --git a/src/python.c b/src/python.c
+index 03f24be1..540ef0d3 100644
+--- a/src/python.c
++++ b/src/python.c
+@@ -483,7 +483,7 @@ getColumnsFromTable(TupleDesc desc, PyObject **p_columns, List **columns)
+ 				List	   *columnDef = NULL;
+ 
+ 				errorCheck();
+-				columnDef = lappend(columnDef, makeString(key));
++				columnDef = lappend(columnDef, makeString(pstrdup(key)));
+ 				columnDef = lappend(columnDef, makeConst(TYPEOID,
+ 								   -1, InvalidOid, 4, ObjectIdGetDatum(typOid), false, true));
+ 				columnDef = lappend(columnDef, makeConst(INT4OID,
