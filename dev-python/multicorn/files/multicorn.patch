@@ -1,0 +1,17 @@
+--- src/multicorn.h	2016-09-27 09:51:11.000000000 +0200
++++ src/multicorn.h	2020-02-06 18:07:52.600564012 +0100
+@@ -1,5 +1,6 @@
+ #include "Python.h"
+ #include "postgres.h"
++#include "access/relation.h"
+ #include "access/relscan.h"
+ #include "catalog/pg_foreign_server.h"
+ #include "catalog/pg_foreign_table.h"
+@@ -13,7 +14,6 @@
+ #include "nodes/bitmapset.h"
+ #include "nodes/makefuncs.h"
+ #include "nodes/pg_list.h"
+-#include "nodes/relation.h"
+ #include "utils/builtins.h"
+ #include "utils/syscache.h"
+ 

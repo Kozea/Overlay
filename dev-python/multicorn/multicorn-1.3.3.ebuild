@@ -12,6 +12,7 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Python module of MultiCorn's PostgreSQL extension"
 HOMEPAGE="http://multicorn.org"
 SRC_URI="https://github.com/Kozea/${MY_PN}/archive/v${PV}.tar.gz"
+PATCHES=( "${FILESDIR}/multicorn.patch" )
 
 LICENSE="BSD"
 SLOT="0"
