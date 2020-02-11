@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} )
+PYTHON_COMPAT=( python3_{5,6,7} )
 
-inherit distutils-r1 git-2
+inherit distutils-r1 git-r3
 
 MY_PN="log_colorizer"
 MY_P="${MY_PN}-${PV}"
