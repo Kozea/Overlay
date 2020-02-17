@@ -32,7 +32,6 @@ RDEPEND="
 	>=dev-python/pyphen-0.8[${PYTHON_USEDEP}]
 	>=dev-python/tinycss2-0.5[${PYTHON_USEDEP}]
 	>=media-gfx/cairosvg-2.4.0[${PYTHON_USEDEP}]
-	>=dev-python/pdfrw-0.4[${PYTHON_USEDEP}]
 "
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
