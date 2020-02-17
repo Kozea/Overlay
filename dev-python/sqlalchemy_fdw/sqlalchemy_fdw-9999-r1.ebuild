@@ -4,7 +4,7 @@
 EAPI=5
 PYTHON_COMPAT=( python3_{4,5,6,7} )
 
-inherit distutils-r1 git-2
+inherit distutils-r1 git-r3
 
 DESCRIPTION="A postgresql dialect based on psycopg2 adding support for Foreign Data Wrappers."
 HOMEPAGE="http://www.multicorn.org"

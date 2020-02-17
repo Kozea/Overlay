@@ -3,7 +3,7 @@
 
 EAPI=5
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Lua module to add Google OAuth to nginx"
 HOMEPAGE="https://github.com/agoragames/nginx-google-oauth"

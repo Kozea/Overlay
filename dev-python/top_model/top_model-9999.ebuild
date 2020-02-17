@@ -4,7 +4,7 @@
 EAPI=5
 PYTHON_COMPAT=( python{3_4,3_5,3_6,3_7} )
 
-inherit distutils-r1 git-2
+inherit distutils-r1 git-r3
 
 DESCRIPTION="We all need a top model for hydra related things"
 HOMEPAGE="https://github.com/Kozea/${PN}"
