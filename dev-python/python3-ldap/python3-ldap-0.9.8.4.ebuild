@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.15.ebuild,v 1.2 2014/06/26 15:18:18 idella4 Exp $
 
-EAPI=5
+EAPI=7
 
 PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} )
 

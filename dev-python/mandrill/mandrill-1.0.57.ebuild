@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.2.ebuild,v 1.3 2011/09/11 20:11:25 maekke Exp $
 
-EAPI=5
-PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} pypy )
+EAPI=7
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6,3_7} pypy )
 
 inherit distutils-r1
 

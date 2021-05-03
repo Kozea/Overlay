@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/media-gfx/cairosvg/cairosvg-1.0.ebuild,v 1.1 2013/09/19 11:04:05 pinkbyte Exp $
 
-EAPI=5
+EAPI=7
 
 PYTHON_COMPAT=( python{3_5,3_6,3_7} )
 
