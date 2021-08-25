@@ -1,5 +1,5 @@
---- src/multicorn.h	2016-09-27 09:51:11.000000000 +0200
-+++ src/multicorn.h	2020-02-06 18:07:52.600564012 +0100
+--- a/src/multicorn.h	2016-09-27 09:51:11.000000000 +0200
++++ b/src/multicorn.h	2020-02-06 18:07:52.600564012 +0100
 @@ -1,5 +1,6 @@
  #include "Python.h"
  #include "postgres.h"
@@ -14,4 +14,4 @@
 -#include "nodes/relation.h"
  #include "utils/builtins.h"
  #include "utils/syscache.h"
- 
+
